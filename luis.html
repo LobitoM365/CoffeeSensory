@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/luis.css">
+    <link rel="stylesheet" href="./fonts/style.css">
+    <link rel="stylesheet" href="icons/all.css">
+    <title>Administrador</title>
+</head>
+<body>
+    <div  class="menu_bar">
+        
+        <div class="search-container">
+            <input type="text" placeholder="Buscar...">
+            <button type="submit">Buscar</button>
+        </div>
+        <a href="#" class="bt_menu"><span class="icon-menu" id="menuclick"></span></a>
+    </div>
+    <nav  class="despliege-inactivo" id="desplegable">
+        <ul >
+            <li><a class="submenu" href="#">Ver Registros <span id="DespliegeBajo" class="icon-chevron-down"></span></a>
+                <ul id="children" class="children">
+                    <li><a href="#">Clientes</a></li>
+                    <li><a href="#">Instructores</a></li>
+                    <li><a href="#">Aprendices</a></li>
+                    <li><a href="#">Formato SCA</a></li>
+                    <li><a href="#">Fincas</a></li>
+                    <li><a href="#">Cafés</a></li>
+                    <li><a href="#">Lotes</a></li>  
+                </ul>
+            </li>
+            <li><a href="#" class="submenu">Registrar Aprendiz <span id="DespliegeBajo" class="icon-chevron-down"></span></a>
+                <ul class="children">
+                    <li><a href="#">Nuevo registro</a></li>
+                    <li><a href="#">Migrar Datos</a></li>
+                </ul>
+            </li>
+            <li><a href="#"> Registrar Instructor</a></li>
+            <li><a href="#">Registrar Cliente</a></li>
+            <li><a href="#" class="submenu">Registrar Finca<span id="DespliegeBajo" class="icon-chevron-down"></span></a>
+                <ul class="children">
+                    <li><a href="#">Nuevo Registro</a></li>
+                    <li><a href="#">Regsitrar lote</a></li>
+                    <li><a href="#">Registrar cafe</a></li>
+                    
+                </ul>
+            </li>
+            <li><a href="#">Asignar cliente</a></li>
+        </ul>
+    </nav>
+    <div class="main-content">
+        
+        
+    </div>
+    <script src="./js/luis.js"></script>
+</body>
+</html>
