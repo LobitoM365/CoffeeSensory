@@ -33,15 +33,44 @@ ul {
     z-index: 50;
     transition: width 2s;
 }
-.nav-ul{
+
+.nav-ul {
     width: 260px;
     transition: all 0.5s;
 }
+
 .transition-nav-ul {
     width: 80px;
     overflow: hidden;
     transition: all 0.5s;
 }
+
+.transition-nav-ul>li>a:hover {
+    background-color: unset;
+}
+
+.transition-nav-ul>li>a>.icon:hover {
+    background-color: rgb(151, 151, 151);
+    padding-right: 15px;
+    border-radius: 8px;
+}
+
+.transition-nav-ul>li:hover>ul>li>a {
+    visibility: hidden;
+}
+
+.nav-ul>li>a>span {
+    opacity: 1;
+    transition: opacity 1s;
+
+}
+
+.transition-nav-ul>li>a>span {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+
 
 li,
 a {
@@ -69,11 +98,23 @@ i {
 
 a:hover {
     background-color: rgb(151, 151, 151);
+    border-radius: 8px;
 }
 
 .icon {
     margin-left: unset;
     margin-right: 20px;
+
+}
+img{
+    width: 15px;
+}
+nav>Ul>li>a .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0px 14px;
+    height: 100%;
 }
 
 /* .invisible{
@@ -122,10 +163,6 @@ a:hover {
     z-index: 2;
 }
 
-nav>ul>li>ul>Li>a {
-    z-index: -1;
-
-}
 
 .hamburguer {
     width: 100%;
@@ -141,9 +178,9 @@ nav>ul>li>ul>Li>a {
 
 
 nav>ul>li>ul {
-    margin-left: 25px;
+    margin-left: 28px;
 }
 
 nav>ul>li>a .text-a-nav {
-    margin-left: 10px;
+    margin-left: 50px;
 }

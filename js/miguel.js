@@ -3,12 +3,22 @@ let itemSubmenu = document.querySelectorAll(".item-submenu");
 let navUl = document.getElementById("navUl");
 let menuHamburguer = document.getElementById("menuHamburguer");
 
-menuHamburguer.addEventListener("click", function(){
+menuHamburguer.addEventListener("click", function () {
     navUl.classList.toggle("transition-nav-ul")
+    for (let x = 0; x < desplegarSubmenu.length; x++) {
+        itemSubmenu[x].classList.remove("focus2")
+        itemSubmenu[x].classList.remove("focus3")
+        itemSubmenu[x].classList.remove("focus4")
+        itemSubmenu[x].classList.remove("focus")
+        itemSubmenu[x].classList.remove("transition-item-submenu")
+    }
 })
 
 for (let i = 0; i < desplegarSubmenu.length; i++) {
     desplegarSubmenu[i].addEventListener("click", function () {
+       if(navUl.classList.contains("transition-nav-ul")){
+
+       }else{
         for (let x = 0; x < desplegarSubmenu.length; x++) {
             if (x < i) {
                 if (itemSubmenu[x].classList.contains("transition-item-submenu")) {
@@ -19,7 +29,7 @@ for (let i = 0; i < desplegarSubmenu.length; i++) {
                 }
             } else if (x > i) {
                 if (itemSubmenu[x].classList.contains("transition-item-submenu")) {
-   
+
                 } else {
                     itemSubmenu[x].classList.add("focus");
                     itemSubmenu[x].classList.remove("focus3");
@@ -44,8 +54,11 @@ for (let i = 0; i < desplegarSubmenu.length; i++) {
 
             }
         }
+       }
 
     });
 }
+
+
 
 
