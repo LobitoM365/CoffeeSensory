@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-vertical {
+    height: 100%;
+    position: fixed;
+    z-index: 3;
+    background-color: hsl(212, 100%, 18%);
+}
+
+li {
+    padding: 0px 15px;
+    margin-left: 5px;
+    list-style: none;
+    width: 1fr;
+}
+
+nav>ul>li>a {
+    z-index: 7;
+    position: relative;
+    width: 190px;
+}
+
+nav>Ul>li>ul>li>a {
+    width: 140px;
+}
+
+ul {
+    background-color: hsl(212, 100%, 18%);
+    position: relative;
+    z-index: 50;
+    transition: width 2s;
+}
+.nav-ul{
+    width: 260px;
+    transition: all 0.5s;
+}
+.transition-nav-ul {
+    width: 80px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+li,
+a {
+    overflow: hidden;
+}
+
+a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: hsl(212, 100%, 18%);
+}
+
+nav>Ul>Li a {
+    display: flex;
+}
+
+i {
+    display: flex;
+    width: 15px;
+    margin-left: 5px;
+}
+
+a:hover {
+    background-color: rgb(151, 151, 151);
+}
+
+.icon {
+    margin-left: unset;
+    margin-right: 20px;
+}
+
+/* .invisible{
+    display: none;
+} */
+
+.transition7-item-submenu {
+    margin-top: -336px;
+    z-index: -2;
+    position: relative;
+    transition: margin 1s;
+}
+
+.transition3-item-submenu {
+    margin-top: -143.57px;
+    z-index: -2;
+    position: relative;
+    transition: margin 1s;
+}
+
+.transition2-item-submenu {
+    margin-top: -95.71px;
+    z-index: -2;
+    position: relative;
+    transition: margin 1s;
+}
+
+.transition-item-submenu {
+    margin-top: 0%;
+    transition: margin 1s;
+}
+
+.focus {
+    z-index: -2;
+}
+
+.focus2 {
+    z-index: -1;
+}
+
+.focus3 {
+    z-index: 1;
+}
+
+.focus4 {
+    z-index: 2;
+}
+
+nav>ul>li>ul>Li>a {
+    z-index: -1;
+
+}
+
+.hamburguer {
+    width: 100%;
+    z-index: 90;
+    background-color: hsl(212, 100%, 18%);
+}
+
+.img-hamburguer {
+    width: 25px;
+    padding: 30px;
+    cursor: pointer;
+}
+
+
+nav>ul>li>ul {
+    margin-left: 25px;
+}
+
+nav>ul>li>a .text-a-nav {
+    margin-left: 10px;
+}
