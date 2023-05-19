@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+body {
+    background-color: rgb(239, 241, 243);
+}
+
 .nav-vertical {
     height: 100%;
     position: fixed;
@@ -12,7 +16,6 @@
 
 li {
     padding: 0px 15px;
-    margin-left: 5px;
     list-style: none;
     width: 1fr;
 }
@@ -20,7 +23,7 @@ li {
 nav>ul>li>a {
     z-index: 7;
     position: relative;
-    width: 190px;
+    width: 200px;
 }
 
 nav>Ul>li>ul>li>a {
@@ -35,12 +38,13 @@ ul {
 }
 
 .nav-ul {
-    width: 260px;
+    width: 270px;
     transition: all 0.5s;
+    margin-top: 20px;
 }
 
 .transition-nav-ul {
-    width: 80px;
+    width: 78px;
     overflow: hidden;
     transition: all 0.5s;
 }
@@ -50,7 +54,7 @@ ul {
 }
 
 .transition-nav-ul>li>a>.icon:hover {
-    background-color: rgb(151, 151, 151);
+    background-color: rgb(57, 100, 174);
     padding-right: 15px;
     border-radius: 8px;
 }
@@ -93,11 +97,10 @@ nav>Ul>Li a {
 i {
     display: flex;
     width: 15px;
-    margin-left: 5px;
 }
 
 a:hover {
-    background-color: rgb(151, 151, 151);
+    background-color: rgb(57, 100, 174);
     border-radius: 8px;
 }
 
@@ -106,9 +109,11 @@ a:hover {
     margin-right: 20px;
 
 }
-img{
+
+img {
     width: 15px;
 }
+
 nav>Ul>li>a .icon {
     position: absolute;
     top: 0;
@@ -125,26 +130,26 @@ nav>Ul>li>a .icon {
     margin-top: -336px;
     z-index: -2;
     position: relative;
-    transition: margin 1s;
+    transition: margin 0.5s;
 }
 
 .transition3-item-submenu {
     margin-top: -143.57px;
     z-index: -2;
     position: relative;
-    transition: margin 1s;
+    transition: margin 0.5s;
 }
 
 .transition2-item-submenu {
     margin-top: -95.71px;
     z-index: -2;
     position: relative;
-    transition: margin 1s;
+    transition: margin 0.5s;
 }
 
 .transition-item-submenu {
     margin-top: 0%;
-    transition: margin 1s;
+    transition: margin 0.5s;
 }
 
 .focus {
@@ -167,13 +172,20 @@ nav>Ul>li>a .icon {
 .hamburguer {
     width: 100%;
     z-index: 90;
-    background-color: hsl(212, 100%, 18%);
+    background-color: #f06363;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0px;
+    border-bottom: 1px solid white;
 }
 
 .img-hamburguer {
     width: 25px;
-    padding: 30px;
     cursor: pointer;
+    padding: 10px 10px;
+    margin-left: 15px;
 }
 
 
@@ -183,4 +195,102 @@ nav>ul>li>ul {
 
 nav>ul>li>a .text-a-nav {
     margin-left: 50px;
+}
+
+.chevron {
+    rotate: 0deg;
+    transition: rotate 0.2s;
+}
+
+.i-chevron {
+    margin-left: 10px;
+}
+
+.transition-chevron {
+    rotate: 180deg;
+    transition: rotate 0.5s;
+}
+
+.nav-horizontal {
+    position: fixed;
+    width: 100%;
+    height: 69px;
+    background-color: #EA5455;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.logo-menu-hamburguer {
+    color: #F9F5EB;
+    position: absolute;
+    margin-left: 84px;
+    font-size: 1.8em;
+
+}
+
+.logo-menu-hamburguer2 {
+    color: white;
+    position: absolute;
+    margin-left: 84px;
+    font-size: 1.8em;
+    -webkit-text-stroke: 5px #002B5B;
+    z-index: -1;
+}
+.buscador-nav-vertical{
+    margin-left: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+::placeholder{
+    color: #E4DCCF;
+}
+.input-search-nav-horizontal:focus{
+    outline: none;
+}
+.input-search-nav-horizontal{
+    width: 100%;
+    height: 30px;
+    border: unset;
+    background-color: transparent;
+    border: 1px solid white;
+    color: #E4DCCF;
+    border-radius: 2px;
+    padding: 2px 10px;
+    width: 350px;
+}
+.icon-search-nav-horizontal{
+    position: absolute;
+    height: calc(100% - 18px);
+    width: 30px;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+.perfil-usuario{
+    color: white;
+    right:  0;
+    position: absolute;
+    display: flex;
+}
+.img-usuario{
+    margin: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    cursor: pointer;
+    position: relative;
+}
+.img-usuario:hover{
+    border: 3px solid #002B5B;
+    margin: 16px;
+}
+.info-usuario{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    margin: 0px 20px 0px 0px;
+    flex-direction: column;
 }
