@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+
+body{
+margin-top: 68px;
+}
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+form{
+    padding: 70px 60px;
+    width: 350px;
+    background-color: hsl(212, 100%, 18%);
+    
+}
+.logo-aprendiz{
+    width: 350px;
+    padding: 70px 60px;
+    background-color: rgb(249, 83,83);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+label{
+    display: block;
+    color: white;
+}
+
+input,select{
+    color: white;
+    border: unset;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 10px 5px;
+    background-color:  hsl(212, 100%, 18%);
+    border-bottom: 1px solid rgb(94, 94, 94);
+}
+::placeholder,select{
+    font-size: 1.2em;
+    padding: 5px;
+}
+.form{
+    border-radius: 20px;
+    display: flex;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+.contenido{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 68px);
+    justify-content: center;
+    align-items: center;
+}
+option{
+    color: white;
+}
+select{
+    cursor: pointer;
+    font-size: 1em;
+}
+
+input[type="submit"]{
+    border: unset;
+    width: auto;
+    padding: 15px 25px;
+    background-color: green;
+    border-radius: 4px;
+    font-size: 1.2  em;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    margin-right: 60px;
+    cursor: pointer;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,select{
+    outline: none;
+}
+
+.imgs-registro-aprendiz,.img-registro-aprendiz{
+    width: 100%;
+    position: relative;
+}
+
+h2{
+    top: 0;
+    position: absolute;
+    margin-top: 90px;
+    color: white;
+    font-size: 2em;
+}
+
+.img-aprendiz{
+    position: absolute;
+    width: 15%;
+    bottom: 25%;
+    left: 60%;
+}
+
+.option{
+    color: rgb(136, 136, 136);
+    font-size: 1.2em;
+}
