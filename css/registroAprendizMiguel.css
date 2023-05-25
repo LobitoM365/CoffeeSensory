@@ -5,6 +5,19 @@
 
 }
 
+.nav-vertical{
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.nav-horizontal{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
 
 body{
 margin-top: 68px;
@@ -22,12 +35,11 @@ form{
     padding: 70px 60px;
     width: 350px;
     background-color: hsl(212, 100%, 18%);
-    
 }
 .logo-aprendiz{
     width: 350px;
     padding: 70px 60px;
-    background-color: rgb(249, 83,83);
+    background-color: #EA5455;
     display: flex;
     justify-content: center;
     align-items: center;
