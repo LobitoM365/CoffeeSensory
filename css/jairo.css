@@ -14,12 +14,13 @@ body {
 } 
 
 .icon-user{
-    padding: 15px;
+    padding: 16px;
     display: flex;
     margin-left: 1620px;
     color: black;
-    font-size: 1.6em;
-    
+    font-size: 1.4em;
+    cursor: pointer;
+    color: #e3dcc8;
 }
 
 .icon-bell{
@@ -29,21 +30,29 @@ body {
     display: flex;
     margin-left: 1550px;
     color: black;
-    font-size: 1.6em; 
+    font-size: 1.4em; 
+    cursor: pointer;
+    color: #e3dcc8;
     
 }
 .sal{
     margin-left: 10px;
     cursor: pointer;
+    color: #e3dcc8;
+}
+.salir{
+    color: #e3dcc8;
 }
 
 .icon-ya{
     position: fixed;
-   top: 2%;
+    top: 2%;
     display: flex;
     margin-left: 1450px;
     color: black;
-    font-size: 1.6em; 
+    font-size: 1.4em; 
+    cursor: pointer;
+    color: #e3dcc8;
 }
 .active{
     margin-left: 5px;
@@ -59,7 +68,7 @@ body {
     color: aliceblue;
     display: flex;
     padding: 10px;
-    margin-left: 150px;
+    margin-left: 5px;
     font-size: 1.5em;
     cursor: pointer;
     font-weight: bold;
@@ -70,14 +79,20 @@ body {
 }
   
 .sidebar {
+    overflow: hidden;
     background-color: #002B5B;
-    width: 210px;
+    width: 48px;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
 }
-  
+.sidebar-mamy{
+    width: 210px;
+}
+.sidebar-papy{
+    width: 48px;
+}
 .sidebar ul {
     list-style-type: none;
     margin: 0;
@@ -91,13 +106,12 @@ body {
 }
 
 .buscar input[type="text"]{
-    padding: 4px;
+    padding: 6px;
     border: none;
     border-radius: 6px;
     margin-right: 4px;
 }
 .but{
-    background-color: ;
     cursor: pointer;
 
 }
@@ -119,6 +133,10 @@ body {
     display: block;
 }
 
+nav >Ul >Li >a{
+    width: 210px;
+    
+}
 
   
 @media (max-width: 768px) {
