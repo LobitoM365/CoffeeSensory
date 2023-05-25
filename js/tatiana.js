@@ -1,5 +1,6 @@
 let botonVertical=document.getElementById("menu1")
 let despligeVertical=document.getElementById("despliege-lado")
+let subitem=document.getElementById("subitem")
 botonVertical.addEventListener("click",function (){
     
     if (despligeVertical.classList.contains("menu_activo")) {
