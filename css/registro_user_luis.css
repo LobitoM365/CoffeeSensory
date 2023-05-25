@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(../img/cafe_fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 4;
+   
+}
+iframe{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+}
+.div-form{
+    display: block;
+    width: 25%;
+    position: fixed;
+    left: 40%;
+    top: 20%;
+   /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.51);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    box-shadow: 15px rgba(255, 255, 255, 0.51);
+
+
+    -webkit-box-shadow: 21px -14px 56px 0px rgba(97,96,97,1);
+    -moz-box-shadow: 21px -14px 56px 0px rgba(97,96,97,1);
+    box-shadow: 21px -14px 56px 0px rgba(97,96,97,1);
+
+}
+form{
+    padding: 20px;
+    display: block;
+    text-align: center;       
+}
+label{
+    font-family: serif;
+    font-size: 1.5em;
+}
+input{
+    padding: 7px;
+    border-radius: 12px;
+    border: none;
+}
+
+select{
+    padding: 3px;
+    border-radius: 20px;
+    background-color: azure;
+}
+
+/* button{
+    background-color: #1d78b0;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 6px;
+    border-radius: 26px;
+ /*    height: 20px; 
+    width: 100px;
+} */
+button{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    background-color:#011826;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    border:none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+button::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #1d78b0;
+    position: absolute;
+    top:-80px ;
+    left: 0;
+    z-index: 1;
+    transition: .3s ease-in-out all;
+}
+
+button a{
+    position: relative;
+    z-index: 2;
+    color: white;
+    transition: .3s ease all;
+    text-decoration: none;
+}
+button:hover::after{
+    top: 0;
+}

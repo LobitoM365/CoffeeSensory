@@ -29,13 +29,20 @@
     color: #fff;
     cursor: pointer;
   }
-
-
-
-body{
-    padding-top: 70px;
-    background-color: #F9F5EB;
+  i{
+    padding: 5px;
+  }
+.user{
+    position: relative;
+    left: -72%;
+    font-size: 2em;
+    color: white;
 }
+.usuario:hover{
+    border: 2px solid black;
+    border-radius: 150px;
+}
+
 h1{
     margin: 35px 0 35px 35px;
 }
