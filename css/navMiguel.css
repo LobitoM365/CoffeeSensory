@@ -129,21 +129,21 @@ nav>Ul>li>a .icon {
 } */
 
 .transition7-item-submenu {
-    margin-top: -336px;
+    margin-top: calc(-48px * 7);
     z-index: -2;
     position: relative;
     transition: margin 0.5s;
 }
 
 .transition3-item-submenu {
-    margin-top: -143.57px;
+    margin-top: calc(-48px * 3);
     z-index: -2;
     position: relative;
     transition: margin 0.5s;
 }
 
 .transition2-item-submenu {
-    margin-top: -95.71px;
+    margin-top: calc(-48px * 2);
     z-index: -2;
     position: relative;
     transition: margin 0.5s;
