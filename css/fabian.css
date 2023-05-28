@@ -29,7 +29,6 @@ li {
 } */
 
 .item-nav {
-    
     border-radius: 5px;
     display: flex;
     width: 226px;
@@ -94,7 +93,10 @@ li {
 }
 
 .icon-down {
+    transition: transform 0.5s;
     margin-left: 8px;
+    position: fixed;
+    left: 220px;
 }
 
 .icon-down-rotate {
@@ -136,23 +138,27 @@ nav {
 .search,
 .icon-lup,
 .icon-notif {
+    
     cursor: pointer;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: relative;
     font-size: 1.3em;
     left: 6%;
 }
-
+.icon-notif{
+    position: fixed;
+    margin-left: 36%;
+}
 .search,
 .icon-lup {
-    border-radius: 12px;
+    border-radius: 5px;
     color: #f75959;
     font-size: 0.1em;
-    left: 33%;
-    padding: 1px;
+    left: 35%;
+    padding: 5px;
     /* height: 22px; */
     outline: none;
-    width: 220px;
+    /* width: 220px; */
     font-size: 1em;
 }
 .icon-notif {
@@ -166,10 +172,12 @@ nav {
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    margin-left: -6px;
+    left: 60.65%;
     transition: background-color 0.2s;
 }
 .search{
+    width: 20%;
+    cursor:text;
     padding-left: 10px;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
@@ -182,15 +190,4 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 50px;
-}
-.box{
-    border-radius: 10px;
-    height: 320px;
-    width: 420px;
-}
-.box-one{
-    background-color: #002B5B;
-}
-.box-two{
-    background-color: #f75959;
 }
