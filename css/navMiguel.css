@@ -1,0 +1,284 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.contenido{
+    width: 100%;
+    height: 100%;
+    background-color: #15eaf1;
+}
+.nav-vertical {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    background-color: hsl(212, 100%, 18%);
+}
+
+li {
+    padding: 0px 15px;
+    list-style: none;
+    width: 1fr;
+}
+
+nav>ul>li>a {
+    z-index: 7;
+    position: relative;
+    width: 200px;
+}
+
+nav>Ul>li>ul>li>a {
+    width: 140px;
+}
+
+ul {
+    background-color: hsl(212, 100%, 18%);
+    position: relative;
+    z-index: 50;
+    transition: width 2s;
+}
+
+.nav-ul {
+    width: 270px;
+    transition: all 0.5s;
+    margin-top: 20px;
+}
+
+.transition-nav-ul {
+    width: 78px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.transition-nav-ul>li>a:hover {
+    background-color: unset;
+}
+
+.transition-nav-ul>li>a>.icon:hover {
+    background-color: rgb(57, 100, 174);
+    padding-right: 15px;
+    border-radius: 8px;
+}
+
+.transition-nav-ul>li:hover>ul>li>a {
+    visibility: hidden;
+}
+
+.nav-ul>li>a>span {
+    opacity: 1;
+    transition: opacity 1s;
+
+}
+
+.transition-nav-ul>li>a>span {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+
+
+li,
+a {
+    overflow: hidden;
+}
+
+a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: hsl(212, 100%, 18%);
+}
+
+nav>Ul>Li a {
+    display: flex;
+}
+
+i {
+    display: flex;
+    width: 15px;
+}
+
+a:hover {
+    background-color: rgb(57, 100, 174);
+    border-radius: 8px;
+}
+
+.icon {
+    margin-left: unset;
+    margin-right: 20px;
+
+}
+
+img {
+    width: 15px;
+}
+
+nav>Ul>li>a .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0px 14px;
+    height: 100%;
+}
+
+/* .invisible{
+    display: none;
+} */
+
+nav >Ul >li >Ul{
+    z-index: -2;
+}
+
+.focus {
+    z-index: -2;
+}
+
+.focus2 {
+    z-index: -1;
+}
+
+.focus3 {
+    z-index: 1;
+}
+
+.focus4 {
+    z-index: 2;
+}
+
+.transition-submenu-bottom{
+    transition: margin 0.5s;
+}
+.transition-submenu-top{
+    transition: margin 0.5s;
+}
+
+.hamburguer {
+    width: 100%;
+    z-index: 90;
+    background-color: #f06363;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0px;
+    border-bottom: 1px solid white;
+}
+
+.img-hamburguer {
+    width: 25px;
+    cursor: pointer;
+    padding: 10px 10px;
+    margin-left: 15px;
+}
+
+
+nav>ul>li>ul {
+    margin-left: 28px;
+}
+
+nav>ul>li>a .text-a-nav {
+    margin-left: 50px;
+}
+
+.chevron {
+    rotate: 0deg;
+    transition: rotate 0.2s;
+}
+
+.i-chevron {
+    margin-left: 10px;
+}
+
+.transition-chevron {
+    rotate: 180deg;
+    transition: rotate 0.5s;
+}
+
+.nav-horizontal {
+    position: fixed;
+    width: 100%;
+    height: 69px;
+    background-color: #EA5455;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.logo-menu-hamburguer {
+    color: #F9F5EB;
+    position: absolute;
+    margin-left: 84px;
+    font-size: 1.8em;
+
+}
+a{
+    font-size: 0.85em;
+}
+.logo-menu-hamburguer2 {
+    color: white;
+    position: absolute;
+    margin-left: 84px;
+    font-size: 1.8em;
+    -webkit-text-stroke: 5px #002B5B;
+    z-index: -1;
+}
+.buscador-nav-horizontal{
+    margin-left: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+::placeholder{
+    color: #E4DCCF;
+}
+.input-search-nav-horizontal:focus{
+    outline: none;
+}
+.input-search-nav-horizontal{
+    width: 100%;
+    height: 30px;
+    border: unset;
+    background-color: transparent;
+    border: 1px solid white;
+    color: #E4DCCF;
+    border-radius: 2px;
+    padding: 2px 10px;
+    width: 350px;
+}
+.icon-search-nav-horizontal{
+    position: absolute;
+    height: calc(100% - 18px);
+    width: 30px;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+.perfil-usuario{
+    color: white;
+    right:  0;
+    position: absolute;
+    display: flex;
+}
+.img-usuario{
+    margin: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    cursor: pointer;
+    position: relative;
+}
+.img-usuario:hover{
+    border: 3px solid #002B5B;
+    margin: 17px;
+}
+.info-usuario{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    margin: 0px 20px 0px 0px;
+    flex-direction: column;
+}
