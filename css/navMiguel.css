@@ -128,30 +128,8 @@ nav>Ul>li>a .icon {
     display: none;
 } */
 
-.transition7-item-submenu {
-    margin-top: calc(-48px * 7);
+nav >Ul >li >Ul{
     z-index: -2;
-    position: relative;
-    transition: margin 0.5s;
-}
-
-.transition3-item-submenu {
-    margin-top: calc(-48px * 3);
-    z-index: -2;
-    position: relative;
-    transition: margin 0.5s;
-}
-
-.transition2-item-submenu {
-    margin-top: calc(-48px * 2);
-    z-index: -2;
-    position: relative;
-    transition: margin 0.5s;
-}
-
-.transition-item-submenu {
-    margin-top: 0%;
-    transition: margin 0.5s;
 }
 
 .focus {
@@ -170,6 +148,12 @@ nav>Ul>li>a .icon {
     z-index: 2;
 }
 
+.transition-submenu-bottom{
+    transition: margin 0.5s;
+}
+.transition-submenu-top{
+    transition: margin 0.5s;
+}
 
 .hamburguer {
     width: 100%;
