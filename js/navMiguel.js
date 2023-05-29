@@ -32,7 +32,6 @@ for (let i = 0; i < desplegarSubmenu.length; i++) {
                 } else {
                     itemSubmenu[x].classList.add("focus3");
                 }
-                
             } else if (x > i) {
                 if (itemSubmenu[x].classList.contains("transition-submenu-bottom")) {
 
