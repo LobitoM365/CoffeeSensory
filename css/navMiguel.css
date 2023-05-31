@@ -4,11 +4,12 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.contenido{
+.contenido {
     width: 100%;
     height: 100%;
     background-color: #15eaf1;
 }
+
 .nav-vertical {
     height: 100%;
     position: fixed;
@@ -36,47 +37,47 @@ ul {
     background-color: hsl(212, 100%, 18%);
     position: relative;
     z-index: 50;
-    transition: width 2s;
 }
 
-.nav-ul {
-    width: 270px;
-    transition: all 0.5s;
+.nav-vertical{
+    overflow-y:auto;
+}
+
+.nav-vertical >ul{
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 
+.nav-desplegado,
 .transition-nav-ul {
-    width: 78px;
-    overflow: hidden;
-    transition: all 0.5s;
+    transition: width 0.5s;
 }
 
 .transition-nav-ul>li>a:hover {
     background-color: unset;
+    cursor: unset;
 }
 
 .transition-nav-ul>li>a>.icon:hover {
     background-color: rgb(57, 100, 174);
     padding-right: 15px;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .transition-nav-ul>li:hover>ul>li>a {
     visibility: hidden;
 }
 
-.nav-ul>li>a>span {
+nav>ul li a>span {
     opacity: 1;
     transition: opacity 1s;
-
 }
 
-.transition-nav-ul>li>a>span {
+.transition-nav-ul li>a>span {
     opacity: 0;
     transition: opacity 0.5s;
 }
-
-
 
 li,
 a {
@@ -128,7 +129,7 @@ nav>Ul>li>a .icon {
     display: none;
 } */
 
-nav >Ul >li >Ul{
+nav>Ul>li>Ul {
     z-index: -2;
 }
 
@@ -148,30 +149,26 @@ nav >Ul >li >Ul{
     z-index: 2;
 }
 
-.transition-submenu-bottom{
-    transition: margin 0.5s;
-}
-.transition-submenu-top{
-    transition: margin 0.5s;
+
+
+.transition-submenu-top {
+    transition: opacity 0.5s, margin 0.5s;
 }
 
 .hamburguer {
-    width: 100%;
     z-index: 90;
     background-color: #f06363;
     display: flex;
     align-items: center;
-    overflow: hidden;
-    position: relative;
-    padding: 10px 0px;
+    position: fixed;
     border-bottom: 1px solid white;
+    overflow: hidden;
 }
 
 .img-hamburguer {
     width: 25px;
     cursor: pointer;
-    padding: 10px 10px;
-    margin-left: 15px;
+    padding: 25px 25px;
 }
 
 nav>ul>li>ul {
@@ -199,45 +196,52 @@ nav>ul>li>a .text-a-nav {
 .nav-horizontal {
     position: fixed;
     width: 100%;
-    height: 69px;
+    height: 79px;
     background-color: #EA5455;
     z-index: 1;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid white;
 }
 
 .logo-menu-hamburguer {
     color: #F9F5EB;
     position: absolute;
-    margin-left: 84px;
+    margin-left: 76px;
     font-size: 1.8em;
 
 }
-a{
+
+a {
     font-size: 0.85em;
 }
+
 .logo-menu-hamburguer2 {
     color: white;
     position: absolute;
-    margin-left: 84px;
+    margin-left: 76px;
     font-size: 1.8em;
     -webkit-text-stroke: 5px #002B5B;
     z-index: -1;
 }
-.buscador-nav-horizontal{
+
+.buscador-nav-horizontal {
     margin-left: 300px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-::placeholder{
+
+::placeholder {
     color: #E4DCCF;
 }
-.input-search-nav-horizontal:focus{
+
+.input-search-nav-horizontal:focus {
     outline: none;
 }
-.input-search-nav-horizontal{
+
+.input-search-nav-horizontal {
     width: 100%;
     height: 30px;
     border: unset;
@@ -248,7 +252,8 @@ a{
     padding: 2px 10px;
     width: 350px;
 }
-.icon-search-nav-horizontal{
+
+.icon-search-nav-horizontal {
     position: absolute;
     height: calc(100% - 18px);
     width: 30px;
@@ -256,13 +261,15 @@ a{
     padding: 10px;
     cursor: pointer;
 }
-.perfil-usuario{
+
+.perfil-usuario {
     color: white;
-    right:  0;
+    right: 0;
     position: absolute;
     display: flex;
 }
-.img-usuario{
+
+.img-usuario {
     margin: 20px;
     width: 40px;
     height: 40px;
@@ -270,11 +277,13 @@ a{
     cursor: pointer;
     position: relative;
 }
-.img-usuario:hover{
+
+.img-usuario:hover {
     border: 3px solid #002B5B;
     margin: 17px;
 }
-.info-usuario{
+
+.info-usuario {
     display: flex;
     justify-content: center;
     text-align: left;

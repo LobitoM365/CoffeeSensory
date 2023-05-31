@@ -1,43 +1,41 @@
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
 
-.nav-vertical{
+.nav-vertical {
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 1;
 }
-.nav-horizontal{
+
+.nav-horizontal {
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 
-body{
-margin-top: 68px;
-}
-.nav{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
+body {
+    margin-top: 78px;
+    margin-left: 76px;
 }
 
 
-form{
+form {
     padding: 70px 60px;
-    width: 350px;
+    width: 50%;
     background-color: hsl(212, 100%, 18%);
+    
 }
-.logo-aprendiz{
-    width: 350px;
+
+.logo-aprendiz {
+    width: 50%;
     padding: 70px 60px;
     background-color: #EA5455;
     display: flex;
@@ -46,53 +44,56 @@ form{
     flex-direction: column;
 }
 
-label{
+label {
     display: block;
     color: white;
 }
 
-input,select{
+input,
+select {
     color: white;
     border: unset;
     width: 100%;
     margin-bottom: 30px;
     padding: 10px 5px;
-    background-color:  hsl(212, 100%, 18%);
+    background-color: hsl(212, 100%, 18%);
     border-bottom: 1px solid rgb(94, 94, 94);
 }
-::placeholder,select{
+
+::placeholder,
+select {
     font-size: 1.2em;
     padding: 5px;
 }
-.form{
+
+.form {
     border-radius: 20px;
     display: flex;
-    height: auto;
     overflow: hidden;
     position: relative;
+    width: 950px;
+    margin: auto;
+    margin-top: 140px;
 }
-.contenido{
-    display: flex;
-    width: 100%;
-    height: calc(100vh - 68px);
-    justify-content: center;
-    align-items: center;
-}
-option{
+
+
+
+option {
     color: white;
 }
-select{
+
+select {
     cursor: pointer;
     font-size: 1em;
 }
 
-input[type="submit"]{
+input[type="submit"] {
     border: unset;
     width: auto;
     padding: 15px 25px;
     background-color: green;
     border-radius: 4px;
-    font-size: 1.2  em;
+    font-size: 1.2 em;
     right: 0;
     bottom: 0;
     position: absolute;
@@ -101,16 +102,18 @@ input[type="submit"]{
 }
 
 input[type="text"]:focus,
-input[type="number"]:focus,select{
+input[type="number"]:focus,
+select {
     outline: none;
 }
 
-.imgs-registro-aprendiz,.img-registro-aprendiz{
+.imgs-registro-aprendiz,
+.img-registro-aprendiz {
     width: 100%;
     position: relative;
 }
 
-h2{
+h2 {
     top: 0;
     position: absolute;
     margin-top: 90px;
@@ -118,14 +121,14 @@ h2{
     font-size: 2em;
 }
 
-.img-aprendiz{
+.img-aprendiz {
     position: absolute;
     width: 15%;
     bottom: 25%;
     left: 60%;
 }
 
-.option{
+.option {
     color: rgb(136, 136, 136);
     font-size: 1.2em;
 }
