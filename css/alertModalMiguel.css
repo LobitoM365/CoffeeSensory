@@ -49,6 +49,9 @@
     top: calc(0% + 30px);
     width: 90px;
 }
+#noMistake .icon-alert{
+    margin-left: 20px;
+}
 
 #mistake,#noMistake{
     display: none;
