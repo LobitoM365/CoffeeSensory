@@ -3,9 +3,8 @@ let labelSelect = document.querySelectorAll(".labelSelect");
 let label = document.querySelectorAll(".label");
 let input = document.querySelectorAll(".input");
 let enviar = document.getElementById("enviar");
-let inputModalAlert = document.getElementById("inputModalAlert");
-let contenidoModal = document.getElementById("contenidoModal");
-
+let formulario = document.getElementById("formulario");
+let iframeAlertModal = document.getElementById("iframeAlertModal");
 
 for (let i = 0; i < select.length; i++) {
     select[i].addEventListener("click", function () {
@@ -21,7 +20,6 @@ for (let i = 0; i < select.length; i++) {
     })
 
 }
-
 for (let x = 0; x < input.length; x++) {
     input[x].addEventListener("input", function () {
         if (input[x].value == "") {
@@ -39,22 +37,59 @@ enviar.addEventListener("click", function (event) {
     for (let s = 0; s < select.length; s++) {
         if (select[s].value == "") {
             selectSinValor = 1;
-        } 
+        }
     }
     for (let u = 0; u < input.length; u++) {
         if (input[u].value == "") {
             inputSinValor = 1;
-        } 
+        }
     }
-    if ( selectSinValor == 1 || inputSinValor == 1) {
+    if (selectSinValor == 1 || inputSinValor == 1) {
         /* alert("Por favor debe llenar todos los campos") */
-        contenidoModal.style.display= "block";
+        iframeAlertModal.style.display = "block";
+        event.preventDefault();
+    } else {
+        iframeAlertModal.style.display = "block";
         event.preventDefault();
     }
 })
 
+window.addEventListener('load', function () {
+    enviar.addEventListener("click", function (event) {
+        let iframe = document.getElementById("iframeAlertModal").contentWindow;
+        let inputModalAlert = iframe.document.querySelectorAll(".inputModalAlert");
+        let mistake = iframe.document.getElementById("mistake");
+        let noMistake = iframe.document.getElementById("noMistake");
 
-
-inputModalAlert.addEventListener("click", function(){
-    contenidoModal.style.display= "none";
+        let inputSinValor = 0;
+        let selectSinValor = 0;
+        for (let s = 0; s < select.length; s++) {
+            if (select[s].value == "") {
+                selectSinValor = 1;
+            }
+        }
+        for (let u = 0; u < input.length; u++) {
+            if (input[u].value == "") {
+                inputSinValor = 1;
+            }
+        }
+        if (selectSinValor == 1 || inputSinValor == 1) {
+            mistake.style.display = "block";
+            noMistake.style.display = "none";
+        } else {
+            noMistake.style.display = "block";
+            mistake.style.display = "none";
+        }
+        for (let x = 0; x < inputModalAlert.length; x++) {
+            inputModalAlert[x].addEventListener("click", function () {
+                iframeAlertModal.style.display = "none";
+                console.log(x)
+                if (x == 1) {
+                    formulario.submit()
+                    console.log(inputModalAlert[x])
+                }
+            })
+        }
+    })
 })
+

@@ -15,9 +15,7 @@
     top: 0;
     left: 0;
 }
-#contenidoModal{
-    display: none;
-}
+
 .modal-alert{
     width: 470px;
     height: 270px;
@@ -30,7 +28,7 @@
     align-items: center;
 }
 
-#inputModalAlert{
+.inputModalAlert{
     padding: 10px 30px;
     background-color: green;
     border: unset;
@@ -50,4 +48,8 @@
     position: absolute;
     top: calc(0% + 30px);
     width: 90px;
+}
+
+#mistake,#noMistake{
+    display: none;
 }

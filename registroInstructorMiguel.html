@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/registroAprendizMiguel.css">
+    <link rel="stylesheet" href="css/FormulariosMiguel.css">
     <title>RegistroAprendiz</title>
 </head>
 
@@ -13,6 +13,7 @@
 
         <iframe class="nav-horizontal" src="miguelNavHorizontal.html" frameborder="0"></iframe>
         <iframe id="iframeNavVertical" class="nav-vertical" src="miguelNavVertical.html" frameborder="0"></iframe>
+        <iframe id="iframeAlertModal" class="iframe-alert-modal" src="alertModalMiguel.html" frameborder="0"></iframe>
 
     <div class="registro-aprendiz">
         <div class="contenido">
@@ -24,26 +25,26 @@
                         <img class="img-aprendiz" src="img/5999059.png" alt="">
                     </div>
                 </div>
-                <form action="">
+                <form id="formulario" action="">
                     <label class= "label" for=""> Nombre(s):</label>
-                    <input class= "input"  type="text" name="" id="" placeholder="Ingrese su(s) nombre(s)" required>
+                    <input class= "input"  type="text" name="" id="" placeholder="Ingrese su(s) nombre(s)" >
                     <label class= "label" for=""> Apellidos(s):</label>
-                    <input class= "input"  type="text" name="" id="" placeholder="Ingrese sus apellidos" required>
+                    <input class= "input"  type="text" name="" id="" placeholder="Ingrese sus apellidos" >
                     <label class= "labelSelect" for=""> Tipo de documento:</label>
-                    <select class="select" name="" id=""  required>
+                    <select class="select" name="" id=""  >
                         <option value=""><span>Seleccione una opcion...</span></option>
                         <option value="1">Tarjeta de identidad</option>
                         <option value="2">Cédula de ciudadania</option>
                         <option value="3">Cédula extranjera</option>
                     </select>
                     <label class= "label" for=""> Número de documento:</label>
-                    <input class= "input"  type="number" name="" id="" placeholder="Ingrese su documento" required>
+                    <input class= "input"  type="number" name="" id="" placeholder="Ingrese su documento" >
     
                     <label class= "label" for=""> Teléfono:</label>
-                    <input class= "input"  type="number" name="" id="" placeholder="Ingrese su número de teléfono" required>
+                    <input class= "input"  type="number" name="" id="" placeholder="Ingrese su número de teléfono" >
     
                     <label class= "label" for=""> Correo electrónico:</label>
-                    <input class= "input"  type="text" name="" id="" placeholder="Ingrese su correo" required>
+                    <input class= "input"  type="text" name="" id="" placeholder="Ingrese su correo" >
                     <input class= "input"id="enviar"   type="submit" value="Registrar">
                 </form>
     
