@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 iframe{
@@ -8,3 +9,35 @@ iframe{
     height: 100vh;
     position: fixed;
 }
+h2{
+    margin: 35px 0px 40px 0px;
+}
+
+.tabla{
+    position: absolute;
+    background-color: rgb(235, 235, 235);
+    width: 620px;
+    height: 600px;
+    left: 670px;
+    top: 200px;
+    box-shadow: 0px 0px 6px 0px black;
+    border-radius: 8px;
+    text-align: center;
+}
+
+input, select{
+    width: 400px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: rgb(226, 226, 226);
+    outline: none;
+    height: 20px;
+    margin-top: 5px;
+}
+
+label{
+    float: left;
+    margin-left: 110px;
+}
+
