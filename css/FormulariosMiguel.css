@@ -20,7 +20,8 @@
     left: 0;
     z-index: 1;
 }
-.iframe-alert-modal{
+
+.iframe-alert-modal {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -41,7 +42,7 @@ form {
     padding: 70px 60px;
     width: 50%;
     background-color: rgb(7, 34, 82);
-    
+
 }
 
 .logo-aprendiz {
@@ -112,6 +113,10 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+input[type="submit"]:hover {
+    background-color: rgb(8, 143, 8);
+}
+
 input[type="text"]:focus,
 input[type="number"]:focus,
 select {
@@ -139,8 +144,6 @@ h2 {
     left: 60%;
 }
 
-.transition-color{
+.transition-color {
     transition: color 0.5s;
 }
-
-
