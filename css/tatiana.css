@@ -69,11 +69,20 @@ nav ul li .children li a{
 }
 
 p{
-    font-size: 1.3em;
-    line-height: 1.4em;
+    font-size: 1em;
+    line-height: 1em;
     text-align: justify;
 }
-
+.icono{
+    position: relative;
+    top: 3px;
+    padding:7px;
+}
+.usuario{
+    float: right;
+    position: relative;
+    top: 3px;
+}
 @media  only screen and (max-width: 720px){
     body{
         padding-top: 70px;
