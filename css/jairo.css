@@ -10,7 +10,6 @@ body {
     height: 60px;
     background-color: #EA5455;
     display: flex;
-    /* align-items: center; */
 } 
 .menup{
     display: flex;
@@ -20,11 +19,8 @@ li{
     list-style: none;
 }
 .name{
-    /* width: 100%;  */
     position: absolute;
     right: 20px;
-    /* float: right; */
-    /* background-color: rebeccapurple; */
 }
 .icon-bell{
     margin-right: 200px;
