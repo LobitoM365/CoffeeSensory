@@ -4,6 +4,10 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+button{
+    cursor: pointer;
+}
+
 iframe {
     position: fixed;
     width: 100%;
@@ -63,18 +67,22 @@ select {
     border: none;
     border-bottom: 1px solid #002B5B;
 }
+
 /* ::placeholder{
     color: #8b8b8b;
 } */
-option{
+option {
     color: black;
     background-color: white;
 }
-select{
+
+select {
     cursor: pointer;
     color: rgb(80, 80, 80);
 }
-input:focus, select:focus{
+
+input:focus,
+select:focus {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     background-color: rgb(230, 230, 230);
@@ -96,8 +104,8 @@ input:focus, select:focus{
     height: 560px;
     width: 820px;
 }
-.container > button{
-    cursor: pointer;
+
+.container>button {
     border: none;
     font-weight: 500;
     color: white;
@@ -109,9 +117,91 @@ input:focus, select:focus{
     left: 640px;
     /* float: right; */
 }
-.container > button:hover{
+
+.container>button:hover {
     background-color: #ff7f7f;
 }
-.icon-pencil{
+
+.icon-pencil {
     margin-left: 15px;
+}
+
+/* Modal */
+.modal-register{
+    display: none;
+}
+.modal-register-visible{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgb(150, 150, 150);
+}
+
+.container-modal {
+    display: none;
+}
+
+.container-modal-visible{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #00000080;
+    position: absolute;
+}
+
+.check-mark path{
+    fill: transparent;
+    stroke: green;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: fillAnimation 5s forwards;
+}
+.svg-error path{
+    fill: transparent;
+    stroke: rgb(155, 155, 155);
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: fillAnimation 5s forwards;
+}
+.check-mark{
+    margin-top: 50px;
+    width: 100px;
+    height: 100px; 
+}
+.svg-error{
+    margin-top: 50px;
+    width: 100px;
+    height: 100px;
+}
+@keyframes fillAnimation {
+    to {
+      stroke-dashoffset: 0;
+      /* fill: green; */
+    }
+}
+
+.txt-modal{
+    font-weight: 500;
+    position: absolute;
+    bottom: 94px;
+}
+.btnOk{
+    position: absolute;
+    bottom: 34px;
+    width: 80px;
+    height: 35px;
+    border-radius: 4px;
+    border: none;
+    background-color: #002B5B;
+    color: whitesmoke;
+    font-weight: 600;
+}
+.btnOk:hover{
+    background-color: #3f6b9e;
 }
