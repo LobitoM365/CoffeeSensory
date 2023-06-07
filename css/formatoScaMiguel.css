@@ -1,0 +1,153 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.formato-sca{
+    border: 2px solid black;
+    position: relative;
+    width: 97%;
+    height: 15vw;
+    background-color: aqua;
+    display: grid;
+    grid-template: "notas1 nivel-tostion fragancia-aroma sabor           acidez       cuerpo        uniformidad  taza-limpia  puntaje-catador puntaje-total "  1fr
+                   "notas1 nivel-tostion fragancia-aroma sabor-residual  acidez       cuerpo        balance      dulzor       defectos        defectos"        1fr
+                   "notas1 notas-final   notas-final   notas-final     notas-final  notas-final   notas-final  notas-final   notas-final    puntaje-final"   0.4fr/
+                    0.5fr      0.5fr            1fr              1fr            1fr          1fr           1fr           1fr           1fr            0.5fr;
+}
+.notas1{
+    grid-area: notas1;
+    border-left: 1px solid black; border-top: 1px solid black;
+}
+.nivel-tostion{
+    grid-area: nivel-tostion;
+    border-left: 1px solid black; border-top: 1px solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.fragancia-aroma{
+    grid-area: fragancia-aroma;
+    border-left: 1px solid black; border-top: 1px solid black;
+}
+.sabor{
+    grid-area: sabor;
+    border-left: 1px solid black; border-top: 1px solid black;
+}
+.acidez{
+    grid-area: acidez;
+    border-left: 1px solid black; border-top: 1px solid black;
+}
+.cuerpo{
+    grid-area: cuerpo;
+    border-left: 1px solid black; border-top: 1px solid black;
+}
+.uniformidad{
+    grid-area:  uniformidad;
+    border-left: 1px solid black; border-top: 1px solid black;
+}
+.taza-limpia{
+    grid-area: taza-limpia;
+    border-left: 1px solid black; border-top: 1px solid black;
+}
+.puntaje-catador{
+    grid-area: puntaje-catador;
+    border-left: 1px solid black; border-top: 1px solid black;border-bottom: 1px solid black;
+}
+.puntaje-total{
+    grid-area: puntaje-total;
+    border-left: 1px solid black; border-top: 1px solid black;
+    border-bottom: unset;
+}
+.sabor-residual{
+    grid-area: sabor-residual;
+    border-left: 1px solid black; border-top: 1px solid black;
+}
+.balance{
+    grid-area: balance;
+    border-left: 1px solid black; border-top: 1px solid black;
+}
+.dulzor{
+    grid-area: dulzor;
+    border-left: 1px solid black; border-top: 1px solid black;
+}
+.defectos{
+    grid-area: defectos;
+    border-left: 1px solid black; border-top: 1px solid black;
+    border-top: unset;
+}
+.notas-final{
+    grid-area: notas-final;
+    border-left: 1px solid black; border-top: 1px solid black;
+}
+.puntaje-final{
+    grid-area: puntaje-final;
+    border-left: 1px solid black; border-top: 1px solid black;
+}
+
+.contenido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.range{
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+h4{
+    text-align: center;
+}
+
+.linea{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+.linea-centro{
+    height: 100%;
+    width: 2px;
+    background-color: black;
+    position: absolute;
+}
+.input-range{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="range"]{
+    -webkit-appearance: none;
+    height: 2px;
+    width: 100px;
+    position: absolute;
+    transform: rotate(-90deg);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb{ 
+    -webkit-appearance: none;
+    height: 50px;
+    width: 2px;
+    background-color: transparent;
+ }
+
+ .value{
+    position: absolute;
+    left: 110%;
+    bottom: 0;
+ }
