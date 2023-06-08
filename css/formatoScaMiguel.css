@@ -1,153 +1,323 @@
-*{
+* {
     padding: 0;
     margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.formato-sca{
-    border: 2px solid black;
-    position: relative;
+body{
+    background-color: azure;
+}
+.formato-sca {
+    border: 0.1vw solid black;
+    
     width: 97%;
-    height: 15vw;
-    background-color: aqua;
+    height: 18vw;
     display: grid;
-    grid-template: "notas1 nivel-tostion fragancia-aroma sabor           acidez       cuerpo        uniformidad  taza-limpia  puntaje-catador puntaje-total "  1fr
-                   "notas1 nivel-tostion fragancia-aroma sabor-residual  acidez       cuerpo        balance      dulzor       defectos        defectos"        1fr
-                   "notas1 notas-final   notas-final   notas-final     notas-final  notas-final   notas-final  notas-final   notas-final    puntaje-final"   0.4fr/
-                    0.5fr      0.5fr            1fr              1fr            1fr          1fr           1fr           1fr           1fr            0.5fr;
+    grid-template: "notas1 nivel-tostion fragancia-aroma sabor           acidez       cuerpo        uniformidad  taza-limpia  puntaje-catador puntaje-total " 1fr
+        "notas1 nivel-tostion fragancia-aroma sabor-residual  acidez       cuerpo        balance      dulzor       defectos        defectos" 1fr
+        "notas1 notas-final   notas-final   notas-final     notas-final  notas-final   notas-final  notas-final   notas-final    puntaje-final" 0.4fr/
+        0.5fr 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
 }
-.notas1{
+
+.notas1 {
     grid-area: notas1;
-    border-left: 1px solid black; border-top: 1px solid black;
+    border: 0.1vw solid black;
+    
 }
-.nivel-tostion{
+.tittle-notas1{
+    font-size: 0.9vw;
+}
+.nivel-tostion {
     grid-area: nivel-tostion;
-    border-left: 1px solid black; border-top: 1px solid black;
+    border: 0.1vw solid black;
     position: relative;
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 1vw;
 }
-.fragancia-aroma{
-    grid-area: fragancia-aroma;
-    border-left: 1px solid black; border-top: 1px solid black;
-}
-.sabor{
-    grid-area: sabor;
-    border-left: 1px solid black; border-top: 1px solid black;
-}
-.acidez{
-    grid-area: acidez;
-    border-left: 1px solid black; border-top: 1px solid black;
-}
-.cuerpo{
-    grid-area: cuerpo;
-    border-left: 1px solid black; border-top: 1px solid black;
-}
-.uniformidad{
-    grid-area:  uniformidad;
-    border-left: 1px solid black; border-top: 1px solid black;
-}
-.taza-limpia{
-    grid-area: taza-limpia;
-    border-left: 1px solid black; border-top: 1px solid black;
-}
-.puntaje-catador{
-    grid-area: puntaje-catador;
-    border-left: 1px solid black; border-top: 1px solid black;border-bottom: 1px solid black;
-}
-.puntaje-total{
-    grid-area: puntaje-total;
-    border-left: 1px solid black; border-top: 1px solid black;
-    border-bottom: unset;
-}
-.sabor-residual{
-    grid-area: sabor-residual;
-    border-left: 1px solid black; border-top: 1px solid black;
-}
-.balance{
-    grid-area: balance;
-    border-left: 1px solid black; border-top: 1px solid black;
-}
-.dulzor{
-    grid-area: dulzor;
-    border-left: 1px solid black; border-top: 1px solid black;
-}
-.defectos{
-    grid-area: defectos;
-    border-left: 1px solid black; border-top: 1px solid black;
-    border-top: unset;
-}
-.notas-final{
-    grid-area: notas-final;
-    border-left: 1px solid black; border-top: 1px solid black;
-}
-.puntaje-final{
-    grid-area: puntaje-final;
-    border-left: 1px solid black; border-top: 1px solid black;
+.tittle-nivel-tostion{
+    font-size: 0.8vw;
 }
 
-.contenido{
+.fragancia-aroma {
+    grid-area: fragancia-aroma;
+    border: 0.1vw solid black;
+    
+    display: grid;
+    grid-template: "area-puntaje-fragancia-aroma" 1fr
+                   "intensidad-fragancia-aroma"   1fr/
+                    1fr ;
+                    position: relative;
+}
+.area-puntaje-fragancia-aroma{
+    grid-area: area-puntaje-fragancia-aroma;
+    position: relative;
+}
+.intensidad-fragancia-aroma{
+    grid-area: intensidad-fragancia-aroma;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.puntaje-fragancia-aroma{
+    border-left: 0.1vw solid black;
+    border-bottom: 0.1vw solid black;
+    width: 2vw;
+    height: 2vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8vw;
+}
+.h4-puntaje-fragancia-aroma{
+    font-size: 0.8vw;
+    margin-left: 3vw;
+    margin-top: 0.5vw;
+}
+.tittle-fragancia-aroma{
+    font-size: 0.8vw;
+    font-weight: 900;
+    margin-left: 0.4vw;
+}
+.div-range-puntaje-aroma{
+    position: absolute;
+    bottom: calc( 0% + 1vw);
+    width: 100%;
+    height: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.guia-range-puntaje-aroma{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:end;
+    z-index: 9;
+}
+.linea6,.linea7,.linea8,.linea9,.linea10{
+    height: 100%;
+    width: 1%;
+    background-color: black;
+}
+.linea-lado{
+    width: 1%;
+    background-color: black;
+    height: 40%;
+    bottom: 0;
+}
+.linea-medio{
+    width: 1%;
+    height: 60%;
+    background-color: black;
+}
+.numero-guia-range-puntaje-aroma{
+    position: absolute;
+    bottom: -0.8vw;
+    font-size: 0.6vw;
+    margin-left: -0.1vw;
+}
+.range-puntaje-aroma{
+    position: absolute;
+    -webkit-appearance: none;
+    width: 90%;
+    height: 0.1vw;
+    z-index: 9;
+    background-color: transparent;
+    cursor: pointer;
+}
+.range-puntaje-aroma::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 3vw;
+    width: 0.1vw;
+    background-color: transparent;
+}
+.range1-intensidad-fragancia-aroma{
+    left: 0;
+    margin-left: 0.5vw;
+}
+.range2-intensidad-fragancia-aroma{
+    right: 0;
+    margin-right: 0.5vw;
+}
+.tittle-intensidad-fragancia-aroma{
+    position: absolute;
+    bottom: 100%;
+    font-size: 0.7vw;
+}
+
+.calidad-intensidad-fragancia-aroma{
+    height: 100%;
+    width: 3.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.2vw;
+}
+.tittle-calidad-intensidad-fragancia-aroma{
+    font-size: 0.7vw;
+    width: 100%;
+    text-align: center;
+}
+.div-puntaje1-calidad-intensidad-fragancia-aroma,.div-puntaje2-calidad-intensidad-fragancia-aroma{
+    width: 100%;
+    height: 2vw;
+    border-bottom: 0.2vw solid black;
+}
+
+
+
+
+.sabor {
+    grid-area: sabor;
+    border: 0.1vw solid black;
+    
+}
+
+.acidez {
+    grid-area: acidez;
+    border: 0.1vw solid black;
+    
+}
+
+.cuerpo {
+    grid-area: cuerpo;
+    border: 0.1vw solid black;
+    
+}
+
+.uniformidad {
+    grid-area: uniformidad;
+    border: 0.1vw solid black;
+    
+}
+
+.taza-limpia {
+    grid-area: taza-limpia;
+    border: 0.1vw solid black;
+    
+}
+
+.puntaje-catador {
+    grid-area: puntaje-catador;
+    border: 0.1vw solid black;
+    
+    border-bottom: 0.1vw solid black;
+}
+
+.puntaje-total {
+    grid-area: puntaje-total;
+    border: 0.1vw solid black;
+    
+    border-bottom: unset;
+}
+
+.sabor-residual {
+    grid-area: sabor-residual;
+    border: 0.1vw solid black;
+    
+}
+
+.balance {
+    grid-area: balance;
+    border: 0.1vw solid black;
+    
+}
+
+.dulzor {
+    grid-area: dulzor;
+    border: 0.1vw solid black;
+    
+}
+
+.defectos {
+    grid-area: defectos;
+    border: 0.1vw solid black;
+    
+    border-top: unset;
+}
+
+.notas-final {
+    grid-area: notas-final;
+    border: 0.1vw solid black;
+    
+}
+
+.puntaje-final {
+    grid-area: puntaje-final;
+    border: 0.1vw solid black;
+    
+}
+
+.contenido {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.range{
-    width: 50%;
-    height: 100px;
+.range {
+    width: 2vw;
+    height: 5vw;
     position: absolute;
     bottom: 0;
-    margin-bottom: 20px;
+    margin-bottom: 1vw;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
 }
-h4{
+
+h4 {
     text-align: center;
+    font-size: 1vw;
 }
 
-.linea{
+.linea {
     width: 100%;
-    height: 2px;
+    height: 1%;
     background-color: black;
 }
 
-.linea-centro{
-    height: 100%;
-    width: 2px;
+.linea-centro {
+    height: 99.9%;
+    width: 1%;
     background-color: black;
     position: absolute;
 }
-.input-range{
+
+.input-range {
     position: absolute;
-    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 2vw;
 }
 
-input[type="range"]{
+.range-nivel-intensidad{
     -webkit-appearance: none;
-    height: 2px;
-    width: 100px;
+    height: 2vw;
+    width: 5vw;
     position: absolute;
     transform: rotate(-90deg);
     background-color: transparent;
     cursor: pointer;
 }
 
-input[type="range"]::-webkit-slider-thumb{ 
+.range-nivel-intensidad::-webkit-slider-thumb {
     -webkit-appearance: none;
-    height: 50px;
-    width: 2px;
+    height: 2vw;
     background-color: transparent;
- }
+    width: 0.2vw;
+}
 
- .value{
+.value {
     position: absolute;
-    left: 110%;
-    bottom: 0;
- }
+    top: calc(100% - 0.2vw);
+    font-size: 01vw;
+}

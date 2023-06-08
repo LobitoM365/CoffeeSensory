@@ -39,10 +39,9 @@ body {
 
 
 form {
-    padding: 70px 60px;
+    padding: 70px 60px 110px 60px;
     width: 50%;
     background-color: rgb(7, 34, 82);
-
 }
 
 .logo-aprendiz {
@@ -58,6 +57,7 @@ form {
 label {
     display: block;
     color: white;
+    position: relative;
 }
 
 input,
@@ -83,7 +83,7 @@ select {
     display: flex;
     overflow: hidden;
     position: relative;
-    width: 950px;
+    width: 1000px;
     margin: auto;
     margin-top: 140px;
 }
@@ -146,4 +146,105 @@ h2 {
 
 .transition-color {
     transition: color 0.5s;
+}
+.indicador-elementos-vacios{
+    width: 200px;
+    height: 30px;
+    background-color: white;
+    position: absolute;
+    right:  calc(0% - 30px);
+    top: 65px;
+    border-radius: 4px;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.restring {
+    position: absolute;
+    border-top: 0px solid transparent;
+    border-bottom: 100px solid rgb(253, 253, 253);
+    border-left: 54px solid transparent;
+    border-right: 54px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: calc(50% - 50px);
+    border-radius: 1460px 1900px 40px 40px;
+    zoom: 20%;
+    left: 50px;
+}
+
+.linea1 {
+    width: 5px;
+    height: 115px;
+    position: absolute;
+    transform: rotate(27deg);
+    top: -15px;
+    left: -28px;
+    border-radius: 100px 100px 100px 100px;
+    z-index: 1;
+    background-color: red;
+}
+
+.linea2 {
+    width: 5px;
+    height: 115px;
+    position: absolute;
+    transform: rotate(-207deg);
+    top: -15px;
+    right: -28px;
+    border-radius: 100px 100px 100px 100px;
+    z-index: 2;
+    background-color: red;
+}
+
+.linea3 {
+    height: 5px;
+    width: 106px;
+    position: absolute;
+    bottom: -95px;
+    border-radius: 100px 100px 100px 100px;
+    z-index: 3;
+    background-color: red;
+}
+
+
+.exclamacion {
+    width: 2px;
+    position: absolute;
+    top: 25px;
+    border-radius: 100px 100px 40px 40px;
+    border-top: 45px solid red;
+    border-bottom: 0px solid transparent;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
+
+.punto-exclamacion {
+    border-radius: 100%;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 100%;
+    background-color: red;
+    left: calc(50% - 5px);
+    top: 2px;
+}
+
+h6{
+    margin-left: 40px;
+}
+
+.indicate-element{
+    position: absolute;
+    border-bottom: 8px solid white;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent; 
+    bottom: 100%;
 }
