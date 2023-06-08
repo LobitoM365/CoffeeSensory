@@ -10,65 +10,76 @@ body {
     height: 60px;
     background-color: #EA5455;
     display: flex;
-} 
-.menup{
+}
+
+.menup {
     display: flex;
+    width: 100%;
+    justify-content: end;
     align-items: center;
 }
-li{
+
+li {
+    margin: 0px 0px 0px 8px;
     list-style: none;
 }
-.name{
-    position: absolute;
-    right: 20px;
+
+.poin {
+    cursor: pointer;
 }
-.icon-bell{
-    margin-right: 200px;
+
+.icon-bell {
     font-size: 1.3em;
 }
-.search{
+
+.search {
     display: flex;
     justify-content: center;
-    width: 100%;
+    margin: auto;
 }
-.search i{
+.icon-end{
+    margin-right: 15px;
+    gap: 40px;
+    display: flex;
+}
+.search i {
     margin-left: 5px;
 }
 
-.sal{
-    margin-left: 10px;
+.sal {
     cursor: pointer;
     color: #e3dcc8;
 }
-.salir{
+
+.salir {
     color: #e3dcc8;
     font-size: 1.3em;
 }
-.sali{
+
+.sali {
+    cursor: pointer;
     color: black;
     font-size: 1.3em;
 }
-.busqueda{
+
+.busqueda {
+    margin-left: 200px;
     outline: none;
 }
 
-.icon-ya{
-    margin-right: 300px;
-}
-.icon-user{
-    margin-right: 8px;
-}
-.active{
+.active {
     margin-left: 5px;
 }
 
-.icon{
+.icon {
     display: flex;
-    margin-right: 12px;
+    margin-right: 20px;
     font-size: 1.2em;
+
 }
 
-.bar-menu{
+.bar-menu {
+    margin-top: 40px;
     color: aliceblue;
     display: flex;
     padding: 10px;
@@ -78,80 +89,93 @@ li{
     font-weight: bold;
 }
 
-.sub-men{
-    margin-left: 20px;
+.sub-men {
+    margin-left: 40px;
 }
-  
+
 .sidebar {
     overflow: hidden;
     background-color: #002B5B;
-    width: 48px;
+    width: 210px;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     transition: width 0.5s;
 }
-.sidebar-mamy{
+
+.sidebar:hover {
+    width: 222px;
+}
+
+.sidebar-mamy {
     width: 210px;
     transition: width 0.5s;
 }
-.sidebar-papy{
-    width: 48px;
+
+.sidebar-papy {
+    width: 60px;
     transition: width 0.5s;
 }
+
 .sidebar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.buscar{
+.buscar {
     margin-left: 60%;
     position: relative;
     top: -115%;
 }
 
-.buscar input[type="text"]{
+.buscar input[type="text"] {
     padding: 6px;
     border: none;
     border-radius: 6px;
     margin-right: 4px;
 }
-.but{
+
+.but {
     cursor: pointer;
 
 }
-  
+
 .sidebar a {
     display: block;
     color: #fff;
     text-decoration: none;
     padding: 10px;
 }
-  
+
 .sidebar a.active {
     color: #E4DCCF;
-} 
-.chill{
+    margin-top: 20px;
+}
+
+.chill {
+
     height: 0px;
     overflow: hidden;
     transition: height 0.3s;
 }
 
-.chill-desp,.chill-two{
+.chill-desp,
+.chill-two {
     height: 108px;
     transition: height 0.3s;
 }
-.chill-two{
+
+.chill-two {
     height: 81px;
 }
 
-.cill:hover{
+.cill:hover {
     display: block;
 }
 
-nav >Ul >Li >a{
+nav>Ul>Li>a {
     width: 210px;
-    
+
 }
