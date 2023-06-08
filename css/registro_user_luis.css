@@ -68,10 +68,10 @@ iframe{
 }
 .div-form{
         position: relative;
-        top: 120px;
-        left: 20%;
+        top: 250px;
+        left: 30%;
         width: 780px;
-        height: 450px;
+        height: 540px;
         background-color: #1c1c1c;
         border-radius: 8px;
         overflow: hidden;
@@ -97,7 +97,7 @@ iframe{
     top: -50%;
     left: -50%; 
     width: 780px;
-    height: 450px;
+    height: 540px;
     background: linear-gradient(0deg,transparent,#45f3ff,#7dff45);
     transform-origin:bottom right ;
     animation: animate 10s linear infinite;  
@@ -108,11 +108,11 @@ iframe{
     top: -50%;
     left: -50%;
     width: 780px;
-    height: 450px;
+    height: 540px;
     background: linear-gradient(0deg,transparent,#ff4545,#45f3ff);
     transform-origin:bottom right ;
     animation: animate 10s linear infinite;
-    animation-delay: -3s;
+    animation-delay: -4s;
    
 }
 @keyframes animate
@@ -131,9 +131,9 @@ iframe{
     inset: 5px;
     background-color: #28292d;  
     z-index: 10;
+    
     border-radius: 8px;
     padding: 10px;
-   
     text-align: center;  
     display: grid;
     grid-template: "caja1     caja2"300px/
@@ -154,21 +154,33 @@ iframe{
     z-index: 9;
 }
 h2{
-    font-family: serif;
-    font-size: 1.5em;
+    font-family: sans-serif;
+    font-size: 1.3em;
     color: white
 }
-input{
-    padding: 7px;
-    border-radius: 12px;
+input,select{
+    width: 250px;
+    margin-bottom: 10px;
     border: none;
+    border-bottom: 1px solid rgb(16, 16, 16);
+    background-color: rgba(255, 255, 255, 0.958);
+    padding: 10px;
+    font-size: 1em;
+    outline: none;
+    border-radius: 7px;
+    box-shadow:3px 3px 2px #eceaea;
+    cursor: pointer;
+   /*  margin-top: 5px; */
+   
+}
+select{
+    cursor: pointer;
 }
 
-select{
-    padding: 3px;
-    border-radius: 20px;
-    background-color: azure;
+input{
+    cursor: text;
 }
+
 
 /* button{
     background-color: #1d78b0;
@@ -227,7 +239,7 @@ button a{
 button:hover::after{
     top: 0;
 }
-@media  only screen and   (max-width:1920px)  {
+@media  only screen and   (max-width:1290px)  {
     
     .div-form{
         position: relative;
