@@ -11,7 +11,6 @@ for(let RI = 0; RI < rangeIntensidad.length ; RI++){
     })
 }
 
-
 for(let x = 0; x < rangePuntaje.length; x++){
     rangePuntaje[x].addEventListener("input", function(){
         puntajeRange[x].innerHTML = rangePuntaje[x].value;
