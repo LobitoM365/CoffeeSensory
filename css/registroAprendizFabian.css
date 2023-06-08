@@ -48,7 +48,19 @@ label {
     margin: 50px 0px 10px 0px;
     /* justify-content: center; */
 }
-
+.txt-label{
+    display: flex;
+}
+.txt-warning{
+    color: #f75959;
+    font-size: 0.8em;
+    margin-top: 6px;
+    margin-bottom: -25px;
+    /* visibility: hidden; */
+}
+.txt-warning-visible{
+    visibility: visible;
+}
 .label-ln {
     width: 290px;
     padding-left: 55px;
@@ -113,7 +125,7 @@ select:focus {
     border-radius: 5px;
     padding: 7px 26px 10px 26px;
     position: relative;
-    top: 140px;
+    top: 150px;
     left: 640px;
     /* float: right; */
 }
