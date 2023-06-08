@@ -5,6 +5,8 @@
 
 body{
     color: rgb(136, 112, 83);
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 .menu-bar{
     display: none;
@@ -21,6 +23,7 @@ body{
 nav{
     background-color: #023859;
     width: 240px;
+    overflow: hidden;
     height: 93.1vh;
 }
 ul{
@@ -28,15 +31,16 @@ ul{
     text-align: left;
 }
 li{
-    position: relative; 
+    width: 400px;
 }
+
 nav ul li:hover{
     background-color: #4d6f83;
 }
 nav ul li a{
     display: block;
     color: white;
-    font-size: 1.3em;
+    font-size: 1.2em;
     text-decoration: none;
     padding: 20px;
 }
@@ -47,18 +51,26 @@ nav ul li a{
 }
 .children{
     position: relative;
-    display: none;
+    height: 0px;
+    overflow: hidden;
     background-color: #153041;
-    text-align: left;
+    transition: height 0.5s;
 }
-nav ul li:hover .children {
-    display: block;
+.children-desp, .children-two, .children-three {
+    height: 440px; 
+    transition: height 0.5s;
     width: 100%;
-    text-align: left;
+    text-align: left; 
+}
+
+.children-two{
+    height: 120px; 
+}
+.children-three{
+    height: 180px; 
 }
 nav ul li .children li{
     overflow: hidden;
-    display: block;
     border-bottom: 1px solid rgba(255,255,255,.5);
 }
 nav ul li .children li a{
@@ -74,14 +86,44 @@ p{
     text-align: justify;
 }
 .icono{
-    position: relative;
-    top: 3px;
-    padding:7px;
+    /* position: relative; */
+    margin-right:20px;
+    color: azure;
 }
 .usuario{
     float: right;
     position: relative;
     top: 3px;
+}
+.menu_activo{
+    position:fixed;
+    height:100vh;
+    width:50px;
+    transition: width 0.5s;
+    left:0;
+
+    overflow: hidden;
+    /* transition: all 30ms; */
+}
+.menu_inactivo{
+    position:fixed;
+    height:100vh;
+    width: 300px;
+    transition: width 0.5s;
+    left:0;
+   
+    overflow:hidden ;
+    /* transition: all 30ms;  */
+}
+
+.submenu{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+.one{
+    /* position: relative; */
+    display: flex;
 }
 @media  only screen and (max-width: 720px){
     body{
@@ -100,7 +142,7 @@ p{
         position:fixed;
         height:100vh;
         width: 50%;
-        left:0;
+        left:10px;
         overflow-y: auto;
         overflow-x:hidden ;
         transition: all 30ms; 

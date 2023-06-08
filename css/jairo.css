@@ -10,31 +10,31 @@ body {
     height: 60px;
     background-color: #EA5455;
     display: flex;
-
 } 
-
-.icon-user{
-    padding: 16px;
+.menup{
     display: flex;
-    margin-left: 1620px;
-    color: black;
-    font-size: 1.4em;
-    cursor: pointer;
-    color: #e3dcc8;
+    align-items: center;
 }
-
+li{
+    list-style: none;
+}
+.name{
+    position: absolute;
+    right: 20px;
+}
 .icon-bell{
-   /*  padding: 30px; */
-   position: fixed;
-   top: 2%;
-    display: flex;
-    margin-left: 1550px;
-    color: black;
-    font-size: 1.4em; 
-    cursor: pointer;
-    color: #e3dcc8;
-    
+    margin-right: 200px;
+    font-size: 1.3em;
 }
+.search{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.search i{
+    margin-left: 5px;
+}
+
 .sal{
     margin-left: 10px;
     cursor: pointer;
@@ -42,17 +42,21 @@ body {
 }
 .salir{
     color: #e3dcc8;
+    font-size: 1.3em;
+}
+.sali{
+    color: black;
+    font-size: 1.3em;
+}
+.busqueda{
+    outline: none;
 }
 
 .icon-ya{
-    position: fixed;
-    top: 2%;
-    display: flex;
-    margin-left: 1450px;
-    color: black;
-    font-size: 1.4em; 
-    cursor: pointer;
-    color: #e3dcc8;
+    margin-right: 300px;
+}
+.icon-user{
+    margin-right: 8px;
 }
 .active{
     margin-left: 5px;
@@ -86,12 +90,15 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    transition: width 0.5s;
 }
 .sidebar-mamy{
     width: 210px;
+    transition: width 0.5s;
 }
 .sidebar-papy{
     width: 48px;
+    transition: width 0.5s;
 }
 .sidebar ul {
     list-style-type: none;
@@ -127,8 +134,19 @@ body {
     color: #E4DCCF;
 } 
 .chill{
-    display: none;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.3s;
 }
+
+.chill-desp,.chill-two{
+    height: 108px;
+    transition: height 0.3s;
+}
+.chill-two{
+    height: 81px;
+}
+
 .cill:hover{
     display: block;
 }
@@ -136,17 +154,4 @@ body {
 nav >Ul >Li >a{
     width: 210px;
     
-}
-
-  
-@media (max-width: 768px) {
-.sidebar {
-      width: 100%;
-      height: auto;
-      position: static;
-}
-  
-.content {
-      margin-left: 0;
-    }
 }

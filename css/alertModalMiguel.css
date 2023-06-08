@@ -1,0 +1,237 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.contenido-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.548);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+.modal-alert {
+    width: 470px;
+    height: 270px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -2;
+}
+
+.inputModalAlert {
+    padding: 10px 30px;
+    background-color: green;
+    border: unset;
+    color: white;
+    border-radius: 10px;
+    position: absolute;
+    bottom: calc(0% + 30px);
+    right: calc(0% + 30px);
+    cursor: pointer;
+    margin: unset;
+}
+
+.input-modal-alert:hover {
+    background-color: rgba(0, 128, 0, 0.822);
+}
+
+.icon-alert {
+    position: absolute;
+    top: calc(0% + 30px);
+    width: 90px;
+}
+
+#noMistake .icon-alert {
+    margin-left: 23px;
+}
+
+#mistake,
+#noMistake {
+    display: none;
+}
+
+.restring {
+    position: absolute;
+    border-top: 0px solid transparent;
+    border-bottom: 100px solid rgb(253, 253, 253);
+    border-left: 54px solid transparent;
+    border-right: 54px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: calc(0% + 35px);
+    border-radius: 1460px 1900px 40px 40px;
+}
+
+/* .restring::after {
+    content: "";
+    position: absolute;
+    border-top: 0px solid transparent;
+    border-bottom: 120px solid rgb(255, 6, 6);
+    border-left: 64px solid transparent;
+    border-right: 64px solid transparent;
+    z-index: -1;
+    top: -14px;
+    border-radius: 1460px 1900px 40px 40px;
+} */
+
+
+.exclamacion {
+    width: 2px;
+    position: absolute;
+    top: 25px;
+    border-radius: 100px 100px 40px 40px;
+    border-top: 45px solid red;
+    border-bottom: 0px solid transparent;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
+
+.punto-exclamacion {
+    border-radius: 100%;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 100%;
+    background-color: red;
+    left: calc(50% - 5px);
+    top: 2px;
+}
+
+.rgb1 {
+    width: 5px;
+    height: 115px;
+    position: absolute;
+    transform: rotate(27deg);
+    top: -15px;
+    left: -28px;
+    border-radius: 100px 100px 100px 100px;
+    z-index: 1;
+    background-color: red;
+}
+
+.rgb2 {
+    width: 5px;
+    height: 115px;
+    position: absolute;
+    transform: rotate(-207deg);
+    top: -15px;
+    right: -28px;
+    border-radius: 100px 100px 100px 100px;
+    z-index: 2;
+    background-color: red;
+}
+
+.rgb3 {
+    height: 5px;
+    width: 106px;
+    position: absolute;
+    bottom: -95px;
+    border-radius: 100px 100px 100px 100px;
+    z-index: 3;
+    background-color: red;
+}
+
+
+
+
+.rgb1 {
+    animation: rgb1 linear infinite 50s;
+    background-size: 120px;
+    background-image: linear-gradient(-60deg, rgb(145, 0, 223), rgb(61, 66, 240), rgb(3, 185, 210), rgb(3, 187, 169), rgb(15, 197, 48), rgb(248, 241, 1), rgb(255, 121, 0), rgb(145, 0, 223), rgb(145, 0, 223), rgb(61, 66, 240), rgb(3, 185, 210), rgb(3, 187, 169), rgb(15, 197, 48), rgb(248, 241, 1), rgb(255, 121, 0), rgb(145, 0, 223));
+}
+
+.rgb2 {
+    animation: rgb2 linear infinite 50s;
+    background-size: 120px;
+    background-image: linear-gradient(-60deg, rgb(145, 0, 223), rgb(61, 66, 240), rgb(3, 185, 210), rgb(3, 187, 169), rgb(15, 197, 48), rgb(248, 241, 1), rgb(255, 121, 0), rgb(145, 0, 223), rgb(145, 0, 223), rgb(61, 66, 240), rgb(3, 185, 210), rgb(3, 187, 169), rgb(15, 197, 48), rgb(248, 241, 1), rgb(255, 121, 0), rgb(145, 0, 223));
+}
+
+.rgb3 {
+    animation: rgb3 linear infinite 72s;
+    background-size: 600px;
+    background-image: linear-gradient(90deg, rgb(145, 0, 223), rgb(61, 66, 240), rgb(3, 185, 210), rgb(3, 187, 169), rgb(15, 197, 48), rgb(248, 241, 1), rgb(255, 121, 0), rgb(145, 0, 223), rgb(145, 0, 223), rgb(61, 66, 240), rgb(3, 185, 210), rgb(3, 187, 169), rgb(15, 197, 48), rgb(248, 241, 1), rgb(255, 121, 0), rgb(145, 0, 223));
+}
+
+.rgb3::after{
+    content: "";
+    animation: rgb3 linear infinite 72s;
+    background-size: 600px;
+    background-image: linear-gradient(90deg, rgb(145, 0, 223), rgb(61, 66, 240), rgb(3, 185, 210), rgb(3, 187, 169), rgb(15, 197, 48), rgb(248, 241, 1), rgb(255, 121, 0), rgb(145, 0, 223), rgb(145, 0, 223), rgb(61, 66, 240), rgb(3, 185, 210), rgb(3, 187, 169), rgb(15, 197, 48), rgb(248, 241, 1), rgb(255, 121, 0), rgb(145, 0, 223));
+    filter: drop-shadow(15px 15px 20px transparent);
+    filter: blur(15px);
+    height: 5px;
+    width: 106px;
+    position: absolute;
+    border-radius: 100px 100px 100px 100px;
+    z-index: -5;
+}
+.rgb1::after{
+    content: "";
+    animation: rgb1 linear infinite 50s;
+    background-size: 120px;
+    background-image: linear-gradient(-60deg, rgb(145, 0, 223), rgb(61, 66, 240), rgb(3, 185, 210), rgb(3, 187, 169), rgb(15, 197, 48), rgb(248, 241, 1), rgb(255, 121, 0), rgb(145, 0, 223), rgb(145, 0, 223), rgb(61, 66, 240), rgb(3, 185, 210), rgb(3, 187, 169), rgb(15, 197, 48), rgb(248, 241, 1), rgb(255, 121, 0), rgb(145, 0, 223));
+    width: 5px;
+    height: 115px;
+    position: absolute;
+    top: -15px;
+    border-radius: 100px 100px 100px 100px;
+    z-index: 1;
+    filter: drop-shadow(15px 15px 20px transparent);
+    filter: blur(15px);
+}
+.rgb2::after{
+    content: "";
+    animation: rgb2 linear infinite 50s;
+    background-size: 120px;
+    background-image: linear-gradient(-60deg, rgb(145, 0, 223), rgb(61, 66, 240), rgb(3, 185, 210), rgb(3, 187, 169), rgb(15, 197, 48), rgb(248, 241, 1), rgb(255, 121, 0), rgb(145, 0, 223), rgb(145, 0, 223), rgb(61, 66, 240), rgb(3, 185, 210), rgb(3, 187, 169), rgb(15, 197, 48), rgb(248, 241, 1), rgb(255, 121, 0), rgb(145, 0, 223));
+    width: 5px;
+    height: 115px;
+    position: absolute;
+    top: -15px;
+    border-radius: 100px 100px 100px 100px;
+    z-index: 2;
+    background-color: red;
+    filter: drop-shadow(15px 15px 20px transparent);
+    filter: blur(15px);
+}
+@keyframes rgb1 {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 7000%;
+    }
+}
+
+@keyframes rgb2 {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 7000%;
+    }
+}
+
+@keyframes rgb3 {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 7000%;
+    }
+}

@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/registroAprendizMiguel.css">
+    <link rel="stylesheet" href="css/FormulariosMiguel.css">
     <title>RegistroAprendiz</title>
 </head>
 
 <body>
 
-        <iframe class="nav-horizontal" src="miguelNavHorizontal.html" frameborder="0"></iframe>
-        <iframe id="iframeNavVertical" class="nav-vertical" src="miguelNavVertical.html" frameborder="0"></iframe>
+    <iframe class="nav-horizontal" src="miguelNavHorizontal.html" frameborder="0"></iframe>
+    <iframe id="iframeNavVertical" class="nav-vertical" src="miguelNavVertical.html" frameborder="0"></iframe>
+    <iframe id="iframeAlertModal" class="iframe-alert-modal" src="alertModalMiguel.html" frameborder="0"></iframe>
 
     <div class="registro-aprendiz">
         <div class="contenido">
@@ -24,40 +25,143 @@
                         <img class="img-aprendiz" src="img/5999059.png" alt="">
                     </div>
                 </div>
-                <form action="">
-                    <label for=""> Nombre(s):</label>
-                    <input type="text" name="" id="" placeholder="Ingrese su(s) nombre(s)" required>
-                    <label for=""> Apellidos(s):</label>
-                    <input type="text" name="" id="" placeholder="Ingrese sus apellidos" required>
-                    <label for=""> Tipo de documento:</label>
-                    <select name="" id=""  required>
+                <form id="formulario" action="">
+                    <label class="label"> Nombre(s):
+                        <div class="alert-input-vacio indicador-elementos-vacios">
+                            <div class="indicate-element"></div>
+                            <div class="restring">
+                                <div class="exclamacion">
+                                    <div class="punto-exclamacion"></div>
+                                </div>
+                                <div class="linea1"></div>
+                                <div class="linea2"></div>
+                                <div class="linea3"></div>
+                            </div>
+                            <h6>Este campo es obligatorio..</h6>
+                        </div>
+                    </label>
+                    <input class="input inputText" type="text" name="" id="" placeholder="Ingrese su(s) nombre(s)">
+
+
+                    <label class="label"> Apellidos(s):
+                        <div class="alert-input-vacio indicador-elementos-vacios">
+                            <h6>Este campo es obligatorio...</h6>
+                            <div class="indicate-element"></div>
+                            <div class="restring">
+                                <div class="exclamacion">
+                                    <div class="punto-exclamacion"></div>
+                                </div>
+                                <div class="linea1"></div>
+                                <div class="linea2"></div>
+                                <div class="linea3"></div>
+                            </div>
+                        </div>
+                    </label>
+                    <input class="input inputText" type="text" name="" id="" placeholder="Ingrese sus apellidos">
+
+
+
+                    <label class="labelSelect"> Tipo de documento:
+                        <div class="alert-select-vacio indicador-elementos-vacios">
+                            <h6>Debe seleccionar un elemento de la lista...</h6>
+                            <div class="indicate-element"></div>
+                            <div class="restring">
+                                <div class="exclamacion">
+                                    <div class="punto-exclamacion"></div>
+                                </div>
+                                <div class="linea1"></div>
+                                <div class="linea2"></div>
+                                <div class="linea3"></div>
+                            </div>
+                        </div>
+                    </label>
+                    <select class="select" name="" id="">
                         <option value=""><span>Seleccione una opcion...</span></option>
-                        <option value="">Tarjeta de identidad</option>
-                        <option value="">Cédula de ciudadania</option>
-                        <option value="">Cédula extranjera</option>
+                        <option value="1">Tarjeta de identidad</option>
+                        <option value="2">Cédula de ciudadania</option>
+                        <option value="3">Cédula extranjera</option>
                     </select>
-                    <label for=""> Número de documento:</label>
-                    <input type="number" name="" id="" placeholder="Ingrese su documento" required>
-    
-                    <label for=""> Teléfono:</label>
-                    <input type="number" name="" id="" placeholder="Ingrese su número de teléfono" required>
-    
-                    <label for=""> Correo electrónico:</label>
-                    <input type="text" name="" id="" placeholder="Ingrese su correo" required>
-                    <label for=""> Titulado</label>
-                    <select name="" id="" required>
+
+
+                    <label class="label" id="labelDocumento"> Número de documento:
+                        <div id="alertInputDocumento"class="alert-input-vacio indicador-elementos-vacios">
+                            <h6>Este campo debe tener un maximo de 8 0 10 caracteres...</h6>
+                            <div class="indicate-element"></div>
+                            <div class="restring">
+                                <div class="exclamacion">
+                                    <div class="punto-exclamacion"></div>
+                                </div>
+                                <div class="linea1"></div>
+                                <div class="linea2"></div>
+                                <div class="linea3"></div>
+                            </div>
+                        </div>
+                    </label>
+                    <input class="input inputNumber" type="text" name="" id="inputNumberDocumento"
+                        placeholder="Ingrese su documento">
+
+
+
+                    <label class="label" id="labelTelefono"> Teléfono:
+                        <div  id="alertInputTelefono" class="alert-input-vacio indicador-elementos-vacios">
+                            <h6>Este campo debe tener un maximo de 10 caracteres...</h6>
+                            <div class="indicate-element"></div>
+                            <div class="restring">
+                                <div class="exclamacion">
+                                    <div class="punto-exclamacion"></div>
+                                </div>
+                                <div class="linea1"></div>
+                                <div class="linea2"></div>
+                                <div class="linea3"></div>
+                            </div>
+                        </div>
+                    </label>
+                    <input class="input inputNumber" type="text" name="" id="inputNumberTelefono"
+                        placeholder="Ingrese su número de teléfono">
+
+
+
+                    <label class="label"> Correo electrónico: <div class="alert-input-vacio indicador-elementos-vacios">
+                            <h6>Este campo es obligatorio...</h6>
+                            <div class="indicate-element"></div>
+                            <div class="restring">
+                                <div class="exclamacion">
+                                    <div class="punto-exclamacion"></div>
+                                </div>
+                                <div class="linea1"></div>
+                                <div class="linea2"></div>
+                                <div class="linea3"></div>
+                            </div>
+                        </div></label>
+                    <input class="input" type="text" name="" id="" placeholder="Ingrese su correo">
+
+
+                    <label class="labelSelect"> Titulado <div class="alert-select-vacio indicador-elementos-vacios">
+                            <h6>Debe seleccionar un elemento de la lista...</h6>
+                            <div class="indicate-element"></div>
+                            <div class="restring">
+                                <div class="exclamacion">
+                                    <div class="punto-exclamacion"></div>
+                                </div>
+                                <div class="linea1"></div>
+                                <div class="linea2"></div>
+                                <div class="linea3"></div>
+                            </div>
+                        </div></label>
+                    <select class="select" name="" id="">
                         <option value="">Seleccione una opcion...</option>
-                        <option value="">2556456</option>
-                        <option value="">2457234</option>
-                        <option value="">2637482</option>
-    
+                        <option value="1">2556456</option>
+                        <option value="2">2457234</option>
+                        <option value="3">2637482</option>
                     </select>
-                    <input type="submit" value="Registrar">
+
+
+                    <input id="enviar" type="submit" value="Registrar">
                 </form>
-    
             </div>
         </div>
     </div>
 </body>
 
 </html>
+<script src="js/formulariosMiguel.js"> </script>
