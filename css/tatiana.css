@@ -2,19 +2,20 @@
     margin: 0;
     padding: 0;
 }
-
 body{
     color: rgb(136, 112, 83);
     overflow-x: hidden;
     overflow-y: hidden;
+    min-width: 100%;
+    min-height: 100vh;
 }
 .menu-bar{
     display: none;
 }
 .bt-menu{
     display: block;
-    padding: 20px;
-    padding-left: 200px;
+    padding-left: 10px;
+    padding-top: 15px;
     color: white;
     font-size: 35px;
     font-weight: bold;
@@ -62,7 +63,6 @@ nav ul li a{
     width: 100%;
     text-align: left; 
 }
-
 .children-two{
     height: 120px; 
 }
@@ -79,7 +79,6 @@ nav ul li .children li a{
 .main-content{
     margin: 30px;
 }
-
 p{
     font-size: 1em;
     line-height: 1em;
@@ -91,9 +90,9 @@ p{
     color: azure;
 }
 .usuario{
+    padding-right: 8px;
     float: right;
     position: relative;
-    top: 3px;
 }
 .menu_activo{
     position:fixed;
@@ -101,9 +100,13 @@ p{
     width:50px;
     transition: width 0.5s;
     left:0;
-
     overflow: hidden;
     /* transition: all 30ms; */
+}
+.menu_activo:hover{
+    display: block;
+    width: 15%;
+    text-align: left;
 }
 .menu_inactivo{
     position:fixed;
@@ -111,11 +114,9 @@ p{
     width: 300px;
     transition: width 0.5s;
     left:0;
-   
     overflow:hidden ;
     /* transition: all 30ms;  */
 }
-
 .submenu{
     display: flex;
     overflow: hidden;

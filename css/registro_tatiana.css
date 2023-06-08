@@ -4,6 +4,8 @@
 }
 body{
     background-color: #F9F5EB;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 div{
     display: block;
@@ -12,7 +14,7 @@ div{
     top: 100px;
 }
 input{
-    padding: 4px;
+    padding: 3px;
     border-radius: 8px;
     border: none;
 }
@@ -37,7 +39,7 @@ h2{
     width: 450px;
     height: 500px;
     text-align: center;
-    font-size: 1.3em;
+    font-size: 1em;
     border-radius: 8px;
     color: white;
     background-color:#034086;
@@ -54,7 +56,7 @@ h2{
     border:1px solid rgb(76, 74, 74);
 }
 select{
-    padding: 4px;
+    padding: 3px;
     border-radius: 8px;
 }
 .central{
@@ -65,21 +67,47 @@ select{
     display: flex;
     position: absolute;
     text-align: center;
+    top: 0;
+    left: 0;
     z-index: 5;
 }
 .inactivo{
     display: none;
 }
 p{
-    font-size: 1.4em;
+    font-size: 1.3em;
+}
+.alert{
+    color: red;
+    display: flex;
+    position: relative;
+    font-size: 3em;
+    top: -50px;
+    left: 45%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.acept{
+    color: rgb(67, 208, 43);
+    display: flex;
+    position: relative;
+    font-size: 4em;
+    top: -50px;
+    left: 45%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
 }
 .form{
     margin: auto;
+    position: relative;
+    top: 5px;
+    left: 5%;
     justify-content: center;
     align-items: center;
     display: flex;
     position: relative;
-    top: 1px;
     width: 300px;
     height: 200px;
     border-radius: 16px;
@@ -98,5 +126,5 @@ p{
     cursor: pointer;
 }
 .boton-aceptar:hover{
-    background-color:rgb(96, 231, 114)
+    background-color:rgb(132, 233, 145)
 }
