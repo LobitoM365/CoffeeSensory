@@ -8,16 +8,22 @@
     <link rel="stylesheet" href="./css/registro_tatiana.css">
 </head>
 <body>
+    <div id="registro" class="inactivo">
+        <div class="form">
+            <p> Por favor llene todos los espacios!!</p> <br>
+            <input id="botonAceptar" class="boton-aceptar"type="submit" name="" id="" value="Aceptar"> 
+        </div>
+    </div>    
     <iframe src="./tatiana.html" frameborder="0"></iframe>
     <div>
         <h1>Registro Aprendiz</h1>
         <br>
         <h2>Bienvenido(a)</h2><br>
-        <form action=""><br>
+        <form  class="principal"action=""><br>
             <p>Ingrese su(s) nombre(s)</p>
-            <input type="text" name="" id="" placeholder="Nombre(s)" required>
+            <input  id="nombre"type="text" name="" id="" placeholder="Nombre(s)" required>
             <p>Ingrese sus Apellidos</p>
-            <input type="text" placeholder="Apellidos" required>
+            <input id="apellido" type="text" placeholder="Apellidos" required>
             <p>Ingrese el tipo de Documento</p>
             <select name="" id="">
                 <option value="">Seleccione una opción</option>
@@ -26,11 +32,11 @@
                 <option value="">Cédula de extranjería</option>
             </select><br>
             <p>Ingrese su número de documento</p>
-            <input type="number" name="" id="" placeholder="Documento "required>
+            <input  id="documento"type="number" name="" id="" placeholder="Documento "required>
             <p>Ingrese su número de teléfono </p>
-            <input type="number" name="" id="" placeholder="Teléfono"required>
+            <input id="telefono" type="number" name="" id="" placeholder="Teléfono"required>
             <p>Ingrese su correo electrónico</p>
-            <input type="email" name="" id="" placeholder="Email"required>
+            <input  id="correo"type="email" name="" id="" placeholder="Email"required>
             <p>Ingrese  el titulado</p>
             <select name="" id="">
                 <option value="">Seleccione una opción</option>
@@ -39,8 +45,10 @@
                 <option value="">Redes electricas</option>
             </select><br>
             <br>
-            <input class="boton" name="boton" type="submit" value="REGISTRAR">
+            <input  id="botonRegistrar"class="boton" name="boton" type="submit" value="REGISTRAR">
+                
         </form>
+        <script src="js/validacion_tatiana.js"></script>
     </div>
 </body>
 </html>
