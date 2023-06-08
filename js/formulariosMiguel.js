@@ -18,15 +18,15 @@ let labelTelefono = document.getElementById("labelTelefono");
 let labelDocumento = document.getElementById("labelDocumento");
 
 
-inputNumberTelefono.addEventListener("input", function(){
-    if(inputNumberTelefono.value.length = 10 ){
-        inputNumberTelefono.value = inputNumberTelefono.value.slice(0,10);
+inputNumberTelefono.addEventListener("input", function () {
+    if (inputNumberTelefono.value.length = 10) {
+        inputNumberTelefono.value = inputNumberTelefono.value.slice(0, 10);
     }
 })
 
-inputNumberDocumento.addEventListener("input", function(){
-    if(inputNumberDocumento.value.length = 10 ){
-        inputNumberDocumento.value = inputNumberDocumento.value.slice(0,10);
+inputNumberDocumento.addEventListener("input", function () {
+    if (inputNumberDocumento.value.length = 10) {
+        inputNumberDocumento.value = inputNumberDocumento.value.slice(0, 10);
     }
 })
 
@@ -34,8 +34,10 @@ inputNumberDocumento.addEventListener("input", function(){
 for (let n = 0; n < inputNumber.length; n++) {
     inputNumber[n].addEventListener("input", function () {
         inputNumber[n].value = inputNumber[n].value.replace(/\D/g, "");
+       
     })
 }
+
 
 for (let t = 0; t < inputText.length; t++) {
     inputText[t].addEventListener("input", function () {
@@ -53,28 +55,31 @@ for (let i = 0; i < select.length; i++) {
             labelSelect[i].style.color = "orange";
             select[i].classList.add("transition-color");
             labelSelect[i].classList.add("transition-color");
-            alertSelectVacio[i].style.visibility= "hidden";
-            alertSelectVacio[i].style.opacity= "0";
+            alertSelectVacio[i].style.visibility = "hidden";
+            alertSelectVacio[i].style.opacity = "0";
         }
-       
+
     })
 
 }
 for (let x = 0; x < input.length; x++) {
     input[x].addEventListener("input", function () {
         input[x].value = input[x].value.trimStart();
+        input[x].value = input[x].value.replace("  ", " ");
+
+
         if (input[x].value.trim() == "") {
             label[x].style.color = "";
         } else {
             label[x].style.color = "orange";
             label[x].classList.add("transition-color");
-            alertInputVacio[x].style.visibility= "hidden";
-            alertInputVacio[x].style.opacity= "0";
+            alertInputVacio[x].style.visibility = "hidden";
+            alertInputVacio[x].style.opacity = "0";
         }
-        if(inputNumberTelefono.value.length < 10 ){
+        if (inputNumberTelefono.value.length < 10) {
             labelTelefono.style.color = "white";
         }
-        if(inputNumberDocumento.value.length < 8 || inputNumberDocumento.value.length == 9){
+        if (inputNumberDocumento.value.length < 8 || inputNumberDocumento.value.length == 9) {
             labelDocumento.style.color = "white";
         }
     })
@@ -105,13 +110,17 @@ enviar.addEventListener("click", function (event) {
         iframeAlertModal.style.display = "block";
         event.preventDefault();
     }
-    if(inputNumberTelefono.value.length < 10 ){
+    if (inputNumberTelefono.value.length < 10) {
         alertInputTelefono.style.opacity = "1";
         alertInputTelefono.style.visibility = "visible";
     }
-    if(inputNumberDocumento.value.length < 8 || inputNumberDocumento.value.length == 9){
+    if (inputNumberDocumento.value.length < 8 || inputNumberDocumento.value.length == 9) {
         alertInputDocumento.style.opacity = "1";
         alertInputDocumento.style.visibility = "visible";
+    }
+    for (let x = 0; x < input.length; x++) {
+        input[x].value = input[x].value.trimEnd();
+        
     }
 })
 
@@ -134,7 +143,7 @@ window.addEventListener('load', function () {
                 inputSinValor = 1;
             }
         }
-        if (selectSinValor == 1 || inputSinValor == 1 || inputNumberTelefono.value.length < 10 || inputNumberDocumento.value.length < 8 || inputNumberDocumento.value.length == 9 ) {
+        if (selectSinValor == 1 || inputSinValor == 1 || inputNumberTelefono.value.length < 10 || inputNumberDocumento.value.length < 8 || inputNumberDocumento.value.length == 9) {
             mistake.style.display = "block";
             noMistake.style.display = "none";
         } else {
@@ -144,10 +153,9 @@ window.addEventListener('load', function () {
         for (let x = 0; x < inputModalAlert.length; x++) {
             inputModalAlert[x].addEventListener("click", function () {
                 iframeAlertModal.style.display = "none";
-                console.log(x)
                 if (x == 1) {
                     formulario.submit()
-                    console.log(inputModalAlert[x])
+                  
                 }
             })
         }

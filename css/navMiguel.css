@@ -45,7 +45,7 @@ ul {
 }
 
 .nav-vertical >ul{
-    margin-top: 20px;
+    margin-top: 140px;
     margin-bottom: 10px;
 }
 
@@ -54,31 +54,25 @@ ul {
     transition: width 0.5s;
 }
 
-.transition-nav-ul>li>a:hover {
+/* .transition-nav-ul>li>a:hover {
     background-color: unset;
     cursor: unset;
-}
+} */
 
-.transition-nav-ul>li>a>.icon:hover {
-    background-color: rgb(57, 100, 174);
-    padding-right: 15px;
-    border-radius: 8px;
-    cursor: pointer;
-}
 
-.transition-nav-ul>li:hover>ul>li>a {
+/* .transition-nav-ul>li:hover>ul>li>a {
     visibility: hidden;
-}
+} */
 
-nav>ul li a>span {
-    opacity: 1;
+/* nav>ul >li >ul >li a>span {
+    opacity: 0;
     transition: opacity 1s;
-}
+} */
 
-.transition-nav-ul li>a>span {
+/* .transition-nav-ul li>a>span {
     opacity: 0;
     transition: opacity 0.5s;
-}
+} */
 
 li,
 a {
@@ -103,10 +97,10 @@ i {
     width: 15px;
 }
 
-a:hover {
+/* a:hover {
     background-color: rgb(57, 100, 174);
     border-radius: 8px;
-}
+} */
 
 .icon {
     margin-left: unset;
@@ -290,4 +284,79 @@ a {
     text-align: left;
     margin: 0px 20px 0px 0px;
     flex-direction: column;
+}
+
+.nav-ul-vertical,.hamburguer{
+    width: 75px;
+    transition: width 0.5s;
+}
+.nav-vertical:hover .nav-ul-vertical,.nav-vertical:hover .hamburguer{
+    width: 273px;
+}
+
+.nav-ul-vertical li > a>span,.nav-ul-vertical li> ul .icon{
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.nav-vertical:hover .nav-ul-vertical li>a >span ,.nav-vertical:hover .nav-ul-vertical li>ul .icon{
+    opacity: 1;
+}
+
+.nav-ul-vertical>li>a:hover , .nav-ul-vertical >li>ul >Li >a:hover {
+    background-color: rgb(57, 100, 174);
+    padding-right: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.nav-ul-vertical>li>a>.icon:hover {
+    background-color: rgb(57, 100, 174);
+    padding-right: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.nav-vertical:hover .nav-ul-vertical .div-chinche-icon{
+    visibility: visible;
+    transition: visibility 15s;
+}
+.div-chinche-icon{
+    position: absolute;
+    left: 245px;
+    padding: 8px;
+    bottom: calc(100% - 15px);
+    z-index: 9;
+    visibility: hidden;
+    transition: visibility 15s;
+    cursor: pointer;
+}
+
+.nav-vertical{
+    overflow-x: hidden;
+}
+
+.chinche-icon{
+    zoom: 80%;
+}
+
+
+.nav-fijo ,.nav-fijo .hamburguer{
+    width: 273px;
+}
+
+.nav-fijo li > a>span, li> ul .icon{
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.nav-fijo  li>a >span ,.nav-fijo  li>ul .icon{
+    opacity: 1;
+}
+
+.nav-fijo  .div-chinche-icon{
+    visibility: visible;
+    transition: visibility 15s;
+}
+
+.nav-fijo >Ul{
+    background-color: #EA5455;
+    width: 300px;
 }

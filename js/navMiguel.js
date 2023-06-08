@@ -5,25 +5,27 @@ let navUl = document.getElementById("navUl");
 let menuHamburguer = document.getElementById("menuHamburguer");
 let divHamburguer = document.getElementById("divHamburguer");
 let navHorizontal = document.getElementById("navHorizontal");
+let navVertical = document.getElementById("navVertical");
+let chincheIcon = document.getElementById("chincheIcon");
 
-let widthNavUl = navUl.scrollWidth;
-navUl.style.width = "75px";
-divHamburguer.style.width = "75px";
+/* let widthNavUl = navUl.scrollWidth; */
+/* navUl.style.width = "75px";
+divHamburguer.style.width = "75px"; */
 let heightdivHamburguer = divHamburguer.scrollHeight;
 
-navUl.style.marginTop = (heightdivHamburguer + 20) + "px";
+navUl.style.marginTop = (heightdivHamburguer + 25) + "px";
 
-menuHamburguer.addEventListener("click", function () {
+/* menuHamburguer.addEventListener("click", function () {
     navUl.classList.toggle("nav-desplegado")
     divHamburguer.classList.toggle("nav-desplegado")
     if(navUl.classList.contains("nav-desplegado")){
-        navUl.style.width =  widthNavUl + "px";
-        divHamburguer.style.width =  widthNavUl + "px";
+       navUl.style.width =  widthNavUl + "px";
+        divHamburguer.style.width =  widthNavUl + "px"; 
         navUl.classList.remove("transition-nav-ul")
         divHamburguer.classList.remove("transition-nav-ul")
     }else{
         navUl.style.width = "75px";
-        divHamburguer.style.width = "75px";
+        divHamburguer.style.width = "75px"; 
         navUl.classList.add("transition-nav-ul")
         divHamburguer.classList.add("transition-nav-ul")
     }
@@ -42,12 +44,40 @@ menuHamburguer.addEventListener("click", function () {
         
     }
 })
+ */
+
+
+navVertical.addEventListener("mouseleave", function () {
+    if (navUl.classList.contains("nav-fijo")) {
+        
+    } else {
+        for (let h = 0; h < itemSubmenu.length; h++) {
+            let height = itemSubmenu[h].scrollHeight;
+            itemSubmenu[h].style.marginTop = "-" + height + "px";
+            itemSubmenu[h].classList.remove("transition-submenu-bottom")
+            itemSubmenu[h].style.opacity = "0";
+            chevron[h].classList.remove("transition-chevron");
+            divHamburguer.style.width = "";
+        }
+    }
+
+})
+
+
+chincheIcon.addEventListener("click", function () {
+    navUl.classList.toggle("nav-fijo");
+    divHamburguer.style.width = "273px";
+})
+
+
+
 
 for (let i = 0; i < desplegarSubmenu.length; i++) {
-    let height = itemSubmenu[i].scrollHeight;
+    let height = itemSubmenu[i].clientHeight;
     itemSubmenu[i].style.marginTop = "-" + height + "px";
+    itemSubmenu[i].style.opacity = 0;
     desplegarSubmenu[i].addEventListener("click", function () {
-        
+
         for (let x = 0; x < desplegarSubmenu.length; x++) {
             if (x < i) {
                 if (itemSubmenu[x].classList.contains("transition-submenu-bottom")) {
@@ -57,32 +87,32 @@ for (let i = 0; i < desplegarSubmenu.length; i++) {
                     itemSubmenu[x].classList.add("focus3");
                 }
             } else if (x > i) {
-                if (itemSubmenu[x].classList.contains("transition-submenu-bottom")) {
-
-                } else {
-                    itemSubmenu[x].classList.add("focus");
-                    itemSubmenu[x].classList.remove("focus3");
-                }
+                /*     if (itemSubmenu[x].classList.contains("transition-submenu-bottom")) {
+    
+                    } else {
+                        itemSubmenu[x].classList.add("focus");
+                        itemSubmenu[x].classList.remove("focus3");
+                    } */
             }
             if (i == x) {
                 let height = itemSubmenu[i].scrollHeight;
                 itemSubmenu[i].classList.toggle("transition-submenu-bottom");
-                if(itemSubmenu[i].classList.contains("transition-submenu-bottom")){
+                if (itemSubmenu[i].classList.contains("transition-submenu-bottom")) {
                     itemSubmenu[i].style.marginTop = 0;
                     itemSubmenu[i].classList.add("transition-submenu-top");
                     itemSubmenu[i].style.opacity = 1;
-                   
-                }else{
+
+                } else {
                     itemSubmenu[i].style.marginTop = "-" + height + "px";
                     itemSubmenu[i].style.opacity = 0;
                     itemSubmenu[i].classList.add("transition-submenu-top");
                 }
 
                 navUl.classList.add("nav-desplegado")
-                navUl.style.width =  widthNavUl + "px";
+                /*  navUl.style.width =  widthNavUl + "px"; */
                 navUl.classList.remove("transition-nav-ul")
                 divHamburguer.classList.add("nav-desplegado")
-                divHamburguer.style.width =  widthNavUl + "px";
+                /* divHamburguer.style.width =  widthNavUl + "px"; */
                 divHamburguer.classList.remove("transition-nav-ul")
                 chevron[i].classList.toggle("transition-chevron");
                 itemSubmenu[x].classList.toggle("focus2");
@@ -102,13 +132,8 @@ for (let i = 0; i < desplegarSubmenu.length; i++) {
 
             }
         }
-     
+
 
     });
 }
-
-
-
-
-
 
