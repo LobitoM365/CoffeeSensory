@@ -30,12 +30,12 @@ h2{
     text-align: center;
     justify-content: center;
 }
-form{
+.principal{
     border: 1.5px solid black;
     padding: 3px;
     margin: auto;
     width: 450px;
-    height: 450px;
+    height: 500px;
     text-align: center;
     font-size: 1.3em;
     border-radius: 8px;
@@ -56,4 +56,47 @@ form{
 select{
     padding: 4px;
     border-radius: 8px;
+}
+.central{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(125, 127, 128, 0.712);
+    align-items: center;
+    display: flex;
+    position: absolute;
+    text-align: center;
+    z-index: 5;
+}
+.inactivo{
+    display: none;
+}
+p{
+    font-size: 1.4em;
+}
+.form{
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    top: 1px;
+    width: 300px;
+    height: 200px;
+    border-radius: 16px;
+    background-color: rgb(217, 217, 233);
+    z-index: 5;
+}
+.boton-aceptar{
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    width: 80px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(29, 221, 55);
+    cursor: pointer;
+}
+.boton-aceptar:hover{
+    background-color:rgb(96, 231, 114)
 }
