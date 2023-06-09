@@ -101,9 +101,9 @@ enviar.addEventListener("click", function (event) {
             alertInputVacio[u].style.opacity = "1";
             alertInputVacio[u].style.visibility = "visible";
         }
+        input[u].value = input[u].value.trimEnd();
     }
     if (selectSinValor == 1 || inputSinValor == 1) {
-        /* alert("Por favor debe llenar todos los campos") */
         iframeAlertModal.style.display = "block";
         event.preventDefault();
     } else {

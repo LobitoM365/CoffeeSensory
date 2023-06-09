@@ -54,25 +54,7 @@ ul {
     transition: width 0.5s;
 }
 
-/* .transition-nav-ul>li>a:hover {
-    background-color: unset;
-    cursor: unset;
-} */
 
-
-/* .transition-nav-ul>li:hover>ul>li>a {
-    visibility: hidden;
-} */
-
-/* nav>ul >li >ul >li a>span {
-    opacity: 0;
-    transition: opacity 1s;
-} */
-
-/* .transition-nav-ul li>a>span {
-    opacity: 0;
-    transition: opacity 0.5s;
-} */
 
 li,
 a {
@@ -97,10 +79,6 @@ i {
     width: 15px;
 }
 
-/* a:hover {
-    background-color: rgb(57, 100, 174);
-    border-radius: 8px;
-} */
 
 .icon {
     margin-left: unset;
@@ -120,9 +98,7 @@ nav>Ul>li>a .icon {
     height: 100%;
 }
 
-/* .invisible{
-    display: none;
-} */
+
 
 nav>Ul>li>Ul {
     z-index: -2;
@@ -286,7 +262,9 @@ a {
     flex-direction: column;
 }
 
-.nav-ul-vertical,.hamburguer{
+
+/*/////////////////////////////////// Menu Hover ////////////////////////*/
+/* .nav-ul-vertical,.hamburguer{
     width: 75px;
     transition: width 0.5s;
 }
@@ -330,6 +308,8 @@ a {
     cursor: pointer;
 }
 
+
+
 .nav-vertical{
     overflow-x: hidden;
 }
@@ -359,4 +339,41 @@ a {
 .nav-fijo >Ul{
     background-color: #EA5455;
     width: 300px;
+} */
+
+/*/////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+/*////////////////// Menu Hamburguer //////////////////////////*/
+
+
+ a:hover {
+    background-color: rgb(57, 100, 174);
+    border-radius: 8px;
+} 
+ .invisible{
+    display: none;
+} 
+.transition-nav-ul>li>a:hover {
+    background-color: unset;
+    cursor: unset;
+} 
+
+.transition-nav-ul>li:hover>ul>li>a {
+    visibility: hidden;
+} 
+ nav>ul >li >ul >li a>span {
+    transition: opacity 1s;
 }
+
+ .transition-nav-ul li>a>span {
+    opacity: 0;
+    transition: opacity 0.5s;
+} 
+
+
+
+/*/////////////////////////////////////////////////////////////*/
