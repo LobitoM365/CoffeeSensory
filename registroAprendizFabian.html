@@ -20,28 +20,27 @@
 
                 <div class="label-ln">
                     <label class="txt-label" for="">Nombre: </label>
-                    <input class="inp" type="text" name="" placeholder="Ingrese su nombre">
+                    <input class="inp inp-letter" oninput="onlyLetters()" type="text" name="" placeholder="Ingrese su nombre">
                     <p class="txt-warning">Debe llenar este campo.</p>
                     <label for="">Tipo de documento:</label>
-                    <select name="" id="selectDni">
+                    <select name="" class="inp">
                         <option value="">Seleccione una opción</option>
                         <option value="1">Tarjeta Identidad</option>
                         <option value="2">Cedula Ciudadanía</option>
                     </select>
                     <p class="txt-warning">Debe llenar este campo.</p>
                     <label for="">Telefono:</label>
-                    <input class="inp" type="number" name="" id="" placeholder="Ingrese su numero de telefono">
+                    <input class="inp inp-number" type="text" oninput="onlyNumbers()" name="" id="" placeholder="Ingrese su numero de telefono">
                     <p class="txt-warning">Debe llenar este campo.</p>
-
                 </div>
 
                 <div class="label-ln label-right">
                     <label for="">Apellido:</label>
-                    <input class="inp" type="text" name="" id="" placeholder="Ingrese sus apellidos">
+                    <input class="inp inp-letter" oninput="onlyLetters()" type="text" name="" id="" placeholder="Ingrese sus apellidos">
                     <p class="txt-warning">Debe llenar este campo.</p>
 
                     <label for="">Numero de documento:</label>
-                    <input class="inp" type="number" name="" id="" placeholder="Ingrese su numero de documento">
+                    <input class="inp inp-number" type="text" name="" id="" oninput="onlyNumbers()" placeholder="Ingrese su numero de documento">
                     <p class="txt-warning">Debe llenar este campo.</p>
 
                     <label for="">Correo electronico:</label>
@@ -51,7 +50,7 @@
                 </div>
                 <div class="label-ln label-bottom">
                     <label for="">ID Titulado:</label>
-                    <select name="" id="selectCourse">
+                    <select name="" class="inp" oninput="" >
                         <option value="">Seleccione una opción</option>
                         <option value="1">2556456</option>
                         <option value="2">2415684</option>

@@ -56,7 +56,7 @@ label {
     font-size: 0.8em;
     margin-top: 6px;
     margin-bottom: -25px;
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 .txt-warning-visible{
     visibility: visible;
@@ -79,7 +79,9 @@ select {
     border: none;
     border-bottom: 1px solid #002B5B;
 }
-
+.input-border{
+    border-bottom: 1px solid #f75959;
+}
 /* ::placeholder{
     color: #8b8b8b;
 } */
@@ -99,7 +101,6 @@ select:focus {
     border-top-right-radius: 3px;
     background-color: rgb(230, 230, 230);
 }
-
 .label-bottom {
     position: absolute;
     top: 400px;
