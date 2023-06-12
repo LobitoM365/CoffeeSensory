@@ -16,6 +16,8 @@ let iframeAlertModal = document.getElementById("iframeAlertModal");
 let inputCorreo = document.getElementById("inputCorreo");
 let labelTelefono = document.getElementById("labelTelefono");
 let labelDocumento = document.getElementById("labelDocumento");
+let alertInputCorreo = document.getElementById("alertInputCorreo");
+let divAlertInputCorreo = document.getElementById("divAlertInputCorreo");
 
 
 inputNumberTelefono.addEventListener("input", function () {
@@ -29,12 +31,19 @@ inputNumberDocumento.addEventListener("input", function () {
         inputNumberDocumento.value = inputNumberDocumento.value.slice(0, 10);
     }
 })
+inputCorreo.addEventListener("input", function () {
+    inputCorreo.value = inputCorreo.value.replace("]", "",);
+    inputCorreo.value = inputCorreo.value.replace(" ", "",);
+    inputCorreo.value = inputCorreo.value.replace("ñ", "",);
+    inputCorreo.value = inputCorreo.value.replace("@@", "@",);
+    inputCorreo.value = inputCorreo.value.replace("..", ".",);
+})
 
 
 for (let n = 0; n < inputNumber.length; n++) {
     inputNumber[n].addEventListener("input", function () {
         inputNumber[n].value = inputNumber[n].value.replace(/\D/g, "");
-       
+
     })
 }
 
@@ -42,6 +51,8 @@ for (let n = 0; n < inputNumber.length; n++) {
 for (let t = 0; t < inputText.length; t++) {
     inputText[t].addEventListener("input", function () {
         inputText[t].value = inputText[t].value.replace(/\d+/g, "");
+        inputText[t].value = inputText[t].value.replace("@", "");
+        inputText[t].value = inputText[t].value.replace(".", "");
     })
 }
 
@@ -66,7 +77,7 @@ for (let x = 0; x < input.length; x++) {
     input[x].addEventListener("input", function () {
         input[x].value = input[x].value.trimStart();
         input[x].value = input[x].value.replace("  ", " ");
-
+        input[x].value = input[x].value.replace(/[!#$%^&*()-+=[{}|;:'",_<>/?`~¡¿´´°ç-]/, "",);
 
         if (input[x].value.trim() == "") {
             label[x].style.color = "";
@@ -93,6 +104,7 @@ enviar.addEventListener("click", function (event) {
             selectSinValor = 1;
             alertSelectVacio[s].style.opacity = "1";
             alertSelectVacio[s].style.visibility = "visible";
+            alertSelectVacio[s].classList.add("Transition-alert-select-vacio")
         }
     }
     for (let u = 0; u < input.length; u++) {
@@ -100,6 +112,27 @@ enviar.addEventListener("click", function (event) {
             inputSinValor = 1;
             alertInputVacio[u].style.opacity = "1";
             alertInputVacio[u].style.visibility = "visible";
+            alertInputVacio[u].classList.add("Transition-alert-select-vacio")
+        }else{
+
+            let numeros = /\d+/g;
+            let letras =/[a-zA-Z]/;
+            if (inputCorreo.value.includes("@") && inputCorreo.value.includes(".")) {
+                
+            } else {
+                divAlertInputCorreo.style.opacity = "1";
+                divAlertInputCorreo.style.visibility = "visible";
+                divAlertInputCorreo.classList.add("Transition-alert-select-vacio");
+                alertInputCorreo.innerHTML = ("El correo debe contener almenos una @ y un .");
+            }
+            if (numeros.test(inputCorreo.value) || letras.test(inputCorreo.value)) {
+                console.log(1)
+            } else {
+                divAlertInputCorreo.style.opacity = "1";
+                divAlertInputCorreo.style.visibility = "visible";
+                divAlertInputCorreo.classList.add("Transition-alert-select-vacio");
+                alertInputCorreo.innerHTML = ("El correo debe contener almenos un numero o una letra...");
+            }
         }
         input[u].value = input[u].value.trimEnd();
     }
@@ -120,8 +153,11 @@ enviar.addEventListener("click", function (event) {
     }
     for (let x = 0; x < input.length; x++) {
         input[x].value = input[x].value.trimEnd();
-        
     }
+
+   
+
+
 })
 
 window.addEventListener('load', function () {
@@ -155,7 +191,7 @@ window.addEventListener('load', function () {
                 iframeAlertModal.style.display = "none";
                 if (x == 1) {
                     formulario.submit()
-                  
+
                 }
             })
         }
