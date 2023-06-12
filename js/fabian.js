@@ -5,12 +5,9 @@ let menu = document.getElementById("menu")
 
 for (let i = 0; i < item.length; i++) {
     for (let index = 0; index < subNav.length; index++) {
-
-        item[i].addEventListener("click", function () {
+    item[i].addEventListener("click", function () {
             // console.log(i)
             subNav[i].classList.remove("sub-nav");
-
-
             if (i == 0) {
                 if (subNav[i].classList.contains("sub")) {
                     subNav[i].classList.remove("sub")
@@ -66,6 +63,5 @@ menu.addEventListener("mouseleave", function(){
     item[i].classList.remove("item-nav-color");
     iconRotate[i].classList.remove("icon-down-rotate");
     console.log("MU")
-
 })
 }
