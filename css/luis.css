@@ -183,7 +183,7 @@ input{
     width: 200px;
     height: 30px;
 }
-@media only screen and (max-width: 1820px){
+@media only screen and (max-width: 1920px){
     .icono{
         margin-left: 1px;
         margin-right: 20px;
@@ -192,6 +192,11 @@ input{
     body{
         padding-top: 70px;
         background-color: #F9F5EB;
+    }
+    nav{
+        background-color: #002B5B;
+        position: absolute;
+        margin-top: 2.3%;
     }
     h1{
         margin: 35px 0 35px 35px;
@@ -205,25 +210,28 @@ input{
         top:8.5% ;
         overflow: hidden;
         transition: all 0.5s;
+        border-radius: 0px 7px 0px 0px;
          
     }
     .despliege-inactivo:hover{
         position: fixed;
         height: 100vh;
-        width: 30%;
+        width: 25%;
         left: 0%;
         top:8.5%;
         overflow: hidden;
         transition: left 0.5s;
+        border-radius:0px 7px 0px 0px;
     }
     .vertical{
         position: fixed;
         height: 100vh;
-        width: 50%;
+        width: 25%;
         left: 0%;
-        top: 8.8%;
+        top: 8.5%;
         overflow: hidden;
         transition: all 0.5s;
+        border-radius: 0px 7px 0px 0px;
     }
     .menu_bar{
         display: block;
