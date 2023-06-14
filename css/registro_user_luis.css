@@ -19,9 +19,19 @@ body{
     align-items: center;
     z-index: 5;
 }
+.modal-alert-acceso{
+    background:linear-gradient(45deg,rgb(8, 8, 8),rgb(16, 16, 16),rgb(32,32,32),rgb(56, 56, 56));
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
 .box-alert{
-    width: 500px;
-    height: 220px;
+    width: 480px;
+    height: 250px;
     background-color: white;
     background: rgba(255, 255, 255, 0.336);
     border-radius: 16px;
@@ -29,8 +39,6 @@ body{
     backdrop-filter: blur(6.5px);
     -webkit-backdrop-filter: blur(6.5px);
     box-shadow: 15px rgba(255, 255, 255, 0.153);
-
-
     -webkit-box-shadow: 21px -14px 56px 0px rgba(97,96,97,1);
     -moz-box-shadow: 21px -14px 56px 0px rgba(97,96,97,1);
     box-shadow: 21px -14px 56px 0px rgba(97,96,97,1); 
@@ -56,6 +64,9 @@ body{
 .inactivo{
    display: none;
 }
+.inactivo-aceptar{
+    display: none; 
+ }
 p{
     font-size: 2em;
     color: white;
@@ -66,12 +77,15 @@ iframe{
     height: 100vh;
     position: fixed;
 }
+
 .div-form{
+        display: flex;
+
         position: relative;
         top: 230px;
         left: 30%;
         width: 780px;
-        height: 500px; 
+        height: 520px; 
         padding: 20px;
         background-color: #1c1c1c;
         border-radius: 8px;
@@ -98,7 +112,7 @@ iframe{
     top: -50%;
     left: -50%; 
     width: 780px;
-    height: 500px;
+    height: 520px;
     background: linear-gradient(0deg,transparent,#45f3ff,#7dff45);
     transform-origin:bottom right ;
     animation: animate 10s linear infinite;  
@@ -109,7 +123,7 @@ iframe{
     top: -50%;
     left: -50%;
     width: 780px;
-    height: 500px;
+    height: 520px;
     background: linear-gradient(0deg,transparent,#ff4545,#45f3ff);
     transform-origin:bottom right ;
     animation: animate 10s linear infinite;
@@ -130,14 +144,14 @@ iframe{
 .form{
     position: absolute;
     inset: 5px;
+    height: 530px;
     background-color: #28292d;  
     z-index: 10;
-    
     border-radius: 8px;
     padding: 10px;
     text-align: center;  
     display: grid;
-    grid-template: "caja1     caja2"300px/
+    grid-template:"caja1     caja2"300px/
                     1fr       1fr  ; 
 
 }
@@ -149,7 +163,7 @@ iframe{
     padding-top: 40px;
 }
 .icon{
-    font-size: 3em;
+    font-size: 5em;
     font-weight: 700;
     margin: auto;
 }
@@ -244,19 +258,6 @@ select{
 input{
     cursor: text;
 }
-
-
-/* button{
-    background-color: #1d78b0;
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    margin: auto;
-    margin-top: 6px;
-    border-radius: 26px;
- /*    height: 20px; 
-    width: 100px;
-} */
 button{
     display: flex;
     align-items:center;
@@ -310,7 +311,7 @@ button:hover::after{
         width: 800px;
         height: 450px;  
         
-        background-color: #1c1c1c;
+        background-color:#1c1c1c;
         border-radius: 8px;
         overflow: hidden;
     }
@@ -358,7 +359,7 @@ button:hover::after{
         z-index: 10;
         border-radius: 8px;
         padding: 20px;
-        height: 450px;
+        height: 440px;
         text-align: center;  
         display: grid;
         grid-template: "caja1     caja2"300px/

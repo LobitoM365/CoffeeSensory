@@ -47,10 +47,10 @@ h1{
     margin: 35px 0 35px 35px;
 }
 .despliege-inactivo{
-
     position: fixed;
     height: 100vh;
     width: 3%;
+    top: 8.3%;
     left: 0;
     overflow-y: auto;
     overflow-x: hidden;
@@ -60,6 +60,7 @@ h1{
     position: fixed;
     height: 100vh;
     width: 20%; 
+    top: 8.3%;
     left: 0%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -69,6 +70,7 @@ h1{
     position: fixed;
     height: 100vh;
     width: 20%; 
+    top: 8.3%;
     left: 0%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -141,10 +143,8 @@ nav ul li .children li a{
     display: block;
 } 
 nav{
-    background-color: #002B5B;
-    position: relative;
-    top: 8.3%;
-}
+    background-color:#002B5B
+} 
 ul{
     list-style: none;
     text-align: right;
@@ -183,7 +183,7 @@ input{
     width: 200px;
     height: 30px;
 }
-@media only screen and (max-width: 1920px){
+@media only screen and (max-width: 1290px){
     .icono{
         margin-left: 1px;
         margin-right: 20px;
@@ -196,10 +196,10 @@ input{
     nav{
         background-color: #002B5B;
         position: absolute;
-        margin-top: 2.3%;
     }
     h1{
         margin: 35px 0 35px 35px;
+        color: #EA5455;
     }
     .despliege-inactivo{
         
@@ -271,15 +271,16 @@ input{
     } 
     .children{
         position: absolute;
-
         display: none;
         background-color: #011826;
         text-align:left;
     }
-    nav ul li:hover .children{
+    .children-desp{
         display: block;
+        height: 500px;
         width: 100%; 
         text-align: left;
+        transition: height 0.5s;
     }
     nav ul li .children li{
         overflow: hidden;
