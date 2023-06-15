@@ -264,7 +264,7 @@ a {
 
 
 /*/////////////////////////////////// Menu Hover ////////////////////////*/
-/* .nav-ul-vertical,.hamburguer{
+.nav-ul-vertical,.hamburguer{
     width: 75px;
     transition: width 0.5s;
 }
@@ -299,13 +299,17 @@ a {
 }
 .div-chinche-icon{
     position: absolute;
-    left: 245px;
+    left: 242px;
     padding: 8px;
-    bottom: calc(100% - 15px);
+    bottom: calc(100% - 8px);
     z-index: 9;
     visibility: hidden;
     transition: visibility 15s;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    rotate: 45deg;
 }
 
 
@@ -339,8 +343,59 @@ a {
 .nav-fijo >Ul{
     background-color: #EA5455;
     width: 300px;
+}
+/* 
+.chinche-fijo-left{
+    width: 5px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: -1px;
+    rotate: 15deg;
+    top: 10px;
+}
+.chinche-fijo-left::after{
+    content: "";
+    width: 5px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 10px;
+    rotate: -30deg;
+    left: 3px;
+}
+.chinche-fijo-right{
+    width: 5px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    right: -1px;
+    rotate: -15deg;
+    top: 10px;
+}
+.chinche-fijo-right::after{
+    content: "";
+    width: 5px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 10px;
+    rotate: 30deg;
+    right: 3px;
 } */
-
+.raya{
+    height: 70%;
+    width: 2px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    rotate: 90deg;
+    top: calc(10% );
+    border-right: 2px solid #002B5B;
+    border-radius: 1px;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0.5s, opacity 0.5s;
+}
 /*/////////////////////////////////////////////////////////////////////*/
 
 
@@ -350,7 +405,7 @@ a {
 /*////////////////// Menu Hamburguer //////////////////////////*/
 
 
- a:hover {
+ /* a:hover {
     background-color: rgb(57, 100, 174);
     border-radius: 8px;
 } 
@@ -372,7 +427,7 @@ a {
  .transition-nav-ul li>a>span {
     opacity: 0;
     transition: opacity 0.5s;
-} 
+}  */
 
 
 

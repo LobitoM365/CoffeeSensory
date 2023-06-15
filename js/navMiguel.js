@@ -7,6 +7,7 @@ let divHamburguer = document.getElementById("divHamburguer");
 let navHorizontal = document.getElementById("navHorizontal");
 let navVertical = document.getElementById("navVertical");
 let chincheIcon = document.getElementById("chincheIcon");
+let chincheFijo = document.getElementById("chincheFijo");
 
 
 let heightdivHamburguer = divHamburguer.scrollHeight;
@@ -16,7 +17,7 @@ navUl.style.marginTop = (heightdivHamburguer + 25) + "px";
 
 //////////////////////////////////Menu hamburguer //////////////////
 
-let widthNavUl = navUl.scrollWidth;
+/* let widthNavUl = navUl.scrollWidth;
 navUl.style.width = "75px";
 divHamburguer.style.width = "75px";
 
@@ -48,7 +49,7 @@ menuHamburguer.addEventListener("click", function () {
         itemSubmenu[x].style.opacity = 0;
 
     }
-})
+}) */
 
 ////////////////////////////////////////////////////////////////////
 
@@ -57,7 +58,7 @@ menuHamburguer.addEventListener("click", function () {
 
 //////////////////// Nav Hover//////////////////////////
 
-/* navVertical.addEventListener("mouseleave", function () {
+navVertical.addEventListener("mouseleave", function () {
     if (navUl.classList.contains("nav-fijo")) {
 
     } else {
@@ -76,7 +77,14 @@ menuHamburguer.addEventListener("click", function () {
 chincheIcon.addEventListener("click", function () {
     navUl.classList.toggle("nav-fijo");
     divHamburguer.style.width = "273px";
-}) */
+    if(navUl.classList.contains("nav-fijo")){
+        chincheFijo.style.visibility = "hidden";
+        chincheFijo.style.opacity = "0";
+    }else{
+        chincheFijo.style.visibility = "";
+        chincheFijo.style.opacity = "";
+    }
+})
 
 ///////////////////////////////
 
@@ -87,7 +95,7 @@ for (let i = 0; i < desplegarSubmenu.length; i++) {
     itemSubmenu[i].style.marginTop = "-" + height + "px";
 
     ////////////Menu hover /////////////////
-    /* itemSubmenu[i].style.opacity = 0; */
+    itemSubmenu[i].style.opacity = 0;
     ////////////////////////////////////////////
 
     desplegarSubmenu[i].addEventListener("click", function () {
@@ -116,8 +124,8 @@ for (let i = 0; i < desplegarSubmenu.length; i++) {
                 }
 
                 ////////////Menu hamburguer /////////////////
-                divHamburguer.style.width = widthNavUl + "px";
-                navUl.style.width = widthNavUl + "px";
+               /*  divHamburguer.style.width = widthNavUl + "px";
+                navUl.style.width = widthNavUl + "px"; */
                 //////////////////////////////////////////////
 
                 navUl.classList.add("nav-desplegado")
