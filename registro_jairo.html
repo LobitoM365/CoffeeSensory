@@ -13,43 +13,63 @@
 
 <body>
     <div class="contain-tabla">
-        <!--  <div class="main">
-        <div class="main-soul">
-            <img class="alert" src="img/alert.svg" alt="" srcset="">
-            <p class="txt-modal">¡Campos sin llenar!</p>
-            <div class="contain-btn">
-                <input id="btnOk" class="btn-ok" type="submit" value="Ok">
-            </div>
-        </div>
-    </div> -->
 
         <div class="tabla">
             <h2>Registro de Aprendiz</h2>
-            <label>Nombre(s)</label required><br>
-            <input type="text"><br>
-            <label>Apellido(s)</label required><br>
-            <input type="text">
-            <br><label>Tipo de Documento</label required><br>
-            <select>
-                <option value="">Tarjeta de identidad</option>
-                <option value="">Cedula de ciudadania</option>
+            <label>Nombre(s)</label><br>
+            <input type="text" class="input"><br>
+            <label class="notif">Este campo es obligatorio</label><br>
+            <label>Apellido(s)</label><br>
+            <input type="text" class="input">
+            <label class="notif">Este campo es obligatorio</label><br>
+            <br><label>Tipo de Documento</label><br>
+            <select class="input">
+                <option value="">Seleccion una opcion</option>
+                <option value="1">Tarjeta de identidad</option>
+                <option value="2">Cedula de ciudadania</option>
             </select><br>
-            <label>Número de Documento</label required><br>
-            <input type="number"><br>
-            <label for="">Telefono</label required><br>
-            <input type="number"><br>
-            <label for="">Correo Electonico</label required><br>
-            <input type="text"><br>
-            <label for="">ID Titulado</label required><br>
-            <select>
-                <option value="">2655521</option>
-                <option value="">2573454</option>
-                <option value="">2165554</option>
+            <label class="notif">Este campo es obligatorio</label><br>
+            <label>Número de Documento</label><br>
+            <input type="text" class="input"><br>
+            <label class="notif">Este campo es obligatorio</label><br>
+            <label for="">Telefono</label><br>
+            <input type="text" class="input"><br>
+            <label class="notif">Este campo es obligatorio</label><br>
+            <label for="">Correo Electonico</label><br>
+            <input type="text" class="input"><br>
+            <label class="notif">Este campo es obligatorio</label><br>
+            <label for="">ID Titulado</label><br>
+            <select class="input">
+                <option value="">Seleccion una opcion</option>
+                <option value="1">2655521</option>
+                <option value="2">2573454</option>
+                <option value="3">2165554</option>
             </select>
-            <input id="btnSubmit" class="btn-submit" type="submit" value="Registrar">
-            <script src="js/registro_jairo.js"></script>
+            <label class="notif">Este campo es obligatorio</label><br>
+            <!-- <button id="btnSubmit" class="btn-submit">Registrar</button> -->
+            <input type="submit" id="btnSubmit" class="btn-submit" value="Registrar">
         </div>
     </div>
+    <div class="" id="shadow">
+        <div class="main-soul-inv" id="main-modal">
+            <div class="main-soul-inv">
+                <img class="alert" src="img/Imagen de WhatsApp 2023-06-14 a las 19.53.59.jpg" alt="" srcset="">
+                <p class="txt-modal">¡Campos sin llenar!</p>
+                <div class="contain-btn">
+                    <input class="btn-ok" type="submit" value="Ok">
+                </div>
+            </div>
+            <div class="main-soul-inv">
+                <img class="check" src="img/Imagen de WhatsApp2 2023-06-14 a las 19.53.59.jpg" alt="" srcset="">
+                <p class="txt-modal">¡Se realizó el registro con exito!</p>
+                <div class="contain-btn">
+                    <input class="btn-ok" type="submit" value="Ok">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/registro_jairo.js"></script>
 </body>
 
 </html>
