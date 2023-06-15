@@ -10,17 +10,21 @@ iframe {
     position: fixed;
 }
 
+body {
+    overflow-y: hidden;
+}
+
 h2 {
-    margin: 35px 0px 40px 0px;
+    margin: 14px 0px 30px 0px;
 }
 
 .tabla {
     position: absolute;
     background-color: rgb(235, 235, 235);
     width: 620px;
-    height: 660px;
-    left: 670px;
-    top: 180px;
+    height: 720px;
+    /* left: 670px; */
+    /* top: 180px; */
     box-shadow: 0px 0px 6px 0px black;
     border-radius: 8px;
     text-align: center;
@@ -29,13 +33,28 @@ h2 {
 input,
 select {
     width: 400px;
-    margin-bottom: 20px;
+    margin-bottom:8px;
     border: none;
     border-bottom: 1px solid black;
     background-color: rgb(226, 226, 226);
     outline: none;
     height: 20px;
     margin-top: 5px;
+}
+
+.contain-tabla {
+    /* z-index: -1; */
+    overflow-y: auto;
+    position: absolute;
+    top: 49.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 35px;
+    display: grid;
+    place-items: center;
+    /* background-color: rebeccapurple; */
+    width: 990px;
+    height: 90vh;
 }
 
 label {
@@ -48,10 +67,64 @@ label {
     position: absolute;
     border: none;
     background-color: #EA5455;
-    bottom: 1px;
+    bottom: 45px;
     width: 80px;
     padding: 8px 0px 25px 0px;
     border-radius: 4px;
     cursor: pointer;
     color: azure;
+}
+
+.main {
+    display: block;
+    position: absolute;
+    background-color: white;
+}
+.main-visible{
+    /* display: none; */
+    position: absolute;
+    background-color: white;
+}
+
+.alert, .check {  
+    width: 80px;
+}
+
+.main-soul {
+    display: block;
+    width: 350px;
+    padding: 20px;
+    display: grid;
+    gap: 25px;
+    place-items: center;
+}
+
+.btn-ok{
+    height: 30px;
+    border-radius: 3px;
+    border-bottom: none;
+    cursor: pointer;
+    background-color: rgb(13, 49, 99);
+    width: 70px;
+    color: white;
+}
+.main-soul-inv{
+    display: none;
+}
+.notif{
+    color: #EA5455;
+    font-size: 0.78em;
+    margin-top: -8px;
+    visibility: hidden;
+}
+.notif-visible{
+    visibility: visible;
+}
+.contai-modal{
+    background-color: rgba(0, 0, 0, 0.573);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
 }
