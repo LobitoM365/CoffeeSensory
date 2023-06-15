@@ -11,10 +11,17 @@ Desplegable.addEventListener("click",function(){
         DespliegeVertical.classList.remove("vertical")  
     }
 })
-DespliegeBajo.addEventListener("click",function () {
-    if (Children.classList.contains(".children-inactivo")) {
-        Children.classList.add("nav ul li .children li a")
-        Children.classList.remove(".children-inactivo")
-    }
-   
-})
+let flecha=document.querySelectorAll(".submenu")
+let cuerpoDespliegue=document.querySelectorAll(".children")
+for (let index = 0; index < flecha.length; index++) {
+    flecha[index].addEventListener("click",function(){
+       /* alert (index)  */
+        if (cuerpoDespliegue[index].classList.contains("children")) { 
+            cuerpoDespliegue[index].classList.remove("children")
+           
+        }else{ 
+            cuerpoDespliegue[index].classList.add("children")
+        }   
+    })
+    
+}

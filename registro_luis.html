@@ -5,42 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/registro_user_luis.css">
+    <link rel="stylesheet" href="./icons/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.css">
     <title>Registro Aprendiz</title>
 </head>
 <body>
     <div id="modal_alert"class=" inactivo ">
         <div class="box-alert">
-            <p>Lo siento al parecer te faltan llenar datos</p>
+            <div class="error"><i class="icon fa-solid fa-circle-exclamation fa-beat-fade" style="color: #e21212;"></i></div>
+            <p class="text_validacion">Lo siento al parecer te faltan llenar datos</p>
             <input id="regreso"class="btn-aceptar" type="submit" value="Aceptar">
         </div>
     </div>
+
+    <div id="modal_alert_acceso"class=" inactivo-aceptar">
+        <div class="box-alert">
+            <div class="error"><i class="icon fa-sharp fa-regular fa-circle-check fa-shake" style="color: #2c511f;"></i></div>
+            <p class="text_validacion">Su registro Fue Exitoso</p>
+            <input id="regreso"class="btn-aceptar" type="submit" value="Aceptar">
+        </div>
+    </div>
+
     <iframe src="./luis.html" frameborder="0"></iframe>
     
-    <div class="div-form">
+    <div id="boxPrincipal" class="div-form">
     <div class="form">
         <div class="one">
             <h2>Ingrese su nombre</h2>
             <br>
             <input type="text" name="" id="NombreUsuario" placeholder="Nombre..."required>
             <br>
+                <div id="validacion" class="validacion">
+                    <div class="triangulo"></div>
+                    <div class="text"><p>Este espacio es obligatorio</p></div>
+                </div>
             <br>
             <h2>Ingrese Su Apellido</h2>
             <br>
             <input type="text" name="" id="ApellidoUsuario" placeholder="Apellido..."required>
+                <div id="validacion1" class="validacion">
+                    <div class="triangulo"></div>
+                    <div class="text"><p>Este espacio es obligatorio</p></div>
+                </div>
             <br>
             <br>
             <h2>Seleccione Su Tipo De Documento</h2>
             <br>
-            <select name="" id="">
-                <option value="">Cédula</option>
-                <option value="">Tarjeta Identidad</option>
-                <option value="">Cédula Extranjera</option>
+            <select name="" id="TipDocumento">
+                <option value="1">Cédula</option>
+                <option value="2">Tarjeta Identidad</option>
+                <option value="3">Cédula Extranjera</option>
             </select>
+           <!--  <div id="validacion5" class="validacion">
+                <div class="triangulo"></div>
+                <div class="text"><p>Este espacio es obligatorio</p></div>
+            </div>  -->
             <br>
             <br>
             <h2>Ingrese Su Numero De Documento</h2>
             <br>
             <input type="number" name="" id="DocumentoUsuario" placeholder="Numero de documento..."required>
+            <div id="validacion2" class="validacion">
+                <div class="triangulo"></div>
+                <div class="text"><p>Este espacio es obligatorio</p></div>
+            </div>
             <br>
             <br>
         </div>
@@ -49,26 +76,39 @@
             <h2>Ingrese Su Numero de telefono</h2>
             <br>
             <input type="number" name="" id="TelefonoUsuario" placeholder="Telefono..."required>
+            <div id="validacion3" class="validacion">
+                <div class="triangulo"></div>
+                <div class="text"><p>Este espacio es obligatorio</p></div>
+            </div>
             <br>
             <br>
             <h2>Ingrese Su Correo Electronico</h2>
             <br>
             <input type="email" id="EmailUsuario" placeholder="Email..." required>
+            <div id="validacion4" class="validacion">
+                <div class="triangulo"></div>
+                <div class="text"><p>Este espacio es obligatorio</p></div>
+            </div>
             <br>
             <br>
             <h2>Seleccione Su Titulado</h2>
             <br>
             <select name="" id="">
-                <option value="">Servicios Barismo</option>
-                <option value="">PAE</option>
-                <option value="">Recursos Naturales</option>
+                <option value="1">Servicios Barismo</option>
+                <option value="2">PAE</option>
+                <option value="3">Recursos Naturales</option>
             </select>
+            <!-- <div id="validacion6" class="validacion">
+                <div class="triangulo"></div>
+                <div class="text"><p>Este espacio es obligatorio</p></div>
+            </div> -->
             <br>
             <br>
-        </div>
-        <div class="box-btn">
             <button id="botonEnviar"><a href="#">Enviar</a></button>
         </div>
+     <!--    <div class="box-btn">
+            
+        </div> -->
         
     </div>
     </div>

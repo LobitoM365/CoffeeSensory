@@ -3,11 +3,10 @@
     margin: 0;
     
 }
-
-
-
 .search-container {
-    
+    position: relative;
+    top: -40%;
+    right: 50%;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -34,8 +33,9 @@
   }
 .user{
     position: relative;
-    left: -72%;
-    font-size: 2em;
+    left: 5%;
+    top:20%;
+    font-size: 2.5em;
     color: white;
 }
 .usuario:hover{
@@ -49,35 +49,54 @@ h1{
 .despliege-inactivo{
     position: fixed;
     height: 100vh;
-    width: 0%;
+    width: 3%;
+    top: 8.3%;
     left: 0;
     overflow-y: auto;
     overflow-x: hidden;
-     
+    transition: width 0.5s;
+}
+.despliege-inactivo:hover{
+    position: fixed;
+    height: 100vh;
+    width: 20%; 
+    top: 8.3%;
+    left: 0%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: width 0.5s;
 }
 .vertical{
     position: fixed;
     height: 100vh;
-    width: 20%;
+    width: 20%; 
+    top: 8.3%;
     left: 0%;
     overflow-y: auto;
     overflow-x: hidden;
     transition: all 0.5s;
 }
+.icono{
+    margin-left: -5px;
+    margin-right: 20px;
+}
 .menu_bar{
-    display: flex;
+    display: block;
     width: 100%;
     height: 80px;
     justify-content: right;
     align-items: center;
     position: fixed;
     top: 0;
-    background-color: #EA5455;
+    background-color: #EA5455; 
 }
 .bt_menu{
+    position: absolute;
+    right: 5%;
+    top: 5%;
     display: block;
     padding: 20px;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 100px;
     font-weight: bold;
     text-decoration: none;
@@ -107,33 +126,32 @@ nav ul li .children{
     background-color: #011826;
     text-align:left;
 }
-nav ul li:hover .children{
+.children-desp{
     display: block;
+    height: 500px;
     width: 100%; 
     text-align: left;
+    transition: height 0.5s;
 }
+
 nav ul li .children li{
     overflow: hidden;
     display: block;
     border-bottom: 1px solid rgb(255,255,255,.9);
 }
-nav ul li .children li a:hover{
+nav ul li .children li a{
     display: block;
 } 
 nav{
-    background-color: #002B5B;
-    position: relative;
-    top: 8.3%;
-}
+    background-color:#002B5B
+} 
 ul{
     list-style: none;
     text-align: right;
 }
 li{
-    display: flex;
-    position: relative;
-    
-}
+    width: 900px;
+} 
 nav ul li a{
     display: block;
     color: white;
@@ -142,8 +160,7 @@ nav ul li a{
     padding: 20px;
 }
 nav ul li:hover{
-    background-color: #4e7288;
-   
+    background-color: #4e7288; 
 }
 .icon-chevron-small-down{
     float: right;
@@ -153,6 +170,12 @@ nav ul li:hover{
 }
 nav ul li .children li a{
     display: block;
+}
+nav ul li ul li{
+    background-color: #031d3b !important; 
+}
+nav ul li ul li:hover{
+    background-color: #4e7288 !important; 
 }
 input{
     border-radius: 6px;
@@ -160,95 +183,60 @@ input{
     width: 200px;
     height: 30px;
 }
-/* .menu_bar{
-    display:inline-block; 
-    
-}
-nav{
-    background-color: #002B5B;
-    height: 100vh;
-    width: 15%;
-}
-ul{
-    list-style: none;
-    text-align: right;
-}
-li{
-    display: flex;
-    position: relative;
-    justify-content:left;
-    align-items: center;
-    
-}
-nav ul li:hover{
-    background-color: #4e7288;
-   
-}
-nav ul li a{
-    display: block;
-    color: white;
-    font-size: 1.3em;
-    text-decoration: none;
-    padding: 20px;
-}
-.children{
-    position: absolute;
-    display: none;
-    background-color: #011826;
-    text-align:left;
-}
-nav ul li:hover .children{
-    display: block;
-    width: 100%; 
-    text-align: left;
-}
-nav ul li .children li{
-    overflow: hidden;
-    display: block;
-    border-bottom: 1px solid rgb(255,255,255,.9);
-}
-nav ul li .children li a{
-    display: block;
-}
-.main-content{
-    margin: 30px;
-    background-color: #F9F5EB;
-}
-.icon-chevron-small-down{
-    float: right;
-    position: relative;
-    top: 3px;
-    padding-left: 5px;
-} */
-@media only screen and (max-width: 720px){
+@media only screen and (max-width: 1290px){
+    .icono{
+        margin-left: 1px;
+        margin-right: 20px;
+        visibility: visible; 
+    }
     body{
         padding-top: 70px;
         background-color: #F9F5EB;
     }
+    nav{
+        background-color: #002B5B;
+        position: absolute;
+    }
     h1{
         margin: 35px 0 35px 35px;
+        color: #EA5455;
     }
     .despliege-inactivo{
+        
         position: fixed;
         height: 100vh;
-        width: 0%;
-        left: 0;
-        overflow-y: auto;
-        overflow-x: hidden;
+        width: 5%;
+        /* left: px; */
+        top:8.5% ;
+        overflow: hidden;
+        transition: all 0.5s;
+        border-radius: 0px 7px 0px 0px;
          
+    }
+    .despliege-inactivo:hover{
+        position: fixed;
+        height: 100vh;
+        width: 25%;
+        left: 0%;
+        top:8.5%;
+        overflow: hidden;
+        transition: left 0.5s;
+        border-radius:0px 7px 0px 0px;
     }
     .vertical{
         position: fixed;
         height: 100vh;
-        width: 50%;
+        width: 25%;
         left: 0%;
-        overflow-y: auto;
-        overflow-x: hidden;
+        top: 8.5%;
+        overflow: hidden;
         transition: all 0.5s;
+        border-radius: 0px 7px 0px 0px;
     }
     .menu_bar{
         display: block;
         width: 100%;
+        height: 80px;
         position: fixed;
         top: 0;
         background-color: #EA5455;
@@ -268,11 +256,11 @@ nav ul li .children li a{
     }
     nav ul{
         text-align: left;
-
     }
     nav ul li{
         display: block;
         border-bottom: 1px solid rgb(255,255,255,.5);
+       
     }
     nav ul .children{
         position: relative;
@@ -287,10 +275,12 @@ nav ul li .children li a{
         background-color: #011826;
         text-align:left;
     }
-    nav ul li:hover .children{
+    .children-desp{
         display: block;
+        height: 500px;
         width: 100%; 
         text-align: left;
+        transition: height 0.5s;
     }
     nav ul li .children li{
         overflow: hidden;
