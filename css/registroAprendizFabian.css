@@ -53,9 +53,9 @@ label {
 }
 .txt-warning{
     color: #f75959;
-    font-size: 0.8em;
-    margin-top: 6px;
-    margin-bottom: -25px;
+    font-size: 0.72em;
+    margin-top: 3.5px;
+    margin-bottom: -20px;
     visibility: hidden;
 }
 .txt-warning-visible{
