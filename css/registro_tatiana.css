@@ -52,7 +52,7 @@ iframe{
     padding: 3px;
     margin: auto;
     width: 550px;
-    height: 600px;
+    height: 650px;
     text-align: center;
     font-size: 1em;
     
@@ -113,18 +113,26 @@ p{
     align-items: center;
     padding-bottom: 20px;
 }
-.texto-error{
+/* .texto-error{
     font-size: 1em;
     color: rgb(197, 57, 57);
-}
+} */
 .one{
-    position: relative;
+    font-size: 1em;
+    color: rgb(197, 57, 57);
+    width: 200px;
+    text-align: center;
+    margin-left: 32%;
+    margin-top: 5px;
     padding: 0;
     margin-bottom: 6px;
     left: -3%;
+    border-radius: 12px;
+    border: 1px solid orangered;
 }
+
 .correcto{
-    display: none;
+    visibility: hidden;
 }
 .acept{
     color: rgb(67, 208, 43);
