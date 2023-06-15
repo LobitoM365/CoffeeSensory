@@ -3,7 +3,9 @@
     padding: 0;
 }
 body{
-    background-color: #F9F5EB;
+    
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 div{
     display: block;
@@ -11,50 +13,70 @@ div{
     left: 100px;
     top: 100px;
 }
-input{
-    padding: 4px;
+input,select{
+    width: 250px;
+    padding: 6px;
     border-radius: 8px;
-    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: 1px solid transparent;
+   text-align: left;
+}
+input{
+    cursor: text;
 }
 h1{
+    padding-bottom:20px;
+    font-size: 2.5em;
     text-align: center;
     align-items: center;
     color: #EA5455;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 iframe{
     width: 100%;
     height: 100vh;
     position: fixed;
 }
-h2{
-    text-align: center;
-    justify-content: center;
-}
+
 .principal{
-    border: 1.5px solid black;
+
+    background: rgba(255, 255, 255, 0.51);
+    border-radius: 16px;
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    box-shadow: 5px rgba(255, 255, 255, 0.51);
+    box-shadow: 1px 0px 25px 0px   #023859; 
     padding: 3px;
     margin: auto;
-    width: 450px;
-    height: 500px;
+    width: 550px;
+    height: 650px;
     text-align: center;
-    font-size: 1.3em;
-    border-radius: 8px;
-    color: white;
-    background-color:#034086;
+    font-size: 1em;
+    
 }
 .boton{
     cursor: pointer;
     border-radius:30px;
-    border: 1px solid black;
-    width: 100px;
+    text-align: center;
+    background-color: #EA5455;
+    color: white;
+    border-bottom: 1px solid  rgb(76, 74, 74);
+    width: 200px;
     height: 30px;
 }
 .boton:hover{
-    background-color:#e4dccf;
-    border:1px solid rgb(76, 74, 74);
+    background-color: #4d6f83;
+    text-align: center;
+    color: white;
+    width: 200px;
+    height: 30px;
+    border-bottom: 1px solid rgb(76, 74, 74);
 }
 select{
-    padding: 4px;
+    padding: 3px;
     border-radius: 8px;
 }
 .central{
@@ -65,21 +87,73 @@ select{
     display: flex;
     position: absolute;
     text-align: center;
+    top: 0;
+    left: 0;
     z-index: 5;
 }
 .inactivo{
     display: none;
 }
 p{
-    font-size: 1.4em;
+    font-size: 1.3em;
+    font-family: serif;
+    color: gray;
+    padding-left:170px ;
+    text-align: left;
+
+}
+.alert{
+    color: red;
+    display: flex;
+    position: relative;
+    font-size: 3em;
+    top: -50px;
+    left: 45%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+/* .texto-error{
+    font-size: 1em;
+    color: rgb(197, 57, 57);
+} */
+.one{
+    font-size: 1em;
+    color: rgb(197, 57, 57);
+    width: 200px;
+    text-align: center;
+    margin-left: 32%;
+    margin-top: 5px;
+    padding: 0;
+    margin-bottom: 6px;
+    left: -3%;
+    border-radius: 12px;
+    border: 1px solid orangered;
+}
+
+.correcto{
+    visibility: hidden;
+}
+.acept{
+    color: rgb(67, 208, 43);
+    display: flex;
+    position: relative;
+    font-size: 4em;
+    top: -50px;
+    left: 45%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
 }
 .form{
     margin: auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
     position: relative;
-    top: 1px;
+    top: 5px;
+    left: 5%;
+    /* justify-content: left;
+    align-items:left;
+    display: flex; */
+    position: relative;
     width: 300px;
     height: 200px;
     border-radius: 16px;
@@ -98,5 +172,5 @@ p{
     cursor: pointer;
 }
 .boton-aceptar:hover{
-    background-color:rgb(96, 231, 114)
+    background-color:rgb(132, 233, 145)
 }

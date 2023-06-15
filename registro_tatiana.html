@@ -6,38 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar Aprendiz</title>
     <link rel="stylesheet" href="./css/registro_tatiana.css">
+    <link rel="stylesheet" href="icons/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.css">
 </head>
 <body>
     <div id="registro" class="inactivo">
         <div class="form">
-            <p> Por favor llene todos los espacios!!</p> <br>
+            <i class=" alert fa-solid fa-triangle-exclamation"></i>
+            <p>¡¡Por favor llene todos los espacios!!</p> <br>
             <input id="botonAceptar" class="boton-aceptar"type="submit" name="" id="" value="Aceptar"> 
         </div>
-    </div>    
+    </div>   
+    <div id="registro" class="inactivo">
+        <div class="form">
+            <i class=" acept fa-solid fa-circle-check"></i>
+            <p>¡Ha sido registrado con éxito!</p><br>  
+        </div>
+    </div> 
     <iframe src="./tatiana.html" frameborder="0"></iframe>
     <div>
         <h1>Registro Aprendiz</h1>
         <br>
-        <h2>Bienvenido(a)</h2><br>
         <form  class="principal"action=""><br>
+            
             <p>Ingrese su(s) nombre(s)</p>
-            <input  id="nombre"type="text" name="" id="" placeholder="Nombre(s)" required>
-            <p>Ingrese sus Apellidos</p>
-            <input id="apellido" type="text" placeholder="Apellidos" required>
-            <p>Ingrese el tipo de Documento</p>
+            <input  id="nombre"type="text" name="" id="" placeholder="Nombre(s)" >
+             <p id="textoError" class="one">Este campo es obligatorio</p>
+            <br>
+            <p>Ingrese sus apellidos</p>
+            <input id="apellido" type="text" placeholder=" Apellidos" >
+            <p id="textoError" class="one">Este campo es obligatorio</p>
+            <br>
+           <!--  <div class="error"><div class="one"><p class="texto-error">Este campo es obligatorio</p></div></div> -->
+            <p>Tipo de Documento</p>
+            <br>
             <select name="" id="">
                 <option value="">Seleccione una opción</option>
                 <option value="">Tarjeta de identidad</option>
                 <option value="">Cédula</option>
                 <option value="">Cédula de extranjería</option>
             </select><br>
-            <p>Ingrese su número de documento</p>
-            <input  id="documento"type="number" name="" id="" placeholder="Documento "required>
-            <p>Ingrese su número de teléfono </p>
-            <input id="telefono" type="number" name="" id="" placeholder="Teléfono"required>
-            <p>Ingrese su correo electrónico</p>
-            <input  id="correo"type="email" name="" id="" placeholder="Email"required>
-            <p>Ingrese  el titulado</p>
+            <br>
+            <p>Número de documento</p>
+            <input  id="documento"type="number" name="" id="" placeholder="Documento">
+            <p id="textoError" class="one">Este campo es obligatorio</p>
+            
+<!--             <div class="error"><div class="one"><p class="texto-error">Este campo es obligatorio</p></div></div> -->
+            
+            <br>
+            <p>Número de teléfono </p>
+            <input id="telefono" type="number" name="" id="" placeholder="Teléfono"> 
+            <p id="textoError" class="one">Este campo es obligatorio</p>
+<!--             <div class="error"><div class="one"><p class="texto-error">Este campo es obligatorio</p></div></div> -->
+            
+            <br>
+            <p>Correo electrónico</p>
+            <input  id="correo"type="email" name="" id="" placeholder="Correo"> 
+            <p id="textoError" class="one">Este campo es obligatorio</p>
+           <!--  <div class="error"><div class="one"><p class="texto-error">Este campo es obligatorio</p></div></div> -->
+            <br>
+            <p>Titulado</p>
+            <br>
             <select name="" id="">
                 <option value="">Seleccione una opción</option>
                 <option value="">Barismo</option>
