@@ -3,7 +3,15 @@ let itemSubmenu = document.querySelectorAll(".item-submenu");
 let chevron = document.querySelectorAll(".chevron");
 let navUl = document.getElementById("navUl");
 let menuHamburguer = document.getElementById("menuHamburguer");
+let loader = document.getElementById("loader");
+let contenido = document.getElementById("contenido");
 
+window.onload = function(){
+    loader.style.opacity = "0";
+    contenido.style.opacity = "1";
+    loader.style.visibility = "hidden";
+    contenido.style.visibility = "visible";
+}
 menuHamburguer.addEventListener("click", function () {
     navUl.classList.toggle("transition-nav-ul")
     for (let x = 0; x < desplegarSubmenu.length; x++) {
