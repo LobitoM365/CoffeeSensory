@@ -72,20 +72,21 @@ for (let CS = 0; CS < cuadroSelect.length; CS++) {
                     cuadroSelect[CSF].classList.add("focus-cuadro-select")
                 } else if (CSF > CS) {
                     cuadroSelect[CSF].classList.remove("focus-cuadro-select")
-                }
-                cuadroSelect[CSF].classList.toggle("focus-no-active");
+                    cuadroSelect[CSF].classList.toggle("focus-no-active");
 
-                if (cuadroSelect[CSF].classList.contains("focus-no-active")) {
                     if (cuadroSelect[CSF].classList.contains("focus-no-active")) {
-                        cuadroSelect[CS].classList.remove("focus-cuadro-select");
-                        cuadroSelect[CSF].classList.add("focus-active");
-                    } else
-                        if (cuadroSelect[CSF].classList.contains("focus-active")) {
-                            cuadroSelect[CS].classList.add("focus-cuadro-select");
-                            cuadroSelect[CSF].classList.remove("focus-active");
-                            cuadroSelect[CSF].classList.remove("focus-active");
-                        }
+                        if (cuadroSelect[CSF].classList.contains("focus-no-active")) {
+                            cuadroSelect[CS].classList.remove("focus-cuadro-select");
+                            cuadroSelect[CSF].classList.add("focus-active");
+                        } else
+                            if (cuadroSelect[CSF].classList.contains("focus-active")) {
+                                cuadroSelect[CS].classList.add("focus-cuadro-select");
+                                cuadroSelect[CSF].classList.remove("focus-active");
+                                cuadroSelect[CSF].classList.remove("focus-active");
+                            }
+                    }
                 }
+               
 
             }
 
