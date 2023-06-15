@@ -10,7 +10,9 @@
 </head>
 
 <body>
+    <iframe id="loader" class="iframe-loader" src="loaderMiguel.html" frameborder="0"></iframe>
 
+    <div id="contenido">
         <iframe class="nav-horizontal" src="miguelNavHorizontal.html" frameborder="0"></iframe>
         <iframe id="iframeNavVertical" class="nav-vertical" src="miguelNavVertical.html" frameborder="0"></iframe>
         <iframe id="iframeAlertModal" class="iframe-alert-modal" src="alertModalMiguel.html" frameborder="0"></iframe>
@@ -41,8 +43,8 @@
                             </div>
                         </label>
                         <input class="input inputText" type="text" name="" id="" placeholder="Ingrese su(s) nombre(s)">
-    
-    
+
+
                         <label class="label"> Apellidos(s):
                             <div class="alert-input-vacio indicador-elementos-vacios">
                                 <h6>Este campo es obligatorio...</h6>
@@ -58,9 +60,9 @@
                             </div>
                         </label>
                         <input class="input inputText" type="text" name="" id="" placeholder="Ingrese sus apellidos">
-    
-    
-    
+
+
+
                         <label class="labelSelect"> Tipo de documento:
                             <div class="alert-select-vacio indicador-elementos-vacios">
                                 <h6>Debe seleccionar un elemento de la lista...</h6>
@@ -81,10 +83,10 @@
                             <option value="2">Cédula de ciudadania</option>
                             <option value="3">Cédula extranjera</option>
                         </select>
-    
-    
+
+
                         <label class="label" id="labelDocumento"> Número de documento:
-                            <div id="alertInputDocumento"class="alert-input-vacio indicador-elementos-vacios">
+                            <div id="alertInputDocumento" class="alert-input-vacio indicador-elementos-vacios">
                                 <h6>Este campo debe tener un maximo de 8 0 10 caracteres...</h6>
                                 <div class="indicate-element"></div>
                                 <div class="restring">
@@ -99,11 +101,11 @@
                         </label>
                         <input class="input inputNumber" type="text" name="" id="inputNumberDocumento"
                             placeholder="Ingrese su documento">
-    
-    
-    
+
+
+
                         <label class="label" id="labelTelefono"> Teléfono:
-                            <div  id="alertInputTelefono" class="alert-input-vacio indicador-elementos-vacios">
+                            <div id="alertInputTelefono" class="alert-input-vacio indicador-elementos-vacios">
                                 <h6>Este campo debe tener un maximo de 10 caracteres...</h6>
                                 <div class="indicate-element"></div>
                                 <div class="restring">
@@ -118,10 +120,11 @@
                         </label>
                         <input class="input inputNumber" type="text" name="" id="inputNumberTelefono"
                             placeholder="Ingrese su número de teléfono">
-    
-    
-    
-                            <label class="label"> Correo electrónico: <div  id="divAlertInputCorreo" class="alert-input-vacio indicador-elementos-vacios">
+
+
+
+                        <label  id="labelCorreo" class="label"> Correo electrónico: <div id="divAlertInputCorreo"
+                                class="alert-input-vacio indicador-elementos-vacios">
                                 <h6 id="alertInputCorreo">Este campo es obligatorio...</h6>
                                 <div class="indicate-element"></div>
                                 <div class="restring">
@@ -139,6 +142,7 @@
                 </div>
             </div>
         </div>
+    </div>
 </body>
 
 </html>

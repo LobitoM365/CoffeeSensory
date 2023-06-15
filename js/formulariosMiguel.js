@@ -16,10 +16,18 @@ let iframeAlertModal = document.getElementById("iframeAlertModal");
 let inputCorreo = document.getElementById("inputCorreo");
 let labelTelefono = document.getElementById("labelTelefono");
 let labelDocumento = document.getElementById("labelDocumento");
+let labelCorreo = document.getElementById("labelCorreo");
 let alertInputCorreo = document.getElementById("alertInputCorreo");
 let divAlertInputCorreo = document.getElementById("divAlertInputCorreo");
+let loader = document.getElementById("loader");
+let contenido = document.getElementById("contenido");
 
-
+window.onload = function(){
+    loader.style.opacity = "0";
+    contenido.style.opacity = "1";
+    loader.style.visibility = "hidden";
+    contenido.style.visibility = "visible";
+}
 inputNumberTelefono.addEventListener("input", function () {
     if (inputNumberTelefono.value.length = 10) {
         inputNumberTelefono.value = inputNumberTelefono.value.slice(0, 10);
@@ -78,7 +86,8 @@ for (let x = 0; x < input.length; x++) {
         input[x].value = input[x].value.trimStart();
         input[x].value = input[x].value.replace("  ", " ");
         input[x].value = input[x].value.replace(/[!#$%^&*()-+=[{}|;:'",_<>/?`~¡¿´´°ç-]/, "",);
-
+        let numeros = /\d+/g;
+        let letras =/[a-zA-Z]/;
         if (input[x].value.trim() == "") {
             label[x].style.color = "";
         } else {
@@ -93,7 +102,18 @@ for (let x = 0; x < input.length; x++) {
         if (inputNumberDocumento.value.length < 8 || inputNumberDocumento.value.length == 9) {
             labelDocumento.style.color = "white";
         }
+        if (inputCorreo.value.includes("@") && inputCorreo.value.includes(".")) {
+                
+        } else {
+            labelCorreo.style.color = "white";
+        }
+        if (numeros.test(inputCorreo.value) || letras.test(inputCorreo.value)) {
+            console.log(1)
+        } else {
+            labelCorreo.style.color = "white";
+        }
     })
+
 }
 
 enviar.addEventListener("click", function (event) {
@@ -124,6 +144,7 @@ enviar.addEventListener("click", function (event) {
                 divAlertInputCorreo.style.visibility = "visible";
                 divAlertInputCorreo.classList.add("Transition-alert-select-vacio");
                 alertInputCorreo.innerHTML = ("El correo debe contener almenos una @ y un .");
+                inputSinValor = 1;
             }
             if (numeros.test(inputCorreo.value) || letras.test(inputCorreo.value)) {
                 console.log(1)
@@ -132,6 +153,7 @@ enviar.addEventListener("click", function (event) {
                 divAlertInputCorreo.style.visibility = "visible";
                 divAlertInputCorreo.classList.add("Transition-alert-select-vacio");
                 alertInputCorreo.innerHTML = ("El correo debe contener almenos un numero o una letra...");
+                inputSinValor = 1;
             }
         }
         input[u].value = input[u].value.trimEnd();
@@ -155,7 +177,7 @@ enviar.addEventListener("click", function (event) {
         input[x].value = input[x].value.trimEnd();
     }
 
-   
+   console.log(inputSinValor)
 
 
 })
@@ -167,6 +189,8 @@ window.addEventListener('load', function () {
         let mistake = iframe.document.getElementById("mistake");
         let noMistake = iframe.document.getElementById("noMistake");
 
+        let numeros = /\d+/g;
+        let letras =/[a-zA-Z]/;
         let inputSinValor = 0;
         let selectSinValor = 0;
         for (let s = 0; s < select.length; s++) {
@@ -179,6 +203,15 @@ window.addEventListener('load', function () {
                 inputSinValor = 1;
             }
         }
+        if (inputCorreo.value.includes("@") && inputCorreo.value.includes(".")) {
+                
+        } else {
+            inputSinValor = 1;
+        }
+        if (numeros.test(inputCorreo.value) || letras.test(inputCorreo.value)) {
+        } else {
+            inputSinValor = 1;
+        }
         if (selectSinValor == 1 || inputSinValor == 1 || inputNumberTelefono.value.length < 10 || inputNumberDocumento.value.length < 8 || inputNumberDocumento.value.length == 9) {
             mistake.style.display = "block";
             noMistake.style.display = "none";
@@ -186,6 +219,7 @@ window.addEventListener('load', function () {
             noMistake.style.display = "block";
             mistake.style.display = "none";
         }
+
         for (let x = 0; x < inputModalAlert.length; x++) {
             inputModalAlert[x].addEventListener("click", function () {
                 iframeAlertModal.style.display = "none";
