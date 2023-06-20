@@ -4,18 +4,31 @@ let rangeIntensidad = document.querySelectorAll(".range-intensidad");
 let puntajeRange = document.querySelectorAll(".puntaje-range ");
 let rangePuntaje = document.querySelectorAll(".range-puntaje ");
 let cuadroSelect = document.querySelectorAll(".cuadro-select ");
+let rangeColor = document.querySelectorAll(".range-color");
+let divRangeColorIntensidad = document.querySelectorAll(".div-range-color-intensidad");
 
 
 for (let RI = 0; RI < rangeIntensidad.length; RI++) {
     rangeIntensidad[RI].addEventListener("input", function () {
         valueRangeIntensidad[RI].innerHTML = rangeIntensidad[RI].value;
+        if(RI == 0){
+
+        }else{
+            divRangeColorIntensidad[RI - 1].style.height = ((rangeIntensidad[RI].value / 5) * 100) + "%";
+        }
     })
 }
 
+for (let RI = 0; RI < 1; RI++) {
+    rangeIntensidad[RI].addEventListener("input", function () {
+        valueRangeIntensidad[RI].innerHTML = rangeIntensidad[RI].value;
+        let cantidadColores = rangeColor[RI].querySelectorAll(".color");
+        rangeColor[RI].style.height = ((rangeIntensidad[RI].value / cantidadColores.length) * 100) + "%";
+    })
+}
 for (let x = 0; x < rangePuntaje.length; x++) {
     rangePuntaje[x].addEventListener("input", function () {
         puntajeRange[x].innerHTML = rangePuntaje[x].value;
-
     })
 }
 for (let CS = 0; CS < cuadroSelect.length; CS++) {

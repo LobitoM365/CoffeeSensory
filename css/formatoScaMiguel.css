@@ -9,13 +9,12 @@ body{
 }
 .formato-sca {
     border: 0.1vw solid black;
-    
     width: 97%;
     height: 18vw;
     display: grid;
-    grid-template: "notas1 nivel-tostion fragancia-aroma sabor           acidez       cuerpo        uniformidad  taza-limpia  puntaje-catador puntaje-total " 1fr
-        "notas1 nivel-tostion fragancia-aroma sabor-residual  acidez       cuerpo        balance      dulzor       defectos        defectos" 1fr
-        "notas1 notas-final   notas-final   notas-final     notas-final  notas-final   notas-final  notas-final   notas-final    puntaje-final" 0.4fr/
+    grid-template: "notas1 nivel-tostion fragancia-aroma sabor           acidez       cuerpo        uniformidad  taza-limpia  puntaje-catador puntaje-total " auto
+        "notas1 nivel-tostion fragancia-aroma sabor-residual  acidez       cuerpo        balance      dulzor       defectos        defectos" auto
+        "notas1 notas-final   notas-final   notas-final     notas-final  notas-final   notas-final  notas-final   notas-final    puntaje-final" 1fr/
         0.5fr 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
 }
 
@@ -212,6 +211,7 @@ h4 {
 }
 
 .range-nivel-intensidad{
+    appearance: none;
     -webkit-appearance: none;
     height: 2vw;
     width: 5vw;
@@ -303,6 +303,7 @@ h4 {
 }
 .input-range-puntaje{
     position: absolute;
+    appearance: none;
     -webkit-appearance: none;
     width: 90%;
     height: 0.1vw;
@@ -314,7 +315,7 @@ h4 {
     -webkit-appearance: none;
     height: 3vw;
     width: 0.1vw;
-    background-color: transparent;
+    background-color:rgb(255,175,28);
 }
 
 .area-puntaje{
@@ -380,4 +381,103 @@ h4 {
 
 .focus-cuadro-select{
     background-color: black;
+}
+
+.range-color-inicial{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(192,192,192),rgb(150,150,150),rgb(129,129,129),rgb(49,49,49));
+    position: absolute;
+    z-index: -2;
+}
+
+.div-range-color{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    transform: rotate(180deg);
+}
+.range-color{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 0%;
+    overflow: hidden;
+}
+
+.color-4-nivel-tostion{
+    width: 100%;
+    height: calc(5vw / 4 );
+    background-color:rgba(158,156,137) ;
+    flex: none;
+}
+.color-3-nivel-tostion{
+    width: 100%;
+    height: calc(5vw / 4 );
+    background-color:rgb(146,110,84) ;
+    flex: none;
+}
+.color-2-nivel-tostion{
+    width: 100%;
+    height: calc(5vw / 4 );
+    background-color:rgb(103,75,53) ;
+    flex: none;
+}
+.color-1-nivel-tostion{
+    width: 100%;
+    height: calc(5vw / 4 );
+    background-color:rgb(69,37,18) ;
+    flex: none;
+}
+
+
+
+
+
+/* .color-1-intensidad{
+    width: 100%;
+    height: calc(5vw / 5 );
+    background-color:rgb(252, 252, 129) ;
+    flex: none;
+}
+.color-2-intensidad{
+    width: 100%;
+    height: calc(5vw / 5 );
+    background-color:rgba(254,255,49) ;
+    flex: none;
+}
+.color-3-intensidad{
+    width: 100%;
+    height: calc(5vw / 5 );
+    background-color:rgb(103,75,53) ;
+    flex: none;
+}
+.color-4-intensidad{
+    width: 100%;
+    height: calc(5vw / 5 );
+    background-color:rgb(69,37,18) ;
+    flex: none;
+}
+.color-5-intensidad{
+    width: 100%;
+    height: calc(5vw / 5 );
+    background-color:rgb(25, 218, 57) ;
+    flex: none;
+} */
+
+
+.div-range-color-intensidad{
+    width: 100%;
+    height: 0%;
+    background-color: aqua;
+    position: absolute;
+    overflow: hidden;
+}
+
+.color-intensidad{
+    width: 100%;
+    height: 5vw;
+    background-image: linear-gradient(rgb(254,255,49),rgb(255,175,28),rgb(255,112,28),rgb(243,48,45));
 }
