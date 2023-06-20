@@ -12,7 +12,7 @@ let chincheFijo = document.getElementById("chincheFijo");
 
 let heightdivHamburguer = divHamburguer.scrollHeight;
 
-navUl.style.marginTop = (heightdivHamburguer + 25) + "px";
+
 
 
 //////////////////////////////////Menu hamburguer //////////////////
@@ -76,7 +76,7 @@ navVertical.addEventListener("mouseleave", function () {
 
 chincheIcon.addEventListener("click", function () {
     navUl.classList.toggle("nav-fijo");
-    divHamburguer.style.width = "273px";
+    divHamburguer.style.width = "288px";
     if(navUl.classList.contains("nav-fijo")){
         chincheFijo.style.visibility = "hidden";
         chincheFijo.style.opacity = "0";

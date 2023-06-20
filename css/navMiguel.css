@@ -15,7 +15,10 @@
     height: 100%;
     position: fixed;
     z-index: 1;
-    background-color: rgb(7, 34, 82);
+    display: grid;
+    grid-template: "hamburguer" auto
+                   "navegacion" 1fr/ 
+                    1fr;
 }
 
 li {
@@ -24,14 +27,38 @@ li {
     width: 1fr;
 }
 
-nav>ul>li>a {
+nav>div>ul>li>a {
     z-index: 7;
     position: relative;
     width: 200px;
 }
 
-nav>Ul>li>ul>li>a {
+nav>div>Ul>li>ul>li>a {
     width: 140px;
+}
+
+.navegacion {
+    width: 100%;
+    grid-area: navegacion;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    background-color: rgb(7, 34, 82);
+}
+.nav-ul-vertical{
+    position: absolute;
+}
+.navegacion::-webkit-scrollbar{
+    width: 15px;
+}
+.navegacion::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: rgb(96, 112, 139);
+}
+
+
+.div-hamburguer {
+    grid-area: hamburguer;
 }
 
 ul {
@@ -40,12 +67,12 @@ ul {
     z-index: 50;
 }
 
-.nav-vertical{
-    overflow-y:auto;
+.nav-vertical {
+    overflow-y: hidden;
 }
 
-.nav-vertical >ul{
-    margin-top: 140px;
+.nav-vertical>div>ul {
+    margin-top: 30px;
     margin-bottom: 10px;
 }
 
@@ -70,7 +97,7 @@ a {
     background-color: rgb(7, 34, 82);
 }
 
-nav>Ul>Li a {
+nav>div>Ul>Li a {
     display: flex;
 }
 
@@ -90,7 +117,7 @@ img {
     width: 15px;
 }
 
-nav>Ul>li>a .icon {
+nav>div>Ul>li>a .icon {
     position: absolute;
     top: 0;
     left: 0;
@@ -100,7 +127,7 @@ nav>Ul>li>a .icon {
 
 
 
-nav>Ul>li>Ul {
+nav>div>Ul>li>Ul {
     z-index: -2;
 }
 
@@ -131,7 +158,6 @@ nav>Ul>li>Ul {
     background-color: #f06363;
     display: flex;
     align-items: center;
-    position: fixed;
     border-bottom: 1px solid white;
     overflow: hidden;
 }
@@ -142,11 +168,11 @@ nav>Ul>li>Ul {
     padding: 25px 25px;
 }
 
-nav>ul>li>ul {
+nav>div>ul>li>ul {
     margin-left: 28px;
 }
 
-nav>ul>li>a .text-a-nav {
+nav>div>ul>li>a .text-a-nav {
     margin-left: 50px;
 }
 
@@ -180,7 +206,7 @@ nav>ul>li>a .text-a-nav {
     position: absolute;
     margin-left: 76px;
     font-size: 1.8em;
-
+    z-index: 9;
 }
 
 a {
@@ -193,7 +219,7 @@ a {
     margin-left: 76px;
     font-size: 1.8em;
     -webkit-text-stroke: 6px #002B5B;
-    z-index: -1;
+    z-index: 8;
 }
 
 .buscador-nav-horizontal {
@@ -264,23 +290,30 @@ a {
 
 
 /*/////////////////////////////////// Menu Hover ////////////////////////*/
-.nav-ul-vertical,.hamburguer{
+.nav-ul-vertical,
+.hamburguer {
     width: 75px;
     transition: width 0.5s;
 }
-.nav-vertical:hover .nav-ul-vertical,.nav-vertical:hover .hamburguer{
-    width: 273px;
+
+.nav-vertical:hover .nav-ul-vertical,
+.nav-vertical:hover .hamburguer {
+    width: 288px;
 }
 
-.nav-ul-vertical li > a>span,.nav-ul-vertical li> ul .icon{
+.nav-ul-vertical li>a>span,
+.nav-ul-vertical li>ul .icon {
     opacity: 0;
     transition: opacity 0.5s;
 }
-.nav-vertical:hover .nav-ul-vertical li>a >span ,.nav-vertical:hover .nav-ul-vertical li>ul .icon{
+
+.nav-vertical:hover .nav-ul-vertical li>a>span,
+.nav-vertical:hover .nav-ul-vertical li>ul .icon {
     opacity: 1;
 }
 
-.nav-ul-vertical>li>a:hover , .nav-ul-vertical >li>ul >Li >a:hover {
+.nav-ul-vertical>li>a:hover,
+.nav-ul-vertical>li>ul>Li>a:hover {
     background-color: rgb(57, 100, 174);
     padding-right: 15px;
     border-radius: 8px;
@@ -293,11 +326,13 @@ a {
     border-radius: 8px;
     cursor: pointer;
 }
-.nav-vertical:hover .nav-ul-vertical .div-chinche-icon{
+
+.nav-vertical:hover .nav-ul-vertical .div-chinche-icon {
     visibility: visible;
     transition: visibility 15s;
 }
-.div-chinche-icon{
+
+.div-chinche-icon {
     position: absolute;
     left: 242px;
     padding: 8px;
@@ -314,36 +349,41 @@ a {
 
 
 
-.nav-vertical{
+.nav-vertical {
     overflow-x: hidden;
 }
 
-.chinche-icon{
+.chinche-icon {
     zoom: 80%;
 }
 
 
-.nav-fijo ,.nav-fijo .hamburguer{
-    width: 273px;
+.nav-fijo,
+.nav-fijo .hamburguer {
+    width: 288px;
 }
 
-.nav-fijo li > a>span, li> ul .icon{
+.nav-fijo li>a>span,
+li>ul .icon {
     opacity: 0;
     transition: opacity 0.5s;
 }
-.nav-fijo  li>a >span ,.nav-fijo  li>ul .icon{
+
+.nav-fijo li>a>span,
+.nav-fijo li>ul .icon {
     opacity: 1;
 }
 
-.nav-fijo  .div-chinche-icon{
+.nav-fijo .div-chinche-icon {
     visibility: visible;
     transition: visibility 15s;
 }
 
-.nav-fijo >Ul{
+.nav-fijo>Ul {
     background-color: #EA5455;
     width: 300px;
 }
+
 /* 
 .chinche-fijo-left{
     width: 5px;
@@ -383,19 +423,20 @@ a {
     rotate: 30deg;
     right: 3px;
 } */
-.raya{
+.raya {
     height: 70%;
     width: 2px;
     background-color: rgb(255, 255, 255);
     position: absolute;
     rotate: 90deg;
-    top: calc(10% );
+    top: calc(10%);
     border-right: 2px solid #002B5B;
     border-radius: 1px;
     visibility: visible;
     opacity: 1;
     transition: visibility 0.5s, opacity 0.5s;
 }
+
 /*/////////////////////////////////////////////////////////////////////*/
 
 
@@ -405,7 +446,7 @@ a {
 /*////////////////// Menu Hamburguer //////////////////////////*/
 
 
- /* a:hover {
+/* a:hover {
     background-color: rgb(57, 100, 174);
     border-radius: 8px;
 } 
@@ -420,7 +461,7 @@ a {
 .transition-nav-ul>li:hover>ul>li>a {
     visibility: hidden;
 } 
- nav>ul >li >ul >li a>span {
+ nav>div>ul >li >ul >li a>span {
     transition: opacity 1s;
 }
 
@@ -432,3 +473,4 @@ a {
 
 
 /*/////////////////////////////////////////////////////////////*/
+
