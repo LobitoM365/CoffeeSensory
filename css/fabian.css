@@ -4,6 +4,7 @@
 }
 
 .rout {
+    font-size:0.9vw;
     text-decoration: none;
     color: #F9F5EB;
 }
@@ -16,7 +17,7 @@ li {
 .menu {
     position: absolute;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    width: 55px;
+    width: 3vw;
     color: #F9F5EB;
     height: 100vh;
     background-color: #002B5B;
@@ -30,14 +31,15 @@ li {
 } */
 
 .item-nav {
-    border-radius: 5px;
+    font-size: 0.9vw;
+    border-radius: 0.4vw;
     display: flex;
-    width: 226px;
+    width: 12.4vw;
     /* padding-left: 59px; */
     position: relative;
     left: 0;
-    top: 100px;
-    padding: 19px;
+    top: 5vw;
+    padding: 1vw;
     /* padding: 35px 0px 0px 0px; */
 }
 
@@ -51,7 +53,7 @@ li {
 
 .item-nav-hover {
     overflow-y: auto;
-    width: 266px;
+    width: 14.5vw;
     transition: width 0.5s;
 }
 
@@ -65,30 +67,30 @@ li {
 .sub,
 .sub-two,
 .sub-three {
-    width: 70%;
+    width: 10.5vw;
     position: relative;
-    left: 55px;
-    top: 100px;
+    left: 3vw;
+    top: 5vw;
     background-color: #002B5B;
-    height: 300px;
+    height: 16vw;
     transition: height 0.4s, opacity 0.42s;
 }
 
 .sub-two {
-    height: 85px;
+    height: 5.5vw;
 }
 
 .sub-three {
-    height: 115px;
+    height: 8vw;
 }
 
 .sub-item {
     width: 100%;
-    padding: 10px;
+    padding: 0.45vw;
 }
 
 .sub-item:hover {
-    border-radius: 4px;
+    border-radius: 0.5vw;
     color: #002B5B;
     background-color: #ffffffe6;
 }
@@ -97,7 +99,7 @@ li {
     transition: transform 0.5s;
     /* margin-left: 8px; */
     position: absolute;
-    left: 240px;
+    left: 13.4vw;
 }
 
 .icon-down-rotate {
@@ -106,22 +108,22 @@ li {
 }
 
 .icons {
-    margin-right: 30px;
+    margin-right: 1.8vw;
 }
 
 .title-menu {
     color: #f75959;
-    font-size: 1.3em;
+    font-size: 1.3vw;
     position: relative;
-    top: 20px;
-    left: 120px;
+    top: 1.5vw;
+    left: 7vw;
 }
 
 .icon-admin {
     position: fixed;
-    font-size: 1.2em;
-    top: 25px;
-    left: 18px;
+    font-size: 1.7vw;
+    top: 1.5vw;
+    left: 0.8vw;
 }
 
 nav {
@@ -139,7 +141,6 @@ nav {
 .search,
 .icon-lup,
 .icon-notif {
-    
     cursor: pointer;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: relative;
@@ -171,8 +172,8 @@ nav {
     align-items: center;
     background-color: #002a5b4e;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 1.75vw;
+    height: 1.75vw;
     left: 60.65%;
     transition: background-color 0.2s;
 }
@@ -182,8 +183,9 @@ nav {
     padding-left: 0.4vw;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
-    border: 1px solid #002a5b92;
+    border: 0.1vw solid #002a5b92;
 }
+/* 
 .content{
     width: 100%;
     height: 100vh;
@@ -191,5 +193,5 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 50px;
-}
+} */
 
