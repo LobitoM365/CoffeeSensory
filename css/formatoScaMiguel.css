@@ -4,9 +4,10 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-body{
+body {
     background-color: azure;
 }
+
 .formato-sca {
     border: 0.1vw solid black;
     width: 97%;
@@ -15,17 +16,19 @@ body{
     grid-template: "notas1 nivel-tostion fragancia-aroma sabor           acidez       cuerpo        uniformidad  taza-limpia  puntaje-catador puntaje-total " auto
         "notas1 nivel-tostion fragancia-aroma sabor-residual  acidez       cuerpo        balance      dulzor       defectos        defectos" auto
         "notas1 notas-final   notas-final   notas-final     notas-final  notas-final   notas-final  notas-final   notas-final    puntaje-final" 1fr/
-        0.5fr 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+        0.5fr 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.6fr;
 }
 
 .notas1 {
     grid-area: notas1;
     border: 0.1vw solid black;
-    
+
 }
-.tittle-notas1{
+
+.tittle-notas1 {
     font-size: 0.9vw;
 }
+
 .nivel-tostion {
     grid-area: nivel-tostion;
     border: 0.1vw solid black;
@@ -34,7 +37,8 @@ body{
     justify-content: center;
     padding: 1vw;
 }
-.tittle-nivel-tostion{
+
+.tittle-nivel-tostion {
     font-size: 0.8vw;
 }
 
@@ -43,9 +47,9 @@ body{
     border: 0.1vw solid black;
     display: grid;
     grid-template: "area-puntaje" 1fr
-                   "area-intensidad"   1fr/
-                    1fr ;
-                    position: relative;
+        "area-intensidad" 1fr/
+        1fr;
+    position: relative;
 }
 
 
@@ -61,11 +65,12 @@ body{
     position: relative;
     display: grid;
     grid-template: "area-puntaje" 1fr
-                   "area-intensidad"   1fr/
-                    1fr ;
-                    position: relative;
+        "area-intensidad" 1fr/
+        1fr;
+    position: relative;
 }
-.intensidad-area-intensidad{
+
+.intensidad-area-intensidad {
     width: 3vw;
     height: 5vw;
     position: absolute;
@@ -76,29 +81,33 @@ body{
     margin-top: 0.3vw;
     margin-left: -2vw;
 }
-.tittle-alta-area-intensidad{
+
+.tittle-alta-area-intensidad {
     top: 0;
     position: absolute;
 }
-.tittle-baja-area-intensidad{
+
+.tittle-baja-area-intensidad {
     bottom: 0;
     position: absolute;
 }
-.tittle-intensidad{
+
+.tittle-intensidad {
     position: absolute;
     bottom: 100%;
     font-size: 0.7vw;
     margin-left: 1vw;
 }
+
 .cuerpo {
     grid-area: cuerpo;
     border: 0.1vw solid black;
     position: relative;
     display: grid;
     grid-template: "area-puntaje" 1fr
-                   "area-intensidad"   1fr/
-                    1fr ;
-                    position: relative;
+        "area-intensidad" 1fr/
+        1fr;
+    position: relative;
 }
 
 .uniformidad {
@@ -210,7 +219,7 @@ h4 {
     width: 2vw;
 }
 
-.range-nivel-intensidad{
+.range-nivel-intensidad {
     appearance: none;
     -webkit-appearance: none;
     height: 2vw;
@@ -235,15 +244,16 @@ h4 {
 }
 
 
-.guia-range-item{
+.guia-range-item {
     width: 90%;
     height: 100%;
     display: flex;
     justify-content: space-between;
-    align-items:end;
+    align-items: end;
     z-index: 9;
 }
-.puntaje-item{
+
+.puntaje-item {
     border-left: 0.1vw solid black;
     border-bottom: 0.1vw solid black;
     width: 2vw;
@@ -256,26 +266,29 @@ h4 {
     align-items: center;
     font-size: 0.8vw;
 }
-.h4-puntaje{
+
+.h4-puntaje {
     font-size: 0.8vw;
     margin-left: 3vw;
     margin-top: 0.5vw;
 }
-.tittle{
+
+.tittle {
     font-size: 0.8vw;
     font-weight: 900;
     margin-left: 0.4vw;
 }
 
-.numero-guia-range-item{
+.numero-guia-range-item {
     position: absolute;
     bottom: -0.8vw;
     font-size: 0.6vw;
     margin-left: -0.1vw;
 }
-.div-range{
+
+.div-range {
     position: absolute;
-    bottom: calc( 0% + 1vw);
+    bottom: calc(0% + 1vw);
     width: 100%;
     height: 3vw;
     display: flex;
@@ -285,23 +298,30 @@ h4 {
 
 
 
-.linea6,.linea7,.linea8,.linea9,.linea10{
+.linea6,
+.linea7,
+.linea8,
+.linea9,
+.linea10 {
     height: 100%;
     width: 1%;
     background-color: black;
 }
-.linea-lado{
+
+.linea-lado {
     width: 1%;
     background-color: black;
     height: 40%;
     bottom: 0;
 }
-.linea-medio{
+
+.linea-medio {
     width: 1%;
     height: 60%;
     background-color: black;
 }
-.input-range-puntaje{
+
+.input-range-puntaje {
     position: absolute;
     appearance: none;
     -webkit-appearance: none;
@@ -311,18 +331,20 @@ h4 {
     background-color: transparent;
     cursor: pointer;
 }
-.input-range-puntaje::-webkit-slider-thumb{
+
+.input-range-puntaje::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 3vw;
     width: 0.1vw;
-    background-color:rgb(255,175,28);
+    background-color: rgb(255, 175, 28);
 }
 
-.area-puntaje{
+.area-puntaje {
     grid-area: area-puntaje;
     position: relative;
 }
-.area-intensidad{
+
+.area-intensidad {
     grid-area: area-intensidad;
     display: flex;
     justify-content: center;
@@ -331,21 +353,23 @@ h4 {
 
 
 
-.range1-area-intensidad{
+.range1-area-intensidad {
     left: 0;
     margin-left: 0.5vw;
 }
-.range2-area-intensidad{
+
+.range2-area-intensidad {
     right: 0;
     margin-right: 0.5vw;
 }
-.tittle-area-intensidad{
+
+.tittle-area-intensidad {
     position: absolute;
     bottom: 100%;
     font-size: 0.7vw;
 }
 
-.calidad-area-intensidad{
+.calidad-area-intensidad {
     height: 100%;
     width: 3.5vw;
     display: flex;
@@ -353,18 +377,21 @@ h4 {
     align-items: center;
     padding-top: 1.2vw;
 }
-.tittle-calidad-area-intensidad{
+
+.tittle-calidad-area-intensidad {
     font-size: 0.7vw;
     width: 100%;
     text-align: center;
 }
-.div-puntaje1-calidad-area-intensidad,.div-puntaje2-calidad-area-intensidad{
+
+.div-puntaje1-calidad-area-intensidad,
+.div-puntaje2-calidad-area-intensidad {
     width: 100%;
     height: 2vw;
     border-bottom: 0.2vw solid black;
 }
 
-.select-cuadro{
+.select-cuadro {
     height: 4.7vw;
     width: 100%;
     display: flex;
@@ -372,33 +399,35 @@ h4 {
     align-items: center;
     gap: 0.8vw;
 }
-.cuadro-select{
+
+.cuadro-select {
     border: 0.2vw solid black;
     width: 0.9vw;
     height: 0.9vw;
     cursor: pointer;
 }
 
-.focus-cuadro-select{
+.focus-cuadro-select {
     background-color: black;
 }
 
-.range-color-inicial{
+.range-color-inicial {
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgba(192,192,192),rgb(150,150,150),rgb(129,129,129),rgb(49,49,49));
+    background-image: linear-gradient(rgba(192, 192, 192), rgb(150, 150, 150), rgb(129, 129, 129), rgb(49, 49, 49));
     position: absolute;
     z-index: -2;
 }
 
-.div-range-color{
+.div-range-color {
     width: 100%;
     height: 100%;
     z-index: -1;
     position: absolute;
     transform: rotate(180deg);
 }
-.range-color{
+
+.range-color {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -407,28 +436,31 @@ h4 {
     overflow: hidden;
 }
 
-.color-4-nivel-tostion{
+.color-4-nivel-tostion {
     width: 100%;
-    height: calc(5vw / 4 );
-    background-color:rgba(158,156,137) ;
+    height: calc(5vw / 4);
+    background-color: rgba(158, 156, 137);
     flex: none;
 }
-.color-3-nivel-tostion{
+
+.color-3-nivel-tostion {
     width: 100%;
-    height: calc(5vw / 4 );
-    background-color:rgb(146,110,84) ;
+    height: calc(5vw / 4);
+    background-color: rgb(146, 110, 84);
     flex: none;
 }
-.color-2-nivel-tostion{
+
+.color-2-nivel-tostion {
     width: 100%;
-    height: calc(5vw / 4 );
-    background-color:rgb(103,75,53) ;
+    height: calc(5vw / 4);
+    background-color: rgb(103, 75, 53);
     flex: none;
 }
-.color-1-nivel-tostion{
+
+.color-1-nivel-tostion {
     width: 100%;
-    height: calc(5vw / 4 );
-    background-color:rgb(69,37,18) ;
+    height: calc(5vw / 4);
+    background-color: rgb(69, 37, 18);
     flex: none;
 }
 
@@ -468,7 +500,7 @@ h4 {
 } */
 
 
-.div-range-color-intensidad{
+.div-range-color-intensidad {
     width: 100%;
     height: 0%;
     background-color: aqua;
@@ -476,8 +508,95 @@ h4 {
     overflow: hidden;
 }
 
-.color-intensidad{
+.color-intensidad {
     width: 100%;
     height: 5vw;
-    background-image: linear-gradient(rgb(254,255,49),rgb(255,175,28),rgb(255,112,28),rgb(243,48,45));
+    background-image: linear-gradient(rgb(254, 255, 49), rgb(255, 175, 28), rgb(255, 112, 28), rgb(243, 48, 45));
+}
+
+.h4-puntaje-total {
+    font-size: 0.8vw;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    position: absolute;
+    text-align: left;
+    left: 1vw;
+}
+
+.header-h4-defectos {
+    display: flex;
+    gap: 4vw;
+}
+
+.defectos {
+    padding: 0.5vw 1vw;
+    position: relative;
+}
+
+.h4-defectos {
+    font-size: 0.7vw;
+}
+
+.items-h4-defectos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.7vw;
+    gap: 1.5vw;
+    font-size: 0.9vw;
+}
+
+.items-defectos {
+    width: 12vw;
+    height: 5vw;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.items-titulos-defectos {
+    display: flex;
+    gap: 2vw;
+    padding: 0.7vw 1vw;
+    font-size: 0.9vw;
+}
+
+.inputs-defectos {
+    display: flex;
+    padding: 0vw 1vw;
+    gap: 0.7vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.tazas-defectos,
+.intensidad-defectos,
+.resultado-tazas-x-intensidad-defectos {
+    width: 1.9vw;
+    height: 1.9vw;
+    border: 0.1vw solid black;
+    flex: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h2-defectos {
+    font-size: 1.2vw;
+}
+
+.input-tazas-defectos,.input-intensidad-defectos{
+    width: calc(80% );
+    height: calc(80% );
+    border: unset;
+    position: absolute;
+    margin: unset;
+    font-size: 1.2vw;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.input-tazas-defectos:focus,.input-intensidad-defectos:focus{
+    outline: none;
 }

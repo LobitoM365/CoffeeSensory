@@ -6,14 +6,15 @@ let rangePuntaje = document.querySelectorAll(".range-puntaje ");
 let cuadroSelect = document.querySelectorAll(".cuadro-select ");
 let rangeColor = document.querySelectorAll(".range-color");
 let divRangeColorIntensidad = document.querySelectorAll(".div-range-color-intensidad");
-
+let inputTazasIntensidad = document.querySelectorAll(".inputTazasIntensidad");
+let resultadoTazasXIntensidad = document.getElementById("resultadoTazasXIntensidad");
 
 for (let RI = 0; RI < rangeIntensidad.length; RI++) {
     rangeIntensidad[RI].addEventListener("input", function () {
         valueRangeIntensidad[RI].innerHTML = rangeIntensidad[RI].value;
-        if(RI == 0){
+        if (RI == 0) {
 
-        }else{
+        } else {
             divRangeColorIntensidad[RI - 1].style.height = ((rangeIntensidad[RI].value / 5) * 100) + "%";
         }
     })
@@ -99,10 +100,29 @@ for (let CS = 0; CS < cuadroSelect.length; CS++) {
                             }
                     }
                 }
-               
+
 
             }
 
         })
     }
+}
+
+for (let x = 0; x < inputTazasIntensidad.length; x++) {
+    inputTazasIntensidad[0].addEventListener("input", function () {
+
+        resultadoTazasXIntensidad.innerHTML = inputTazasIntensidad[0].value;
+        inputTazasIntensidad[1].addEventListener("input", function () {
+
+            resultadoTazasXIntensidad.innerHTML = inputTazasIntensidad[0].value * inputTazasIntensidad[1].value;
+        })
+    })
+    inputTazasIntensidad[1].addEventListener("input", function () {
+
+        resultadoTazasXIntensidad.innerHTML = inputTazasIntensidad[1].value;
+        inputTazasIntensidad[0].addEventListener("input", function () {
+
+            resultadoTazasXIntensidad.innerHTML = inputTazasIntensidad[0].value * inputTazasIntensidad[1].value;
+        })
+    })
 }
