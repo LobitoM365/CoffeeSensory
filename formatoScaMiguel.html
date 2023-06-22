@@ -77,7 +77,7 @@
                                 <h6 class="numero-guia-range-item">10</h6>
                             </div>
                         </div>
-                        <input class="range-puntaje input-range-puntaje" type="range" name="" id="" value="6" min="6"
+                        <input class="range-puntaje input-range-puntaje" type="range" name="" id="" value="0" min="6"
                             max="10" step="0.25">
                     </div>
                 </div>
@@ -175,7 +175,7 @@
                             <h6 class="numero-guia-range-item">10</h6>
                         </div>
                     </div>
-                    <input class="range-puntaje input-range-puntaje" type="range" name="" id="" value="6" min="6"
+                    <input class="range-puntaje input-range-puntaje" type="range" name="" id="" value="0" min="6"
                         max="10" step="0.25">
                 </div>
             </div>
@@ -213,7 +213,7 @@
                             <h6 class="numero-guia-range-item">10</h6>
                         </div>
                     </div>
-                    <input class="range-puntaje input-range-puntaje" type="range" name="" id="" value="6" min="6"
+                    <input class="range-puntaje input-range-puntaje" type="range" name="" id="" value="0" min="6"
                         max="10" step="0.25">
                 </div>
             </div>
@@ -253,7 +253,7 @@
                                 <h6 class="numero-guia-range-item">10</h6>
                             </div>
                         </div>
-                        <input class="range-puntaje input-range-puntaje" type="range" name="" id="" value="6" min="6"
+                        <input class="range-puntaje input-range-puntaje" type="range" name="" id="" value="0" min="6"
                             max="10" step="0.25">
                     </div>
                 </div>
@@ -323,7 +323,7 @@
                                 <h6 class="numero-guia-range-item">10</h6>
                             </div>
                         </div>
-                        <input class="range-puntaje input-range-puntaje" type="range" name="" id="" value="6" min="6"
+                        <input class="range-puntaje input-range-puntaje" type="range" name="" id="" value="0" min="6"
                             max="10" step="0.25">
                     </div>
                 </div>
@@ -360,7 +360,7 @@
             <div class="uniformidad">
                 <h4 class="h4-puntaje"> Puntaje:</h4>
                 <h5 class="tittle"> Uniformidad</h5>
-                <div class="puntaje-select puntaje-item">0</div>
+                <div class="puntaje-select puntaje-item">10</div>
                 <div class="select-cuadro">
                     <div class="cuadro-select focus-no-active"></div>
                     <div class="cuadro-select focus-no-active"></div>
@@ -405,14 +405,14 @@
                             <h6 class="numero-guia-range-item">10</h6>
                         </div>
                     </div>
-                    <input class="range-puntaje input-range-puntaje" type="range" name="" id="" value="6" min="6"
+                    <input class="range-puntaje input-range-puntaje" type="range" name="" id="" value="0" min="6"
                         max="10" step="0.25">
                 </div>
             </div>
             <div class="taza-limpia">
                 <h4 class="h4-puntaje"> Puntaje:</h4>
-                <h5 class="tittle"> Uniformidad</h5>
-                <div class="puntaje-select puntaje-item">0</div>
+                <h5 class="tittle"> Taza limpia</h5>
+                <div class="puntaje-select puntaje-item">10</div>
                 <div class="select-cuadro">
                     <div class="cuadro-select focus-no-active"></div>
                     <div class="cuadro-select focus-no-active"></div>
@@ -423,8 +423,8 @@
             </div>
             <div class="dulzor">
                 <h4 class="h4-puntaje"> Puntaje:</h4>
-                <h5 class="tittle"> Uniformidad</h5>
-                <div class="puntaje-select puntaje-item">0</div>
+                <h5 class="tittle"> Dulzor</h5>
+                <div class="puntaje-select puntaje-item">10</div>
                 <div class="select-cuadro">
                     <div class="cuadro-select focus-no-active"></div>
                     <div class="cuadro-select focus-no-active"></div>
@@ -467,13 +467,13 @@
                             <h6 class="numero-guia-range-item">10</h6>
                         </div>
                     </div>
-                    <input class="range-puntaje input-range-puntaje" type="range" name="" id="" value="6" min="6"
+                    <input class="range-puntaje input-range-puntaje" type="range" name="" id="" value="0" min="6"
                         max="10" step="0.25">
                 </div>
             </div>
             <div class="puntaje-total">
                 <h4 class="h4-puntaje-total"> <span>Puntaje</span><span>Total</span></h4>
-                <div class="puntaje-range puntaje-item">0</div>
+                <div id="puntajeTotal" class="puntaje-range puntaje-item">0</div>
             </div>
             <div class="defectos">
                 <div class="header-h4-defectos">
@@ -498,12 +498,20 @@
                             <input class="inputTazasIntensidad input-intensidad-defectos" type="text" name="" id="">
                         </div>
                         <h2 class="h2-defectos">=</h2>
-                        <div  id="resultadoTazasXIntensidad" class="resultado-tazas-x-intensidad-defectos"></div>
+                        <div id="resultadoTazasXIntensidad" class="resultado-tazas-x-intensidad-defectos puntaje-item"></div>
                     </div>
                 </div>
             </div>
-            <div class="notas-final"></div>
-            <div class="puntaje-final"></div>
+            <div id="notasFinalDiv" class="notas-final">
+                <h4 class="h4-tittle-notas">Notas:</h4>
+                <textarea  class="texarea-notas-final" name="" id="notasFinal" cols="30" rows="10"></textarea>
+                <input id="button" class="button" type="button" value="Ver mas...">
+                
+            </div>
+            <div class="puntaje-final">
+                <h4 class="h4-puntaje-final">Puntaje final</h4>
+                <div id="puntajeFinal" class="item-puntaje-final">0</div>
+            </div>
         </div>
     </div>
 </body>

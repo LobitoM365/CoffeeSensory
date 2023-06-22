@@ -11,12 +11,12 @@ body {
 .formato-sca {
     border: 0.1vw solid black;
     width: 97%;
-    height: 18vw;
+    height: auto;
     display: grid;
-    grid-template: "notas1 nivel-tostion fragancia-aroma sabor           acidez       cuerpo        uniformidad  taza-limpia  puntaje-catador puntaje-total " auto
-        "notas1 nivel-tostion fragancia-aroma sabor-residual  acidez       cuerpo        balance      dulzor       defectos        defectos" auto
-        "notas1 notas-final   notas-final   notas-final     notas-final  notas-final   notas-final  notas-final   notas-final    puntaje-final" 1fr/
-        0.5fr 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.6fr;
+    grid-template: "notas1 nivel-tostion fragancia-aroma sabor           acidez       cuerpo        uniformidad  taza-limpia      puntaje-catador   puntaje-catador  puntaje-total " auto
+        "notas1 nivel-tostion fragancia-aroma sabor-residual  acidez       cuerpo        balance      dulzor           defectos          defectos         defectos" auto
+        "notas1 notas-final   notas-final     notas-final     notas-final  notas-final   notas-final  notas-final      notas-final       puntaje-final    puntaje-final" auto/
+        0.5fr 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr 0.6fr 0.4fr 0.6fr;
 }
 
 .notas1 {
@@ -40,6 +40,7 @@ body {
 
 .tittle-nivel-tostion {
     font-size: 0.8vw;
+    text-align: center;
 }
 
 .fragancia-aroma {
@@ -165,12 +166,18 @@ body {
     grid-area: notas-final;
     border: 0.1vw solid black;
     position: relative;
+    display: flex;
+    height: 4vw;
 }
 
 .puntaje-final {
     grid-area: puntaje-final;
     border: 0.1vw solid black;
     position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+    gap: 0.8vw;
 }
 
 .contenido {
@@ -192,10 +199,7 @@ body {
     align-items: center;
 }
 
-h4 {
-    text-align: center;
-    font-size: 1vw;
-}
+
 
 .linea {
     width: 100%;
@@ -271,6 +275,7 @@ h4 {
     font-size: 0.8vw;
     margin-left: 3vw;
     margin-top: 0.5vw;
+    text-align: center;
 }
 
 .tittle {
@@ -586,9 +591,10 @@ h4 {
     font-size: 1.2vw;
 }
 
-.input-tazas-defectos,.input-intensidad-defectos{
-    width: calc(80% );
-    height: calc(80% );
+.input-tazas-defectos,
+.input-intensidad-defectos {
+    width: calc(80%);
+    height: calc(80%);
     border: unset;
     position: absolute;
     margin: unset;
@@ -597,6 +603,53 @@ h4 {
     cursor: pointer;
 }
 
-.input-tazas-defectos:focus,.input-intensidad-defectos:focus{
+.input-tazas-defectos:focus,
+.input-intensidad-defectos:focus {
     outline: none;
+}
+
+.h4-tittle-notas {
+    font-size: 0.8vw;
+    margin: 0.2vw 0.4vw;
+}
+
+.h4-puntaje-final {
+    font-size: 0.9vw;
+    bottom: 0;
+}
+
+.item-puntaje-final {
+    border-left: 0.1vw solid black;
+    width: 2.5vw;
+    height: 100%;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8vw;
+}
+
+.texarea-notas-final {
+    width: 96%;
+    height: 100%;
+    resize: none;
+    position: absolute;
+    border: unset;
+    padding-left: 4%;
+    background-color: transparent;
+    font-size: 1vw;
+    padding-top: 0%;
+
+}
+
+.texarea-notas-final:focus {
+    outline: none;
+}
+
+.button {
+    position: absolute;
+    right: 0;
+    display: none;
+    overflow: hidden;
 }
