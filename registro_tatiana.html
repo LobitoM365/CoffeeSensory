@@ -12,34 +12,34 @@
     <div id="registro" class="inactivo">
         <div class="form">
             <i class=" alert fa-solid fa-triangle-exclamation"></i>
-            <p>¡¡Por favor llene todos los espacios!!</p> <br>
-            <input id="botonAceptar" class="boton-aceptar"type="submit" name="" id="" value="Aceptar"> 
+            <p class="verificar">¡¡Complete todos los espacios!!</p> <br>
+            <input id="botonAceptar" class="boton-aceptar"type="submit" name=""  value="Aceptar"> 
         </div>
     </div>   
-    <div id="registro" class="inactivo">
+    <div id="registro_correcto" class="inactivo-apagado">
         <div class="form">
             <i class=" acept fa-solid fa-circle-check"></i>
-            <p>¡Ha sido registrado con éxito!</p><br>  
+            <p class="verificar">¡Ha sido registrado con éxito!</p><br>
+            <input id="botonAceptar2" class="boton-aceptar2"type="submit" name=""  value="Aceptar">   
         </div>
     </div> 
+
     <iframe src="./tatiana.html" frameborder="0"></iframe>
     <div>
         <h1>Registro Aprendiz</h1>
         <br>
-        <form  class="principal"action=""><br>
-            
+        <div  class="principal"action=""><br>
             <p>Ingrese su(s) nombre(s)</p>
-            <input  id="nombre"type="text" name="" id="" placeholder="Nombre(s)" >
-             <p id="textoError" class="one">Este campo es obligatorio</p>
             <br>
+            <input  id="nombre"type="text" name="nombre"  placeholder="Nombre(s)">
+            <p id="textoError" class="correcto">Este campo es obligatorio</p>
             <p>Ingrese sus apellidos</p>
-            <input id="apellido" type="text" placeholder=" Apellidos" >
-            <p id="textoError" class="one">Este campo es obligatorio</p>
             <br>
-           <!--  <div class="error"><div class="one"><p class="texto-error">Este campo es obligatorio</p></div></div> -->
+            <input id="apellido" type="text" name="apellido" placeholder=" Apellidos" >
+            <p id="textoError2" class="correcto">Este campo es obligatorio</p>
             <p>Tipo de Documento</p>
             <br>
-            <select name="" id="">
+            <select name="tipo_docuemto" id="">
                 <option value="">Seleccione una opción</option>
                 <option value="">Tarjeta de identidad</option>
                 <option value="">Cédula</option>
@@ -47,35 +47,30 @@
             </select><br>
             <br>
             <p>Número de documento</p>
-            <input  id="documento"type="number" name="" id="" placeholder="Documento">
-            <p id="textoError" class="one">Este campo es obligatorio</p>
-            
-<!--             <div class="error"><div class="one"><p class="texto-error">Este campo es obligatorio</p></div></div> -->
-            
             <br>
+            <input  id="documento"type="number" name="Documento"  placeholder="Documento">
+            <p id="textoError3" class="correcto">Este campo es obligatorio</p>
             <p>Número de teléfono </p>
-            <input id="telefono" type="number" name="" id="" placeholder="Teléfono"> 
-            <p id="textoError" class="one">Este campo es obligatorio</p>
-<!--             <div class="error"><div class="one"><p class="texto-error">Este campo es obligatorio</p></div></div> -->
-            
             <br>
+            <input id="telefono" type="number" name="telefono"  placeholder="Teléfono"> 
+            <p id="textoError4" class="correcto">Este campo es obligatorio</p>
             <p>Correo electrónico</p>
-            <input  id="correo"type="email" name="" id="" placeholder="Correo"> 
-            <p id="textoError" class="one">Este campo es obligatorio</p>
-           <!--  <div class="error"><div class="one"><p class="texto-error">Este campo es obligatorio</p></div></div> -->
             <br>
+            <input  id="correo"type="email" name="correo" placeholder="Correo" > 
+            <p id="textoError5" class="correcto">Este campo es obligatorio</p>
             <p>Titulado</p>
             <br>
-            <select name="" id="">
+            <select name="Titulado" id="">
                 <option value="">Seleccione una opción</option>
                 <option value="">Barismo</option>
                 <option value="">Cocina</option>
                 <option value="">Redes electricas</option>
             </select><br>
             <br>
-            <input  id="botonRegistrar"class="boton" name="boton" type="submit" value="REGISTRAR">
-                
-        </form>
+            
+            
+            <button id="botonRegistrar" class="boton">REGISTRAR</button>
+        </div>
         <script src="js/validacion_tatiana.js"></script>
     </div>
 </body>
